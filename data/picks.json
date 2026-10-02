@@ -1,0 +1,365 @@
+{
+  "asOf": "2026-10-02",
+  "generatedAt": "2026-10-02T17:18:28.590471+00:00",
+  "mode": "FREE DAILY QUANT SCAN",
+  "universeSize": 69,
+  "candidatesScanned": 68,
+  "picks": [
+    {
+      "ticker": "ON",
+      "name": "ON Semiconductor Corporation",
+      "price": 83.89,
+      "change5d": 8.67,
+      "change20d": 13.9,
+      "rsi": 70.1,
+      "ema20": 75.58,
+      "ema50": 78.54,
+      "atr": 3.71,
+      "relVolume": 1.21,
+      "volatilityPct": 4.42,
+      "high20": 86.45,
+      "low20": 65.8,
+      "score": 96.6,
+      "setup": "Momentum continuation",
+      "entry": 83.89,
+      "stop": 78.88,
+      "tp1": 93.9,
+      "tp2": 99.91,
+      "rr": 3.2,
+      "confidence": 89.0,
+      "whyNow": "5D momentum +8.7%; price above EMA20; RSI 70 in momentum zone; fresh constructive headlines",
+      "thesis": "High-beta setup driven by momentum continuation, recent price structure and the latest available headlines. This is a scenario, not a certainty.",
+      "catalysts": [
+        "ON Semiconductor, Synaptics stocks jump on revised merger deal",
+        "Onsemi's Revised Synaptics Deal Expected to Be Immediately Accretive, UBS Says",
+        "Sector Update: Tech Stocks Rise Pre-Bell Friday"
+      ],
+      "risks": [
+        "High volatility can gap through stops",
+        "Fresh expectations may already be priced in",
+        "Headline or sector reversal"
+      ],
+      "invalidate": "Close below $78.88 or a material deterioration in the setup/news thesis.",
+      "news": [
+        {
+          "title": "ON Semiconductor, Synaptics stocks jump on revised merger deal",
+          "url": "https://finance.yahoo.com/markets/stocks/article/on-semiconductor-synaptics-stocks-jump-on-revised-merger-deal-152416209.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 15:24:16 +0000"
+        },
+        {
+          "title": "Onsemi's Revised Synaptics Deal Expected to Be Immediately Accretive, UBS Says",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/onsemi-apos-revised-synaptics-deal-154901040.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 15:49:01 +0000"
+        },
+        {
+          "title": "Sector Update: Tech Stocks Rise Pre-Bell Friday",
+          "url": "https://finance.yahoo.com/technology/articles/sector-tech-stocks-rise-pre-131302085.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 13:13:02 +0000"
+        },
+        {
+          "title": "onsemi revises Synaptics acquisition to all-cash $5.7B deal",
+          "url": "https://qz.com/onsemi-synaptics-revised-merger-cash-deal-100226?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 11:17:12 +0000"
+        },
+        {
+          "title": "ON Semiconductor Shares Rise 6.5% After Synaptics Acquisition Terms Revised",
+          "url": "https://investorshub.advfn.com/market-news/article/37381/on-semiconductor-shares-rise-6-5-after-synaptics-acquisition-terms-revised?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 10:23:29 +0000"
+        },
+        {
+          "title": "ON, SYNA Climb After-Hours As The $7B Stock Deal Becomes A $5.7B Cash Bid",
+          "url": "https://stocktwits.com/news-articles/markets/equity/on-syna-climb-after-hours-as-the-7-b-stock-deal-becomes-a-5-7-b-cash-bid/cZD0SPiRB0i?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 21:55:15 +0000"
+        }
+      ],
+      "source": "Yahoo Finance public chart + RSS",
+      "newsNote": "8 fresh headlines; 4 constructive / 0 adverse terms",
+      "rank": 1
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks, Inc.",
+      "price": 402.77,
+      "change5d": 7.48,
+      "change20d": 21.34,
+      "rsi": 64.5,
+      "ema20": 378.25,
+      "ema50": 358.5,
+      "atr": 16.33,
+      "relVolume": 0.36,
+      "volatilityPct": 4.05,
+      "high20": 409.5,
+      "low20": 325.32,
+      "score": 77.9,
+      "setup": "Momentum continuation",
+      "entry": 402.77,
+      "stop": 380.72,
+      "tp1": 446.87,
+      "tp2": 473.32,
+      "rr": 3.2,
+      "confidence": 81.0,
+      "whyNow": "5D momentum +7.5%; price above EMA20; RSI 64 in momentum zone",
+      "thesis": "High-beta setup driven by momentum continuation, recent price structure and the latest available headlines. This is a scenario, not a certainty.",
+      "catalysts": [
+        "These Telltale Clues Shine A Spotlight On Palo Alto Networks",
+        "Is Trending Stock Palo Alto Networks, Inc. (PANW) a Buy Now?",
+        "Is Platformization Becoming Palo Alto Networks' Biggest Growth Lever?"
+      ],
+      "risks": [
+        "High volatility can gap through stops",
+        "Fresh expectations may already be priced in",
+        "Headline or sector reversal"
+      ],
+      "invalidate": "Close below $380.72 or a material deterioration in the setup/news thesis.",
+      "news": [
+        {
+          "title": "These Telltale Clues Shine A Spotlight On Palo Alto Networks",
+          "url": "https://finance.yahoo.com/m/d941026c-847f-3623-ace5-c1bb7e445ad3/these-telltale-clues-shine-a.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 14:40:34 +0000"
+        },
+        {
+          "title": "Is Trending Stock Palo Alto Networks, Inc. (PANW) a Buy Now?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/trending-stock-palo-alto-networks-120005230.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 12:00:05 +0000"
+        },
+        {
+          "title": "Is Platformization Becoming Palo Alto Networks' Biggest Growth Lever?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/platformization-becoming-palo-alto-networks-094400428.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 09:44:00 +0000"
+        },
+        {
+          "title": "3 Volatile Stocks We Keep Off Our Radar",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-volatile-stocks-keep-off-091003767.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 09:10:03 +0000"
+        },
+        {
+          "title": "PANW Stock Rises 21% in a Month: Should You Hold or Book Profits?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/panw-stock-rises-21-month-142200611.html?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 14:22:00 +0000"
+        },
+        {
+          "title": "Cyderes Partners with Palo Alto Networks to Accelerate AI-Powered Security Operations for Global Enterprises",
+          "url": "https://finance.yahoo.com/technology/ai/articles/cyderes-partners-palo-alto-networks-130000362.html?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 13:00:00 +0000"
+        }
+      ],
+      "source": "Yahoo Finance public chart + RSS",
+      "newsNote": "8 fresh headlines; 0 constructive / 0 adverse terms",
+      "rank": 2
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "price": 207.18,
+      "change5d": 10.25,
+      "change20d": 19.8,
+      "rsi": 90.4,
+      "ema20": 188.53,
+      "ema50": 190.64,
+      "atr": 6.83,
+      "relVolume": 0.35,
+      "volatilityPct": 3.3,
+      "high20": 208.68,
+      "low20": 165.89,
+      "score": 72.5,
+      "setup": "Momentum continuation",
+      "entry": 207.18,
+      "stop": 197.96,
+      "tp1": 225.61,
+      "tp2": 236.67,
+      "rr": 3.2,
+      "confidence": 79.0,
+      "whyNow": "5D momentum +10.2%; price above EMA20; fresh constructive headlines",
+      "thesis": "High-beta setup driven by momentum continuation, recent price structure and the latest available headlines. This is a scenario, not a certainty.",
+      "catalysts": [
+        "Consumer Electronics Manufacturing Equipment Market Outlook 2026-2035 - Featuring Profiles of 3 of the Leading Companies Within the Data Included: KLA Corporation, FANUC Corporation, and ABB Robotics",
+        "Is KLA Stock Really Expensive?",
+        "KLAC's Backlog Surges on AI Demand: Can It Outpace AMAT & ASML?"
+      ],
+      "risks": [
+        "High volatility can gap through stops",
+        "Fresh expectations may already be priced in",
+        "Headline or sector reversal"
+      ],
+      "invalidate": "Close below $197.96 or a material deterioration in the setup/news thesis.",
+      "news": [
+        {
+          "title": "Consumer Electronics Manufacturing Equipment Market Outlook 2026-2035 - Featuring Profiles of 3 of the Leading Companies Within the Data Included: KLA Corporation, FANUC Corporation, and ABB Robotics",
+          "url": "https://finance.yahoo.com/technology/articles/consumer-electronics-manufacturing-equipment-market-090600492.html?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 09:06:00 +0000"
+        },
+        {
+          "title": "Is KLA Stock Really Expensive?",
+          "url": "https://www.trefis.com/articles/617166/is-kla-stock-really-expensive/2026-09-30?.tsrc=rss",
+          "published": "Wed, 30 Sep 2026 14:07:02 +0000"
+        },
+        {
+          "title": "KLAC's Backlog Surges on AI Demand: Can It Outpace AMAT & ASML?",
+          "url": "https://finance.yahoo.com/technology/ai/articles/klacs-backlog-surges-ai-demand-140200246.html?.tsrc=rss",
+          "published": "Tue, 29 Sep 2026 14:02:00 +0000"
+        },
+        {
+          "title": "Teradyne Strengthens AI Test Portfolio: Can It Beat KLAC & COHU?",
+          "url": "https://finance.yahoo.com/technology/ai/articles/teradyne-strengthens-ai-test-portfolio-151600517.html?.tsrc=rss",
+          "published": "Thu, 24 Sep 2026 15:16:00 +0000"
+        },
+        {
+          "title": "KLA (KLAC) Stock Moves 2.36%: What You Should Know",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/kla-klac-stock-moves-2-221505648.html?.tsrc=rss",
+          "published": "Tue, 22 Sep 2026 22:15:05 +0000"
+        },
+        {
+          "title": "Semiconductor Metrology Global Market Opportunity Analysis and Industry Forecast 2026-2036 Featuring KLA Corp., Applied Materials, ASML, Hitachi High-Tech Corp., Lam Research Corp. and More",
+          "url": "https://finance.yahoo.com/technology/articles/semiconductor-metrology-global-market-opportunity-085100450.html?.tsrc=rss",
+          "published": "Mon, 21 Sep 2026 08:51:00 +0000"
+        }
+      ],
+      "source": "Yahoo Finance public chart + RSS",
+      "newsNote": "8 fresh headlines; 1 constructive / 0 adverse terms",
+      "rank": 3
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials, Inc.",
+      "price": 538.52,
+      "change5d": 11.04,
+      "change20d": 23.54,
+      "rsi": 92.8,
+      "ema20": 484.67,
+      "ema50": 488.18,
+      "atr": 17.96,
+      "relVolume": 0.51,
+      "volatilityPct": 3.33,
+      "high20": 547.25,
+      "low20": 411.51,
+      "score": 72.1,
+      "setup": "Momentum continuation",
+      "entry": 538.52,
+      "stop": 514.28,
+      "tp1": 587.0,
+      "tp2": 616.09,
+      "rr": 3.2,
+      "confidence": 79.0,
+      "whyNow": "5D momentum +11.0%; price above EMA20",
+      "thesis": "High-beta setup driven by momentum continuation, recent price structure and the latest available headlines. This is a scenario, not a certainty.",
+      "catalysts": [
+        "Why Applied Materials (AMAT) Stock Is Up Today",
+        "Applied Materials vs. AMD: Which AI Semiconductor Stock Is a Better Buy in 2026?",
+        "ASML vs. Applied Digital: Which Is the Better Semiconductor Equipment Stock to Own for the Next 1 Year?"
+      ],
+      "risks": [
+        "High volatility can gap through stops",
+        "Fresh expectations may already be priced in",
+        "Headline or sector reversal"
+      ],
+      "invalidate": "Close below $514.28 or a material deterioration in the setup/news thesis.",
+      "news": [
+        {
+          "title": "Why Applied Materials (AMAT) Stock Is Up Today",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-applied-materials-amat-stock-214107274.html?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 21:41:07 +0000"
+        },
+        {
+          "title": "Applied Materials vs. AMD: Which AI Semiconductor Stock Is a Better Buy in 2026?",
+          "url": "https://www.fool.com/coverage/better-buy/2026/10/01/applied-materials-vs-advanced-micro-devices-ai-semiconductor-stock-better-buy-2026/?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 19:28:01 +0000"
+        },
+        {
+          "title": "ASML vs. Applied Digital: Which Is the Better Semiconductor Equipment Stock to Own for the Next 1 Year?",
+          "url": "https://www.fool.com/investing/2026/10/01/asml-vs-applied-digital-which-is-the-better-stock/?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 19:20:00 +0000"
+        },
+        {
+          "title": "Applied Materials vs. Broadcom: Which Semiconductor Stock Is a Better Buy in 2026?",
+          "url": "https://www.fool.com/coverage/better-buy/2026/10/01/applied-materials-vs-broadcom-which-semiconductor-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 18:29:42 +0000"
+        },
+        {
+          "title": "Applied Materials vs. ASML: Which Technology Stock Is a Better Buy in 2026?",
+          "url": "https://www.fool.com/coverage/better-buy/2026/10/01/applied-materials-vs-asml-which-technology-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 18:05:28 +0000"
+        },
+        {
+          "title": "Management Guided Higher For Applied Materials Stock; Does The Chart Agree?",
+          "url": "https://www.trefis.com/articles/617306/management-guided-higher-for-applied-materials-stock-does-the-chart-agree/2026-10-01?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 17:54:48 +0000"
+        }
+      ],
+      "source": "Yahoo Finance public chart + RSS",
+      "newsNote": "8 fresh headlines; 0 constructive / 0 adverse terms",
+      "rank": 4
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare, Inc.",
+      "price": 353.38,
+      "change5d": 1.25,
+      "change20d": 24.2,
+      "rsi": 62.9,
+      "ema20": 335.69,
+      "ema50": 310.45,
+      "atr": 16.12,
+      "relVolume": 0.52,
+      "volatilityPct": 4.56,
+      "high20": 367.43,
+      "low20": 271.72,
+      "score": 72.0,
+      "setup": "Momentum continuation",
+      "entry": 353.38,
+      "stop": 331.61,
+      "tp1": 396.9,
+      "tp2": 423.01,
+      "rr": 3.2,
+      "confidence": 79.0,
+      "whyNow": "price above EMA20; RSI 63 in momentum zone; fresh constructive headlines",
+      "thesis": "High-beta setup driven by momentum continuation, recent price structure and the latest available headlines. This is a scenario, not a certainty.",
+      "catalysts": [
+        "AI Agents and Bots Now Generate Most Web Traffic as Infrastructure Stocks Rally",
+        "Cloudflare Launches Basin: A More Open and Accessible Data Platform for Developers",
+        "Cloudflare (NET) Falls More Steeply Than Broader Market: What Investors Need to Know"
+      ],
+      "risks": [
+        "High volatility can gap through stops",
+        "Fresh expectations may already be priced in",
+        "Headline or sector reversal"
+      ],
+      "invalidate": "Close below $331.61 or a material deterioration in the setup/news thesis.",
+      "news": [
+        {
+          "title": "AI Agents and Bots Now Generate Most Web Traffic as Infrastructure Stocks Rally",
+          "url": "https://beincrypto.com/ai-agents-web-traffic-infrastructure-stocks/?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 02:44:00 +0000"
+        },
+        {
+          "title": "Cloudflare Launches Basin: A More Open and Accessible Data Platform for Developers",
+          "url": "https://finance.yahoo.com/technology/articles/cloudflare-launches-basin-more-open-130000213.html?.tsrc=rss",
+          "published": "Thu, 01 Oct 2026 13:00:00 +0000"
+        },
+        {
+          "title": "Cloudflare (NET) Falls More Steeply Than Broader Market: What Investors Need to Know",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cloudflare-net-falls-more-steeply-210005467.html?.tsrc=rss",
+          "published": "Wed, 30 Sep 2026 21:00:05 +0000"
+        },
+        {
+          "title": "Cloudflare just announced a tool that lets businesses charge AI agents in stablecoins",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/cloudflare-just-announced-tool-lets-170632357.html?.tsrc=rss",
+          "published": "Wed, 30 Sep 2026 17:06:32 +0000"
+        },
+        {
+          "title": "Cloudflare at $350: AI Cybersecurity Threats Aren’t Enough to Move the Needle Now",
+          "url": "https://247wallst.com/investing/2026/09/30/cloudflare-at-350-ai-cybersecurity-threats-arent-enough-to-move-the-needle-now/?.tsrc=rss",
+          "published": "Wed, 30 Sep 2026 12:45:13 +0000"
+        },
+        {
+          "title": "Bot Traffic Will Be “1000X” Bigger Than Human Traffic in Just Five Years, According to Cloudflare CEO",
+          "url": "https://www.tikr.com/blog/bot-traffic-will-be-1000x-bigger-than-human-traffic-in-just-five-years-according-to-cloudflare-ceo?ref=yahoofinance&.tsrc=rss",
+          "published": "Tue, 29 Sep 2026 22:17:40 +0000"
+        }
+      ],
+      "source": "Yahoo Finance public chart + RSS",
+      "newsNote": "8 fresh headlines; 1 constructive / 0 adverse terms",
+      "rank": 5
+    }
+  ],
+  "disclaimer": "Automated quantitative ranking using public Yahoo Finance chart/RSS endpoints. Not financial advice; levels are model scenarios."
+}

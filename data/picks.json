@@ -1,173 +1,416 @@
 {
-  "asOf": "2026-10-03",
-  "generatedAt": "2026-10-03T08:31:06.203512+00:00",
+  "asOf": "2026-10-05",
+  "generatedAt": "2026-10-05T16:12:56.805100+00:00",
   "mode": "FREE DAILY NEWS-FIRST SCAN",
   "universeSize": 70,
   "candidatesScanned": 69,
-  "globalHeadlinesDiscovered": 176,
-  "newsDrivenCandidates": 59,
+  "globalHeadlinesDiscovered": 166,
+  "newsDrivenCandidates": 58,
   "picks": [
     {
-      "ticker": "ON",
-      "name": "ON Semiconductor Corporation",
-      "price": 84.89,
-      "change5d": 9.96,
-      "change20d": 15.26,
-      "rsi": 71.1,
-      "ema20": 75.68,
-      "ema50": 78.59,
-      "atr": 3.71,
-      "relVolume": 1.97,
-      "volatilityPct": 4.37,
-      "high20": 86.45,
-      "low20": 65.8,
+      "ticker": "NET",
+      "name": "Cloudflare, Inc.",
+      "price": 364.57,
+      "change5d": 2.99,
+      "change20d": 30.71,
+      "rsi": 68.4,
+      "ema20": 338.07,
+      "ema50": 312.39,
+      "atr": 16.4,
+      "relVolume": 0.43,
+      "volatilityPct": 4.5,
+      "high20": 367.43,
+      "low20": 271.72,
       "newsScore": 50.0,
-      "technicalScore": 50.0,
+      "technicalScore": 40.89,
       "score": 100.0,
       "setup": "Catalyst + momentum",
-      "entry": 84.89,
-      "stop": 66.21,
-      "tp1": 122.24,
-      "tp2": 144.65,
+      "entry": 364.57,
+      "stop": 284.36,
+      "tp1": 524.98,
+      "tp2": 621.23,
       "rr": 3.2,
-      "confidence": 74.0,
-      "whyNow": "EARNINGS / GUIDANCE: CrowdStrike Beats Q1 Estimates On Earnings And Revenue — But Stock Sinks 13% After-Hours On Modest Guidance - Stocktwits | 5D momentum +10.0% | relative volume 2.0x | price above EMA20",
-      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (EARNINGS / GUIDANCE) with technical confirmation. This is a scenario, not a certainty.",
+      "confidence": 72.0,
+      "whyNow": "REGULATORY / CLINICAL: A proposed treatment for dogs’ bone cancer pain qualifies to pursue conditional FDA approval - stocktitan.net | 5D momentum +3.0% | price above EMA20 | RSI 68 confirms momentum",
+      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (REGULATORY / CLINICAL) with technical confirmation. This is a scenario, not a certainty.",
       "catalysts": [
-        "CrowdStrike Beats Q1 Estimates On Earnings And Revenue — But Stock Sinks 13% After-Hours On Modest Guidance - Stocktwits",
-        "Powerus Tokenized Shares Launch on Solana After Oct. 1 Merger - tokenpost.com",
-        "Onsemi, Synaptics Stocks Rally on Revised Merger Agreement",
-        "Onsemi, Synaptics Stocks Rally on Revised Merger Agreement - Investopedia"
+        "A proposed treatment for dogs’ bone cancer pain qualifies to pursue conditional FDA approval - stocktitan.net",
+        "FDA approval lets Alvotech double capacity to make a Humira alternative for U.S. supply - stocktitan.net",
+        "AIT would owe SIM Acquisition Corp. I (SIMA) $5M if it terminates their proposed merger. - stocktitan.net",
+        "One fund holds 6.06% as Mudita reports a combined stake in Metals Acquisition Corp. II (MTAL). - stocktitan.net"
       ],
       "risks": [
         "High volatility may create gaps through the modeled stop.",
         "A strong headline can already be priced in before the market opens.",
         "Sector or market reversal can overwhelm the company-specific catalyst."
       ],
-      "invalidate": "Close below $66.21 or a material deterioration in the catalyst/news thesis.",
+      "invalidate": "Close below $284.36 or a material deterioration in the catalyst/news thesis.",
       "news": [
         {
-          "title": "CrowdStrike Beats Q1 Estimates On Earnings And Revenue — But Stock Sinks 13% After-Hours On Modest Guidance - Stocktwits",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNR2lGTmxuUkhqOFdabGV1RUNJQzRveGhhMDE4UWN1eHc0MnltVEFmT3BNWWl2X0xzZWFUSlRwV0swQnB6LU9fNGVSQ1lZRGczZXI5WjVPeldDQkd5WGhpZEJlWWpJMmZ2YS1MM04yS2dOaFFORkluTzlpd3FUallqeHp4c25RYWI5bTkxaFA0UnNRNFVoNFlnQTZVdW5qWE92OE9ncHlEOVFzeXliU28wYl8tdHNYV0JuTTF3bi1DdnB3WGJrNVJRM2NUcXRXUnBJei1lUGx0TGxrUmVD?oc=5",
-          "published": "Fri, 02 Oct 2026 20:05:04 GMT",
-          "source": "Stocktwits",
+          "title": "A proposed treatment for dogs’ bone cancer pain qualifies to pursue conditional FDA approval - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcHR3S0RuTHVUc2xMM2dHcU9oX3RPQTdUV0NjNUw0VmlsWlphS21FWU5FZFcxUjlRRGxaNzdvRVpYTGl6ZXF5MTRhZldfUGFlNWRCeWZBX0hzRllyRTZrTnNhT3BRcGt2R3M1ektCbTU4WjJoVWdURWhzanhUaDRwMUdLUnpkVG14cVpVZDZlZ0djbXVXZUNQdWo0SVF5ZFladHRWdERtcmJlV2F4N1lJRExrRlFCSVpwNm5OTzln?oc=5",
+          "published": "Mon, 05 Oct 2026 12:45:00 GMT",
+          "source": "stocktitan.net",
           "globalDiscovery": true,
-          "eventType": "EARNINGS / GUIDANCE",
-          "impactScore": 19.44
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 41.92
         },
         {
-          "title": "Powerus Tokenized Shares Launch on Solana After Oct. 1 Merger - tokenpost.com",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5Kem9fXzA3N1YwMXRZWDJ5SExpMmdFc0psYmFfNE5uN1JYWWdaN2xYd2IxWlF3UkJFdUdsNE4zQ0ZXbzBqc3d0TXpCSnBXeFp6MGhOZFJUcU8?oc=5",
-          "published": "Fri, 02 Oct 2026 17:54:05 GMT",
-          "source": "tokenpost.com",
+          "title": "FDA approval lets Alvotech double capacity to make a Humira alternative for U.S. supply - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNb1dlVDNwN1hSek9ydjZZekNGMGdRZTFKdmx0MlJLR1F5NmJVQTNteXRDN0Zjb0wwSkJ1VndFaG5BRFZGbnl5Nm9lSVdGaXA5MzNWQzhySFZLUFdEOExWTmNQZDV3Q1FIelM2Uy1jLWRFYnU0c0dGVXVPMGhySmdIX1dTUTEwNW9EaHUxNHFRdEo1emhXalhXR2x2RUpQTlRvRjVGR1l5WlBaYVdFYUtQMmhnUFR4QS1PN2c?oc=5",
+          "published": "Mon, 05 Oct 2026 08:00:00 GMT",
+          "source": "stocktitan.net",
           "globalDiscovery": true,
-          "eventType": "M&A",
-          "impactScore": 17.82
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 37.26
         },
         {
-          "title": "Onsemi, Synaptics Stocks Rally on Revised Merger Agreement",
-          "url": "https://www.investopedia.com/market-update-onsemi-synaptics-stocks-rally-on-revised-merger-agreement-12154624?.tsrc=rss",
-          "published": "Fri, 02 Oct 2026 17:46:52 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "M&A",
-          "impactScore": 11.34
-        },
-        {
-          "title": "Onsemi, Synaptics Stocks Rally on Revised Merger Agreement - Investopedia",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb2h3d19pQXlSRlEwLXlQZlZIMHVYdW5OQVNsMXRRM1BiUU8zbkI3NmRXVGZoRVMxVmVZaU5lenB2ZDB3ZWxKRmxqZzJKanNYVnJjVFlaazBWSFlvRndXQzlfYUJoNXhYaUZRTXZQcUZlaDc4THR1NVMzVk0xS0Q5azJDVGgzWDkxQ1lnRjEwclpfbk9KU0dRLTRQdkRHRTM4dXJuS1NvbjhpTDZXNlE?oc=5",
-          "published": "Fri, 02 Oct 2026 17:46:52 GMT",
-          "source": "Investopedia",
+          "title": "AIT would owe SIM Acquisition Corp. I (SIMA) $5M if it terminates their proposed merger. - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQWJYMEFYbTMwYTc1MjVGZXZyYlFXdm5mWS0tZWRtX0hvSnM2dG5lZWl5MFdsM0tiX2RJQV9zcmw3NGlocVRCNHhabllRMFc0MDdORnZmN3FpbVpfSWpaa0lyU0lrRG13YWVjOW9BODZBQnVHdi0zTXUzdjRqZHFsWGRFMXM5UExtTGljZXBTZzU4cHFIRndjZE9Mckx4T2tDbUpLRHl1VnhCMjNKWEN1RUV2VHlLSllwUTdrZFB6Nzg?oc=5",
+          "published": "Mon, 05 Oct 2026 13:54:08 GMT",
+          "source": "stocktitan.net",
           "globalDiscovery": true,
           "eventType": "M&A",
-          "impactScore": 11.34
+          "impactScore": 36.45
         },
         {
-          "title": "ON Semiconductor, Synaptics stocks jump on revised merger deal - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPU2U0MDhIaHRad2J0WU03ZGMwRXlRYWFSQXZxamk5VjNlbzRBWjJ4c0dSbVpSWlJ2Ukpyb0JnQXBndm12OGxTN3R2STJ3eU01dXVSa0prWlUzdnBjbHotUHVoWWJya0E0Q1dBaFdxWUV2aHQtNzN5dHZPRWJqclJJODZfZ1QxSHhDVFZuY2l6Y3NZODltZDdsSkVSSEhxWk5pelZWcVhUMUYxMFBRdm15WjQwZXphVFZCeE5hY3plM3g5S00?oc=5",
-          "published": "Fri, 02 Oct 2026 15:27:18 GMT",
-          "source": "Yahoo Finance",
+          "title": "One fund holds 6.06% as Mudita reports a combined stake in Metals Acquisition Corp. II (MTAL). - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQLW95WXVrS3U2Z0Z6bXdXalB0ZVB4bjMwX2lBZEIwcDlTTzBsUV8zcEFuZ0xZSE1sRDJMWjdfOUxTRVhEWWtiSjFBYVRzVHd2eG1PNVpDcThZUXZwNDM5c0NmejN5dEh1bFNxYVh6NWNlT25ab29hUkVUY2IwQk5yNmNPRE9yb0JfRFZLZVAzQ3l0aWRpbmxRRDdwYUFXN05xcThUN0JjWGFadU5kbnpZcDlXTXRLQmdHS0daeUw1TzNURmJBTjZOQXRZQQ?oc=5",
+          "published": "Mon, 05 Oct 2026 13:19:00 GMT",
+          "source": "stocktitan.net",
           "globalDiscovery": true,
           "eventType": "M&A",
-          "impactScore": 9.92
+          "impactScore": 22.28
         },
         {
-          "title": "Stifel reiterates Hold on ON Semiconductor stock amid merger terms - Investing.com",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQTZHNTNCdlNrVkFZeW1yeS1oVkJVMzFKZHJhc3huODFyUUp5LUhqSzRvbEhCdjVmZFhyNk5CUWl2QkxoX1RWQ3VBWkpFdFlpQ0dnM2E0bTdwNUlsblZyM0xSTHlYbmZQaDhpREwwYVZQdnFVemk2RDJoZkdQZGM3WVNGcmJFbmtIelRPZzVWTUVFdVFKZjJ3YzNWNmxXSlY3TXdfQk84NV9DWXVQX1hoV2Y0Ym1wOHdSZVpDWXZRdlBXdlVZ?oc=5",
-          "published": "Fri, 02 Oct 2026 13:08:03 GMT",
-          "source": "Investing.com",
+          "title": "An up-to-$4.5B bridge commitment supports C.H. Robinson’s planned acquisition of RXO (RXO). - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR0NrMGRzV2JtVURjUHpkUHJxdmFDNDQ5bF9SVnJ0SGp6elc5SUlNc0FxSkk4UF9QVzJ5MzJwQTVvUklzLXBfeDhFcU1lTUtkSVNOSHRicmVQY1pGRmJXV1BYNFoxRjVmdy03RDBCdlFWeU9rc3FPNnEwUG5GNzBtQmMzMWdCNEh1YV9VeGpKZU9FbkdYS0ZWQVc5cDRzcUFMUGtaNHdMRmt0RXc?oc=5",
+          "published": "Mon, 05 Oct 2026 13:54:08 GMT",
+          "source": "stocktitan.net",
           "globalDiscovery": true,
           "eventType": "M&A",
-          "impactScore": 9.92
+          "impactScore": 22.28
         },
         {
-          "title": "ON Semiconductor Shares Jump After Revised Synaptics Merger Deal - benzinga.com",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbGJId1dnWENlREYzdjFtWlhSeHlqWVhNMzZsdTZWU2tVSk5CbVBQMmhodEJQT3lGdEhGMlJFT01tMUtMMTIxbkFCM2tnMEV5SVJwWENUMzlRTW5Qb3hhbWd6Rm1OR2hOczFKNjdxdHJkOW9JMGFQSUpfQjVJTWdhVTJCNE9nNE5jVzVGcTFBcU9panpCOUt0NS1Rb0ZBSHltb25zM19lZldyMzd6UEVKM2lfV3FpNWtvN3Y1SHBTQQ?oc=5",
-          "published": "Fri, 02 Oct 2026 13:37:05 GMT",
-          "source": "benzinga.com",
+          "title": "The FDA clears an application to test Crescent’s cancer treatment in people. - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMUd1NzFTcHllaGZwVU1kNGRvWlN6VU8yN2NoR3piTU9MZVBhdHd2QjFUYUk2TDgtUEFHbGxGeWZOZ1p4U0Y5V2NsajNIWVpmdjVCNzdRcFhDcHJJcWl0bVZoaHBkdC1naldZd2o3TWVNaTh3ZFFubWUzX1dabDE0dU44Wmd4dDFZV2xnZmN6NmF6QmE4eEpOTzJmRy1nYWJiMzBSTzhXcm1QVkVQWGFhczUxWmlGaXlmb1dKNnIwZVg?oc=5",
+          "published": "Mon, 05 Oct 2026 11:30:00 GMT",
+          "source": "stocktitan.net",
+          "globalDiscovery": true,
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 12.76
+        },
+        {
+          "title": "The merger is off, but Neighborhood Intelligence will keep its digital assets. - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON0JISkllbUoyNVI1WlpJZm4zWVNBcDdiRkF1RWltclBoTThLVlZSVnVEdzVQcDgzenFQYzRyQ2VNXzczZDBYZEtRdGJMazZLdWhfSG1FOUxRa0MzNFRnazVMcmNEZzlmZmhGTVdYTzRIWHBid0hWS2JRaXNVM040cDBuczRBcnJsSHEtd204X0hUUm93U054d1lZRWdsUERIV0Y0WkZSaG12YlpDenBfSjJaWTlPZw?oc=5",
+          "published": "Mon, 05 Oct 2026 11:03:45 GMT",
+          "source": "stocktitan.net",
           "globalDiscovery": true,
           "eventType": "M&A",
-          "impactScore": 9.92
+          "impactScore": 12.76
         },
         {
-          "title": "Suppliers pile pressure on government over energy bills - bbc.co.uk",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5QcldGcjNrczFwTXBBNHJXZEhjSmZkdUtQVHNPaW45UDV0MmxLcXp6NjcwZnA4T0xxT3c1czZnWkhHUEEzUHlnczBBa1ZJZ1hBQTRKYmJQbzlkLU5oQ2c?oc=5",
-          "published": "Sat, 03 Oct 2026 03:47:32 GMT",
-          "source": "bbc.co.uk",
-          "eventType": "OTHER",
-          "impactScore": 3.65
+          "title": "Some space launches leave room for more cargo. Voyager will prototype satellite gear to use it. - stocktitan.net",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaGZhZG5RX3BXWXo2cklEUU01aGN4Mnk5eEhwaktZQy1nT1N6Ylh5d2lId2ROTGlRcVBsVE9PQzdSeG9jRHRQbjN2RTN0OXZWYXJMSWJiY1FEUm5qWE5OQUMtb2JIUEg1RXd0XzJPcXZsem5QLXlBNlM5NGNmeTd4bGlEUVFUY0F6T1QtNTZTTjJjVUJFUTF0Q2tKZjItX2c2YnpYYTRyeU5DUjU3YzY2dFlkMA?oc=5",
+          "published": "Mon, 05 Oct 2026 13:00:00 GMT",
+          "source": "stocktitan.net",
+          "globalDiscovery": true,
+          "eventType": "PRODUCT / TECHNOLOGY",
+          "impactScore": 7.29
         }
       ],
       "source": "Yahoo Finance public chart/RSS + Google News public RSS",
-      "newsNote": "8 relevant headlines; 13 material events; lead event: EARNINGS / GUIDANCE",
+      "newsNote": "8 relevant headlines; 14 material events; lead event: REGULATORY / CLINICAL",
       "rank": 1
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials, Inc.",
+      "price": 538.66,
+      "change5d": 10.66,
+      "change20d": 18.46,
+      "rsi": 94.1,
+      "ema20": 489.94,
+      "ema50": 490.15,
+      "atr": 17.88,
+      "relVolume": 0.24,
+      "volatilityPct": 3.32,
+      "high20": 547.25,
+      "low20": 411.51,
+      "newsScore": 50.0,
+      "technicalScore": 36.23,
+      "score": 100.0,
+      "setup": "Catalyst + momentum",
+      "entry": 538.66,
+      "stop": 420.15,
+      "tp1": 775.67,
+      "tp2": 917.88,
+      "rr": 3.2,
+      "confidence": 72.0,
+      "whyNow": "OTHER: Applied Materials expands Besi partnership and Applied Materials stock trades at EUR 478.50 - AD HOC NEWS | 5D momentum +10.7% | price above EMA20",
+      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+      "catalysts": [
+        "Applied Materials expands Besi partnership and Applied Materials stock trades at EUR 478.50 - AD HOC NEWS",
+        "Did EPIC Center Partnerships Just Shift Applied Materials (AMAT) Investment Narrative? - Simply Wall Street",
+        "Applied Materials, Besi broaden packaging partnership for AI chip integration - digitimes.com",
+        "Applied Materials, Besi broaden packaging partnership for AI chip integration - digitimes"
+      ],
+      "risks": [
+        "High volatility may create gaps through the modeled stop.",
+        "A strong headline can already be priced in before the market opens.",
+        "Sector or market reversal can overwhelm the company-specific catalyst."
+      ],
+      "invalidate": "Close below $420.15 or a material deterioration in the catalyst/news thesis.",
+      "news": [
+        {
+          "title": "Applied Materials expands Besi partnership and Applied Materials stock trades at EUR 478.50 - AD HOC NEWS",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWTZTSDF1VTNSeEktMXVnSzNFNldIdi1RZXp2NXprLXlCNm5YenZSSGdNNHZNRVRlWHBPV2hfUXZxcmhQakNRU0NVNjg2M0VydXFFc1hTankzY3hJYzE1NWlPa2RNSG1xYUVQdWM5a01mbHBORkRicnc4X1h5VkJmTWFzRV84WTg3VHJ4TUFEbVdfQ0RjalE5NFpnNV9rblJZNGd2WFFMaWlmcldYR3E1TmJCcllfU0E4SWZoN2I3QzJaWHpyVzhobG1DUUR4QQ?oc=5",
+          "published": "Mon, 05 Oct 2026 12:00:38 GMT",
+          "source": "AD HOC NEWS",
+          "eventType": "OTHER",
+          "impactScore": 16.34
+        },
+        {
+          "title": "Did EPIC Center Partnerships Just Shift Applied Materials (AMAT) Investment Narrative? - Simply Wall Street",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQSnJ4dlB4MTlXcEl1Nl9TZUFwenFtbXJ3TVhyQkNXTWl6X1k5ZjVFbHlOWVNmTjlLS0lvRVN6S196d1FSMllHR0lOMmN4RmVOT3V3aWU2TWw3TGNoOThaOVloTGVfYkxVaEpuSVhVV2tQMFpON20wellZNzBwcGlaWkJOSGpFZUZxTHpzX05UcHVubWxFdGtQOHBUUG53V21yZGQxZFFiMkFZQ0hpdm05Y0pzUVBkaUZHVFJBLWFCWV9KMzBUXy1XRmc0QXo5VkNvc3pTdjJjX0tjd9IB3wFBVV95cUxNMTFkeTUwTjA2Y2o5NjZsOE50QkIzSDN6MmttZzhENzJWdGVudlJaTEIwc0xOQXcxRy1FandpT3VrZk8tQ1MzYUxXWmNpTG5VaTZpOEt2cWFhYlk1OVJ5X3JyQlJiRDNfUUdHaUk5TWFQMlRveW9ocEZLeFk0d0dYTlVtVFJPc01EZTVsY2c3VExpMDM2MF9LQjcxNG1RSWpobXdGakhvREs3emdaNlJOZUdQclRqWXlURHpLSHF1MXBha0Y2R0xRVEFoY0xOVWhMSTNoMzZMX0VLNDVhOEhJ?oc=5",
+          "published": "Sun, 04 Oct 2026 16:34:52 GMT",
+          "source": "Simply Wall Street",
+          "eventType": "OTHER",
+          "impactScore": 15.59
+        },
+        {
+          "title": "Applied Materials, Besi broaden packaging partnership for AI chip integration - digitimes.com",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVXhRSGoxSVBMWHpfa3BjU2JYRklaOHRzM09mLUNpR3FYbXJvX2dwaHJ0WC1UQ1hpcjh3aW9xSnE5eFo5NTFqanJZVkpybGtBY3IzVFY5RDZPQnZkTzVhVmpSam5hM0NTSF9mRFpNNDZSYkVKZ2kxVFd3UzVBM0hNN2NrMGh3c21VbzlORlNVNkN4M2Z6Sl8zNDlCQnBQU1JYc2lqaFpXeDdDMmN4Z0tyU28tUm92UFE?oc=5",
+          "published": "Mon, 05 Oct 2026 01:31:08 GMT",
+          "source": "digitimes.com",
+          "eventType": "OTHER",
+          "impactScore": 14.52
+        },
+        {
+          "title": "Applied Materials, Besi broaden packaging partnership for AI chip integration - digitimes",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVXhRSGoxSVBMWHpfa3BjU2JYRklaOHRzM09mLUNpR3FYbXJvX2dwaHJ0WC1UQ1hpcjh3aW9xSnE5eFo5NTFqanJZVkpybGtBY3IzVFY5RDZPQnZkTzVhVmpSam5hM0NTSF9mRFpNNDZSYkVKZ2kxVFd3UzVBM0hNN2NrMGh3c21VbzlORlNVNkN4M2Z6Sl8zNDlCQnBQU1JYc2lqaFpXeDdDMmN4Z0tyU28tUm92UFE?oc=5",
+          "published": "Mon, 05 Oct 2026 01:31:08 GMT",
+          "source": "digitimes",
+          "eventType": "OTHER",
+          "impactScore": 14.52
+        },
+        {
+          "title": "Applied Materials (AMAT) Earnings Preview: AI Chip Demand, Capital Expenditure Trends, & Trade Setups - In Progress - TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOcHQ4N2xNRi1FZEFSUnBVM3V1U0tGM1FjMmRCcWR5cFdYLUNhQ29QT2JQcE4wMDBBRUdoSzJ4LWpmTjJJVzFpb3NydHJIRXFsSEFlbHhrNElVX0pJQUkteFJreTdGQ3lvYWVTQUdjZFM5UDMySnY4U21xTTBhVjZXUXZHNUN6SDFxemxwVWJDTTdfei1DWlJVeHVFVjFDemM4V0JIUlhHM3I5alBCWW9zYV9OZGdlQjAzZS1WUGpUOHVNSFgwZ2tvRmdmcHlVcXlCb0Z2NjB6NnQ2VjQ0SE5UYlFEZ0F6SU5PZk1KQQ?oc=5",
+          "published": "Sun, 04 Oct 2026 23:00:42 GMT",
+          "source": "TradingKey",
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 5.67
+        },
+        {
+          "title": "Applied Materials and 2 More Chip Stocks Set for Earnings Boost, and 3 to Avoid - Barron's",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeFVQODFQSndSaGh0S2ZyNFRSTEhTRWdvT0xCTXBQbl9zdkdHb3JCRkdmejVFa3RLcFpzemV4cTdHM3ZVbWlkLVpMODV4Uzd5RGszNGY4MnRONHlvaFFtRDVKUnlYLW5DakZGZkpyenpvMkhnYzY1dFhFYklxVGxoTmpBcFVQVC13djFVWTBEYXpEbzQ?oc=5",
+          "published": "Mon, 05 Oct 2026 14:12:00 GMT",
+          "source": "Barron's",
+          "eventType": "EARNINGS / GUIDANCE",
+          "impactScore": 3.3
+        },
+        {
+          "title": "Applied Materials and 2 More Chip Stocks Set for Earnings Boost, and 3 to Avoid - barrons.com",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeFVQODFQSndSaGh0S2ZyNFRSTEhTRWdvT0xCTXBQbl9zdkdHb3JCRkdmejVFa3RLcFpzemV4cTdHM3ZVbWlkLVpMODV4Uzd5RGszNGY4MnRONHlvaFFtRDVKUnlYLW5DakZGZkpyenpvMkhnYzY1dFhFYklxVGxoTmpBcFVQVC13djFVWTBEYXpEbzQ?oc=5",
+          "published": "Mon, 05 Oct 2026 14:12:00 GMT",
+          "source": "barrons.com",
+          "eventType": "EARNINGS / GUIDANCE",
+          "impactScore": 3.3
+        },
+        {
+          "title": "Bishop Amat vs Bp. Montgomery - Girls Varsity Soccer 01/07/2027 | Watch Live & On Demand - NFHS Network",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOLThvcHg5YWVEN3FnOXlLWDRFT0JzYjdueGk3YmotSEFLYmVObXBBd2lwLVVnb2lCNmRCU2JYRWprVEtqTFJwQlZ1ZWpZVmZ4RlYxVDFndEZFRFlKbklPMlg1RHYtTTRxU2R0SVlHZmg2OUlmYXVBemtEOTY4R1R5SmJVTlhJcWJHR2daS0d3?oc=5",
+          "published": "Mon, 05 Oct 2026 03:25:02 GMT",
+          "source": "NFHS Network",
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 3.24
+        }
+      ],
+      "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+      "newsNote": "8 relevant headlines; 6 material events; lead event: OTHER",
+      "rank": 2
+    },
+    {
+      "ticker": "ENPH",
+      "name": "Enphase Energy, Inc.",
+      "price": 33.31,
+      "change5d": 7.76,
+      "change20d": -8.41,
+      "rsi": 33.0,
+      "ema20": 34.24,
+      "ema50": 36.77,
+      "atr": 1.56,
+      "relVolume": 0.33,
+      "volatilityPct": 4.67,
+      "high20": 39.54,
+      "low20": 30.54,
+      "newsScore": 50.0,
+      "technicalScore": 10.89,
+      "score": 100.0,
+      "setup": "Catalyst setup",
+      "entry": 33.31,
+      "stop": 30.08,
+      "tp1": 39.77,
+      "tp2": 43.64,
+      "rr": 3.2,
+      "confidence": 67.0,
+      "whyNow": "OTHER: BMO raises DTE Energy stock price target on regulatory approval By Investing.com - Investing.com Canada | 5D momentum +7.8%",
+      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+      "catalysts": [
+        "BMO raises DTE Energy stock price target on regulatory approval By Investing.com - Investing.com Canada",
+        "Coterra Energy completes merger: what it means for Coterra Energy stock - AD HOC NEWS",
+        "Enphase Energy (ENPH) Utility Approvals Open A Bigger Backup Market As Undervalued Narrative Holds",
+        "Enphase Energy (ENPH) Utility Approvals Open A Bigger Backup Market As Undervalued Narrative Holds - Yahoo Finance Singapore"
+      ],
+      "risks": [
+        "High volatility may create gaps through the modeled stop.",
+        "A strong headline can already be priced in before the market opens.",
+        "Sector or market reversal can overwhelm the company-specific catalyst."
+      ],
+      "invalidate": "Close below $30.08 or a material deterioration in the catalyst/news thesis.",
+      "news": [
+        {
+          "title": "BMO raises DTE Energy stock price target on regulatory approval By Investing.com - Investing.com Canada",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdTE4MUMtQU90TUlrSjFHeGtmVjNyNGRDZlN4UDdlS3NMNmFaZ3lDdThtLWlHRk01RkswR2ZQTDhaeDNrWGduMnJ5ZDJkTWZNOFdJVGJHOFhQbXB5SEZUWWpJNU5ESm11djU1b1A3dlBYcFhkZlFRLVljZU9ZRGZSclNaWkk0ajRmeFh6QVJDRHhreXlWTEhIdFBWRzhzMGpYUDZVcVFWNUR0UjhNamdROEF4SnhJX05CZXJqT1VER0Zsdw?oc=5",
+          "published": "Mon, 05 Oct 2026 14:21:03 GMT",
+          "source": "Investing.com Canada",
+          "globalDiscovery": true,
+          "eventType": "OTHER",
+          "impactScore": 16.57
+        },
+        {
+          "title": "Coterra Energy completes merger: what it means for Coterra Energy stock - AD HOC NEWS",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQenhHWHZzZzhCM2xvd0JuZzdsUHFZUkJ2aFlFY3pzbWhqblhNV2lnVjNvNWZqSDhyYjZIUllWdEQwYU82ejdiZ3NtV3dzUzAxSXY0TGFCWGozWVFtREY1c3FFU25oWHBVRDlpbUJ3VTl2MGdILTFTVkV1UXg4YUlfdGJrMDBOVl90U1B4dmltZUg4QmdYV2QzUjZpMlJsQkRhSVhDQ3R0U2owVVd6NE1SMmdVOGJmY0FlTUFZaVpLckotUEVaeWFORlhlakJHZw?oc=5",
+          "published": "Mon, 05 Oct 2026 14:11:50 GMT",
+          "source": "AD HOC NEWS",
+          "globalDiscovery": true,
+          "eventType": "M&A",
+          "impactScore": 8.93
+        },
+        {
+          "title": "Enphase Energy (ENPH) Utility Approvals Open A Bigger Backup Market As Undervalued Narrative Holds",
+          "url": "https://finance.yahoo.com/energy/articles/enphase-energy-enph-utility-approvals-200623317.html?.tsrc=rss",
+          "published": "Sun, 04 Oct 2026 20:06:23 +0000",
+          "source": "Yahoo Finance",
+          "eventType": "OTHER",
+          "impactScore": 8.51
+        },
+        {
+          "title": "Enphase Energy (ENPH) Utility Approvals Open A Bigger Backup Market As Undervalued Narrative Holds - Yahoo Finance Singapore",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQLW1VYlVQblFGRlZ2NmVaak1ZR3dCMkhrMnpCWm5aWmxWYWVSRzJUc1JSNGZqUUdRbUZQU05kbFQ0VV9oRFZDd0laTTBYV19FMERZQ2xFLWozSk95Rk1HUVR3THhndjF4b2lDbXJCcFdTZWZZdVJTZDJzWHRIUWRLLTdiVHBmVmRnNjhkeDFzZw?oc=5",
+          "published": "Sun, 04 Oct 2026 20:06:23 GMT",
+          "source": "Yahoo Finance Singapore",
+          "eventType": "OTHER",
+          "impactScore": 8.51
+        },
+        {
+          "title": "Enphase Energy (ENPH) Utility Approvals Open A Bigger Backup Market As Undervalued Narrative Holds - sg.finance.yahoo.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQLW1VYlVQblFGRlZ2NmVaak1ZR3dCMkhrMnpCWm5aWmxWYWVSRzJUc1JSNGZqUUdRbUZQU05kbFQ0VV9oRFZDd0laTTBYV19FMERZQ2xFLWozSk95Rk1HUVR3THhndjF4b2lDbXJCcFdTZWZZdVJTZDJzWHRIUWRLLTdiVHBmVmRnNjhkeDFzZw?oc=5",
+          "published": "Sun, 04 Oct 2026 20:06:23 GMT",
+          "source": "sg.finance.yahoo.com",
+          "eventType": "OTHER",
+          "impactScore": 8.51
+        },
+        {
+          "title": "Enphase (ENPH) Wins 80 Utility Approvals. Can Easier Installation Boost Battery Sales?",
+          "url": "https://finance.yahoo.com/energy/articles/enphase-enph-wins-80-utility-033043125.html?.tsrc=rss",
+          "published": "Sat, 26 Sep 2026 03:30:43 +0000",
+          "source": "Yahoo Finance",
+          "eventType": "OTHER",
+          "impactScore": 4.05
+        },
+        {
+          "title": "Enphase Energy Inc. (E0P.SG) Q2 FY2026 earnings call transcript - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbmRkTncybFAyQzBadFRsenNUbWpXbUdsX29FZFNBYnNFdGlXbkphVUJZX0tkVlJ3MWU1VEVOUzk3cmdRSDBZZi1XN2JzZ2tuRTJZb3RtM2J6X2lkVzJUX0h2LVI5anZDWjRBT3ZqRURvRFZRLVQxcmIwQ3dTV0loSEswejh2LXZYRnE0ak5uTjVTUQ?oc=5",
+          "published": "Sun, 04 Oct 2026 05:13:13 GMT",
+          "source": "Yahoo Finance",
+          "eventType": "EARNINGS / GUIDANCE",
+          "impactScore": 1.76
+        },
+        {
+          "title": "Here is What to Know Beyond Why Enphase Energy, Inc. (ENPH) is a Trending Stock",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-enphase-energy-120004941.html?.tsrc=rss",
+          "published": "Fri, 02 Oct 2026 12:00:04 +0000",
+          "source": "Yahoo Finance",
+          "eventType": "OTHER",
+          "impactScore": 0.0
+        }
+      ],
+      "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+      "newsNote": "8 relevant headlines; 3 material events; lead event: OTHER",
+      "rank": 3
     },
     {
       "ticker": "RIVN",
       "name": "Rivian Automotive, Inc.",
-      "price": 14.3,
-      "change5d": -7.56,
-      "change20d": -10.12,
-      "rsi": 30.0,
-      "ema20": 15.24,
-      "ema50": 15.65,
-      "atr": 0.69,
-      "relVolume": 2.75,
-      "volatilityPct": 4.8,
+      "price": 14.28,
+      "change5d": -3.41,
+      "change20d": -9.24,
+      "rsi": 32.5,
+      "ema20": 15.15,
+      "ema50": 15.6,
+      "atr": 0.66,
+      "relVolume": 0.33,
+      "volatilityPct": 4.64,
       "high20": 16.81,
       "low20": 13.96,
       "newsScore": 50.0,
-      "technicalScore": 12.8,
+      "technicalScore": 4.64,
       "score": 100.0,
       "setup": "Catalyst setup",
-      "entry": 14.3,
-      "stop": 13.37,
-      "tp1": 16.15,
-      "tp2": 17.27,
+      "entry": 14.28,
+      "stop": 13.39,
+      "tp1": 16.07,
+      "tp2": 17.15,
       "rr": 3.2,
-      "confidence": 67.0,
-      "whyNow": "OTHER: Rivian reports record Q3 deliveries, beats estimates, shares rise - Investing.com | relative volume 2.7x",
-      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+      "confidence": 66.0,
+      "whyNow": "EARNINGS / GUIDANCE: Rivian Automotive earnings beat by $0.03, revenue fell short of estimates - Investing.com",
+      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (EARNINGS / GUIDANCE) with technical confirmation. This is a scenario, not a certainty.",
       "catalysts": [
-        "Rivian reports record Q3 deliveries, beats estimates, shares rise - Investing.com",
-        "Stock Market Today, Oct. 2: Rivian Beats Q3 Delivery Estimates on Record Production Pace",
-        "Rivian Automotive Options Spot-On: On October 2nd, 207.34K Contracts Were Traded, With 2.14 Million Open Interest - Moomoo",
-        "Tesla, Rivian Deliveries Beat Estimates: Analysts Explain Why TSLA Rallied While RIVN Fell"
+        "Rivian Automotive earnings beat by $0.03, revenue fell short of estimates - Investing.com",
+        "Rivian (RIVN) Stock Price Forecast 2026: Q2 Beat Raises Guidance to 70,000 — Short Setup Intact? - TradingKey",
+        "Rivian Beats Quarterly Delivery Estimates on Strong Cheaper R2 SUV Demand",
+        "Rivian Beats Quarterly Delivery Estimates on Strong Cheaper R2 SUV Demand - TIKR.com"
       ],
       "risks": [
         "High volatility may create gaps through the modeled stop.",
         "A strong headline can already be priced in before the market opens.",
         "Sector or market reversal can overwhelm the company-specific catalyst."
       ],
-      "invalidate": "Close below $13.37 or a material deterioration in the catalyst/news thesis.",
+      "invalidate": "Close below $13.39 or a material deterioration in the catalyst/news thesis.",
       "news": [
         {
-          "title": "Rivian reports record Q3 deliveries, beats estimates, shares rise - Investing.com",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSS1nc1ZuUFZoVE1JQ0tNOEhkX2VFbk1FQWJSVkh2N2NsTmdvQUthSE5FVkxMUnEwUGdaY2pUaEhwbnZvT2owc1htbDdpUmV2TUZwanYxOUs1Y2t1cUxtZHRWcTFOSFFHdDVvaEFDV2VwZG9IVjNtWUpxZHJLSm5XbEVtWXdUZzFmc0RoZkptN1M0em5TdV9XdkdJRXd2enZDZmpjZDh3N0tKcThQV0RWaWw1ZFZHdjA4azNGRQ?oc=5",
-          "published": "Fri, 02 Oct 2026 12:51:24 GMT",
+          "title": "Rivian Automotive earnings beat by $0.03, revenue fell short of estimates - Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS1Ezc3ZoRlNvX1czdkFDc1VuM2dZa19BVWhadkQxaE53ZUVSblhrNlI5X0tqdkZSelBEUGctRjBVY25oY1o1c0dBWUJsZUd6cXE3MEkydklybmp1bzVfUi1VbUJudjlGSE5wU0xNV2dsTGVBUFFXYTNsbnZWYzRCMHEyOUxRYWw5ZUVPc3A0WVhGWnQ3VU9fUnJHRWNGTVF0a204X3lFOVotSi1zRXI5N0plQ05wbXJxcFE?oc=5",
+          "published": "Mon, 05 Oct 2026 08:36:01 GMT",
           "source": "Investing.com",
-          "globalDiscovery": true,
-          "eventType": "OTHER",
-          "impactScore": 21.42
+          "eventType": "EARNINGS / GUIDANCE",
+          "impactScore": 26.73
+        },
+        {
+          "title": "Rivian (RIVN) Stock Price Forecast 2026: Q2 Beat Raises Guidance to 70,000 — Short Setup Intact? - TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWXcwSzVYdGJsRUJWTDQwVThPOXE3eEJPTzBubTNSOUN4TjFKMmJfUkh3ZWZUTDdub1BrMjVNYjdEaG1xLWV3R1Nfd1pjdWhiZGU4Vjc1aUNiWks0U0dIWUVjbmN1VFJtRHA3aHZ6Z0lEVmNmTjFpODlIZm9jLThNT2VxQURMREhtWUdPZ2JCZV9CN2F2TWRjOXdHSmZDbVhDcHpsMDNHdUJUSmxmcXBud0pqRGVVeEFSMkhmVEpTazVNZEk?oc=5",
+          "published": "Sun, 04 Oct 2026 13:38:28 GMT",
+          "source": "TradingKey",
+          "eventType": "EARNINGS / GUIDANCE",
+          "impactScore": 23.76
+        },
+        {
+          "title": "Rivian Beats Quarterly Delivery Estimates on Strong Cheaper R2 SUV Demand",
+          "url": "https://www.tikr.com/blog/rivian-record-q3-deliveries-r2-suv-beats-estimates?ref=yahoofinance&.tsrc=rss",
+          "published": "Mon, 05 Oct 2026 12:51:15 +0000",
+          "source": "Yahoo Finance",
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 11.48
+        },
+        {
+          "title": "Rivian Beats Quarterly Delivery Estimates on Strong Cheaper R2 SUV Demand - TIKR.com",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTUFfLU9YdTE2VHdDM1MtSUt4NExKSV8xdTgyNkFtd1FQZE1ZZDU5WGw1S3A0OFhtc0NPU0ZiSmh2Xy1TTnFDdEY0V0RGSXZJSFF6eDBGZlR6VzRvMFV4M3JQaGp5TlNUeVJOZWRobERmbFFpanFmT1E3Zlh0bzMzTzhn?oc=5",
+          "published": "Mon, 05 Oct 2026 12:55:46 GMT",
+          "source": "TIKR.com",
+          "eventType": "REGULATORY / CLINICAL",
+          "impactScore": 11.48
         },
         {
           "title": "Stock Market Today, Oct. 2: Rivian Beats Q3 Delivery Estimates on Record Production Pace",
@@ -175,15 +418,7 @@
           "published": "Fri, 02 Oct 2026 21:07:46 +0000",
           "source": "Yahoo Finance",
           "eventType": "PRODUCT / TECHNOLOGY",
-          "impactScore": 12.24
-        },
-        {
-          "title": "Rivian Automotive Options Spot-On: On October 2nd, 207.34K Contracts Were Traded, With 2.14 Million Open Interest - Moomoo",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObjd4d2tkUlJ4elpkMFI2R2ZaSFNZNDh4RzhIRm14RDVndE80NTMtek5FclozbjRZRl82dW8tTGVFaGNqNlFzdTZWZmtOOEViWkROcHBuMzY5eXZkUUZYQWJTblJFUEtxSlNlNkkxbXRBX01lSlRtUVhSWmN2YmpUQzVtS3N1bnVfMmhRVEp2NFZjREJjZ3ZoU3dGcW9zcUszdmc?oc=5",
-          "published": "Fri, 02 Oct 2026 21:46:58 GMT",
-          "source": "Moomoo",
-          "eventType": "CONTRACT / ORDERS",
-          "impactScore": 7.92
+          "impactScore": 5.1
         },
         {
           "title": "Tesla, Rivian Deliveries Beat Estimates: Analysts Explain Why TSLA Rallied While RIVN Fell",
@@ -191,32 +426,15 @@
           "published": "Sat, 03 Oct 2026 00:24:42 +0000",
           "source": "Yahoo Finance",
           "eventType": "OTHER",
-          "impactScore": 6.48
-        },
-        {
-          "title": "Rivian Automotive (NASDAQ:RIVN) Stock: Insider Michael John Callahan Sells 15,000 Shares - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNcGN6S1JaTy1KUlBFS0VSekNfRE82YXR1R0s2YUE5SmJ1d0VkaFRpcmU1aEhwM1NUTFVtTVRrdVdtaVo0WjZmRUYyQndkREdhUWpOWVZsTW9OU1pKSzNDWmt0WU5GamtBcXAwVVhfby1HWXNoZ2tRQTd5VHRsc3JTOHZ3V1JqejMxa2hZQnN4SkcyR3hzQ2x3RnlkQjQxOVgwcEVTbHJobEZIZGFnRjhIdTVtc2JIZHFobDhOdEEzT2wxTWRXaVR6cXVyMGF4Sk5JRjQ4SVdvX01rMW5WMzE0?oc=5",
-          "published": "Fri, 02 Oct 2026 23:19:57 GMT",
-          "source": "MarketBeat",
-          "eventType": "OTHER",
-          "impactScore": 6.48
-        },
-        {
-          "title": "Rivian Automotive (NASDAQ:RIVN) Stock Falls 3.1% - Time to Sell? - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNREtGMmNtazZvczY3MGpzTUJ4eGRmLWJrM2l5bndRekIxcm9xMkIyN3l5Z2JTandHWDlEanh2Z19MOFlOOFlQZVpyeEZDWDJSLTBlX1BaVVF6cTY3ZW1jaXVrYjdqdjdTX1ZyVFRsMUNCdEZGNnZqbXVjRUNUTXI2OFR2UDBpSDlGRG5MZndYdl9IVUtrdmEzUURFSU1wZXFGLUNtVy1wWUNaRXdRWHZISW1kOTJ3enZC?oc=5",
-          "published": "Fri, 02 Oct 2026 21:51:22 GMT",
-          "source": "MarketBeat",
-          "globalDiscovery": true,
-          "eventType": "OTHER",
-          "impactScore": 6.48
+          "impactScore": 2.7
         },
         {
           "title": "RIVN Stock Drops After-Hours On Potential $1.5B Offering Despite Upbeat Q2 Guidance - Stocktwits",
           "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUU82SmQyUHg0UGxiVVltX3BSekRJOU00U2R0N0FybkZXQkRJa3Z5NGY3NHlnY3RQTmMwVEFJTFV3ZGIza182QjBWc0VKczg3RXdKSDlLVERMdVFBcDFOXzZOejdYOEdKNWh4VTBpbnVmMjJOQldfU2dwQ1B1dzdDcGh5VmpkbG5hNjF2VFp1VDZQOG5tT0tiaUpzdVN2RHExeTJaMDg4TG5tN0FaQVUyZllZR1dELVlLdzFubkh4cWNJQWh2?oc=5",
-          "published": "Fri, 02 Oct 2026 23:13:39 GMT",
+          "published": "Sun, 04 Oct 2026 11:53:10 GMT",
           "source": "Stocktwits",
           "eventType": "EARNINGS / GUIDANCE",
-          "impactScore": 4.05
+          "impactScore": 2.7
         },
         {
           "title": "Rivian Q3 Deliveries Hit Record — Retail Says Sub-$50K R2 Could Make It Stronger Rival To Tesla",
@@ -224,342 +442,119 @@
           "published": "Fri, 02 Oct 2026 15:07:44 +0000",
           "source": "Yahoo Finance",
           "eventType": "OTHER",
-          "impactScore": 3.57
+          "impactScore": 1.7
         }
       ],
       "source": "Yahoo Finance public chart/RSS + Google News public RSS",
-      "newsNote": "8 relevant headlines; 12 material events; lead event: OTHER",
-      "rank": 2
+      "newsNote": "8 relevant headlines; 7 material events; lead event: EARNINGS / GUIDANCE",
+      "rank": 4
     },
     {
-      "ticker": "FSLR",
-      "name": "First Solar, Inc.",
-      "price": 174.61,
-      "change5d": -1.74,
-      "change20d": -15.82,
-      "rsi": 31.2,
-      "ema20": 189.0,
-      "ema50": 202.96,
-      "atr": 9.01,
-      "relVolume": 0.76,
-      "volatilityPct": 5.16,
-      "high20": 220.98,
-      "low20": 168.6,
-      "newsScore": 50.0,
-      "technicalScore": 5.0,
-      "score": 100.0,
+      "ticker": "NIO",
+      "name": "NIO Inc.",
+      "price": 3.41,
+      "change5d": -5.01,
+      "change20d": -10.26,
+      "rsi": 34.9,
+      "ema20": 3.64,
+      "ema50": 4.06,
+      "atr": 0.1,
+      "relVolume": 0.44,
+      "volatilityPct": 2.81,
+      "high20": 3.85,
+      "low20": 3.37,
+      "newsScore": 40.3,
+      "technicalScore": 2.81,
+      "score": 93.0,
       "setup": "Catalyst setup",
-      "entry": 174.61,
-      "stop": 162.44,
-      "tp1": 198.94,
-      "tp2": 213.54,
+      "entry": 3.41,
+      "stop": 3.28,
+      "tp1": 3.67,
+      "tp2": 3.82,
       "rr": 3.2,
-      "confidence": 66.0,
-      "whyNow": "REGULATORY / CLINICAL: With FDA approval, Lilly’s BTK drug Jaypirca enters first-line CLL - fiercepharma.com",
-      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (REGULATORY / CLINICAL) with technical confirmation. This is a scenario, not a certainty.",
+      "confidence": 63.0,
+      "whyNow": "OTHER: Weekly Recap: Sept record sales, NEVs 65% and 30% stake in NIO swap unit - TradingView",
+      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
       "catalysts": [
-        "With FDA approval, Lilly’s BTK drug Jaypirca enters first-line CLL - fiercepharma.com",
-        "Edwards Lifesciences Secures FDA Approval for First Expandable Pediatric Heart Valve - benzinga.com",
-        "FDA Approves Eli Lilly's Jaypirca for First-Line CLL/SLL Treatme - GuruFocus",
-        "FDA approves Jaypirca for first-line CLL/SLL treatment By Investing.com - Investing.com India"
+        "Weekly Recap: Sept record sales, NEVs 65% and 30% stake in NIO swap unit - TradingView",
+        "NIO (NYSE:NIO) Hits New 12-Month Low - Time to Sell? - MarketBeat",
+        "NIO Stock Rises Overnight After 6-Week Losing Streak: Retail Bulls See ‘Real Money’ In Battery Swaps After Holiday Record Usage",
+        "NIO Stock Rises Overnight After 6-Week Losing Streak: Retail Bulls See ‘Real Money’ In Battery Swaps After Holiday Record Usage - TradingView"
       ],
       "risks": [
         "High volatility may create gaps through the modeled stop.",
         "A strong headline can already be priced in before the market opens.",
         "Sector or market reversal can overwhelm the company-specific catalyst."
       ],
-      "invalidate": "Close below $162.44 or a material deterioration in the catalyst/news thesis.",
+      "invalidate": "Close below $3.28 or a material deterioration in the catalyst/news thesis.",
       "news": [
         {
-          "title": "With FDA approval, Lilly’s BTK drug Jaypirca enters first-line CLL - fiercepharma.com",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX21MMWZmNm1CZGEtak1VbGctYTU4cm1oTTJEUnNlYVFCN0cwalZWaXYtUXBVRnA2TGVLNzJxb2pDVk9icnU3S3NZTXJZMDVFWGxyYWZoOEhNeVdrR2xHVm1yaFpZRnNvWmV5QWpuSnAtYXVYeEpLaVlWa1dXYjl2Y1c5WTlyeXUwRHBwZU5mb3FJN2pvaUNDdW53?oc=5",
-          "published": "Fri, 02 Oct 2026 20:15:25 GMT",
-          "source": "fiercepharma.com",
-          "globalDiscovery": true,
-          "eventType": "REGULATORY / CLINICAL",
-          "impactScore": 23.46
-        },
-        {
-          "title": "Edwards Lifesciences Secures FDA Approval for First Expandable Pediatric Heart Valve - benzinga.com",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOTFJ4YlhsNjBMOENjcTUzODcyejhBbGc3ekpWX3h4LXZWb2Q3cE5zV3RyV0FHUThXelNrSG5icEZwYlJMS2kzbVhkVnh5VUFyak40U216VE1VWGFpOUJONVU0b19HcDlRS2VBUVRMbng0SlZZZ2kyUnZNZXd1SFZWdTFQVkYtR2tyanRqandxdEtLUElmeEdtczVJam9Td3ZLVjdRdFhNZU4yODdWVF9nMzlOX250cWVESE9CUkFHQi1LYjBDTmFzMDRQM25fM0ZTcDhrZHpMSmM?oc=5",
-          "published": "Fri, 02 Oct 2026 14:46:02 GMT",
-          "source": "benzinga.com",
-          "globalDiscovery": true,
-          "eventType": "REGULATORY / CLINICAL",
-          "impactScore": 20.53
-        },
-        {
-          "title": "FDA Approves Eli Lilly's Jaypirca for First-Line CLL/SLL Treatme - GuruFocus",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZzhqTDRPV0lOWUpZUVRuOGNJY2tFNXlDUVFHcVhwSm41WGpwSVREcVlDQURFa193aUt2UzhVbjRBeFk5VEJYRUxUUTJDR0piZE1LMDNZRGR3QTk3NXdMRExUaHBmMlZ4RmxwaGxWa2loY3E5anByTFBJMno2ODhmVGNHeE1TdFVtdFh3Y1h4S0ZPQWFHSzU3TzVobDRwZy1oYkhiWVNveVVhUQ?oc=5",
-          "published": "Fri, 02 Oct 2026 21:11:06 GMT",
-          "source": "GuruFocus",
-          "globalDiscovery": true,
-          "eventType": "REGULATORY / CLINICAL",
-          "impactScore": 17.34
-        },
-        {
-          "title": "FDA approves Jaypirca for first-line CLL/SLL treatment By Investing.com - Investing.com India",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVkNVYWFKOHBaa011ZmNTRHVxVWV6Y3UwMnpwejkyWFlZTHlmVU56aW15NTVFUHJLWkRsY05YcUpFWVV0cWFuS0FGbm54dVJzblUzVHV0UEhEMzNHOGpWYWZtSEctSjYyRS1kdXZzZTdiQ2tvQzE1dnhvRHBQTDZzZ1NYUm9ibUhvVktkWnp4NUNxWVV6YmY3VjRIUURoeEh1MzhZRGstNUJ4b25VNENKNzZVSQ?oc=5",
-          "published": "Fri, 02 Oct 2026 19:17:20 GMT",
-          "source": "Investing.com India",
-          "globalDiscovery": true,
-          "eventType": "REGULATORY / CLINICAL",
-          "impactScore": 17.34
-        },
-        {
-          "title": "FDA Approves Lilly’s Blood Cancer Drug Jaypirca in First-Line CLL, SLL - Genome Web",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYTRiTF9UUmZOQzMweGRfSUstZV83UG1XQ1hfdWQ5Rlg2RkloWVlRSVJsdFdldE93WDJZMlRZSGozS3lxQmo3dFdTWmhhTXhKcXRyRlVYZ2xEcUJtUGM2MlpreF9RUC1OZzBsM3FTRzM5SDJEcjNFaG80SlVSTlZfYXBHQVVJeXdzdkIwaGpxb0JrQktjSGI2azFwaG9ieVl1YU9VYUoxZW5DWlNqUG5uQ2xMZw?oc=5",
-          "published": "Fri, 02 Oct 2026 20:29:00 GMT",
-          "source": "Genome Web",
-          "globalDiscovery": true,
-          "eventType": "REGULATORY / CLINICAL",
-          "impactScore": 17.34
-        },
-        {
-          "title": "FDA Approves First Drug To Treat Alexander Disease After 30 Years of Research - SciTechDaily",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZHhLaldGUU5Ra3JaUTVjdTRuR2Zndk8zclVydHFjN09oYkt2X1ZYT1BPckNIem1UOFRTTkItWE05WXlWYUF5YUhlcjhmSjFOZ25YckVLQmdMRVZHbW1yQ0lRT3JvMkRHNnpQS0R5Um1MNFpteklhWndWQ19FSTRCc1B4dlV4TjBGODFLbjJIdWJLUXNEOUUtY3hUSVlieDVGVlk3U3BR?oc=5",
-          "published": "Fri, 02 Oct 2026 16:22:11 GMT",
-          "source": "SciTechDaily",
-          "globalDiscovery": true,
-          "eventType": "REGULATORY / CLINICAL",
-          "impactScore": 15.17
-        },
-        {
-          "title": "Will First Solar (FSLR) Beat Estimates Again in Its Next Earnings Report?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-beat-estimates-151004150.html?.tsrc=rss",
-          "published": "Thu, 01 Oct 2026 15:10:04 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "EARNINGS / GUIDANCE",
-          "impactScore": 6.48
-        },
-        {
-          "title": "First Solar (NASDAQ:FSLR) Stock: Insider Markus Gloeckler Sells 800 Shares - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPalo2bkJDSlFhdk56UHJHWnpIVU9Sd2wxZU1mY3ZCejhPTU1aV1pLbzRicUVGSTZxbm4zcjZaNkI5UHpJQlE3VEVjN212ckN5S183dl9jMEM2eGxqY2R2X25MY28zYW4tVG5PRE5LbmZtSlhHMDU4U2x0R3lNLUN1QmdRNG9IRHVtNG9OWWlGN3lTd3FBeTBLQURvLS02X2prXzU4TTFJazAzSFREWFZvdUdNb3lTLVZtWUxNclVTM01KZm43SGxpZUs0ZGFxQQ?oc=5",
-          "published": "Fri, 02 Oct 2026 23:09:48 GMT",
-          "source": "MarketBeat",
+          "title": "Weekly Recap: Sept record sales, NEVs 65% and 30% stake in NIO swap unit - TradingView",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPdzg5T3ZrdkJsUVJnLUUxTmJRYTl6b2RjejVPcVVvZkZXOUE1dWdKNFluUWk3Q1ljYW5kc3lIWnkxTlU0bkhXbzRfTjVXM2JMbW5VR1RDY3dBTlB5bm9TR1RtS3B4aFI1YzdQMElsYkVPLVJhQkNVMVo0OHY2ZTQ0MjA5Y1ZjY08wUDlzYUI4QUxGM0NKUGVvN1BzM3NWR1Z2UEU2NzBHaWtvNllicFpVZk1vd1V3RFQ3cHVVa241UVZDSUxqS0JLdmFn?oc=5",
+          "published": "Sun, 04 Oct 2026 23:00:00 GMT",
+          "source": "TradingView",
           "eventType": "OTHER",
-          "impactScore": 6.48
-        }
-      ],
-      "source": "Yahoo Finance public chart/RSS + Google News public RSS",
-      "newsNote": "8 relevant headlines; 15 material events; lead event: REGULATORY / CLINICAL",
-      "rank": 3
-    },
-    {
-      "ticker": "RKLB",
-      "name": "Rocket Lab Corporation",
-      "price": 73.92,
-      "change5d": -0.04,
-      "change20d": 15.84,
-      "rsi": 69.1,
-      "ema20": 69.6,
-      "ema50": 71.96,
-      "atr": 4.11,
-      "relVolume": 1.28,
-      "volatilityPct": 5.56,
-      "high20": 76.09,
-      "low20": 60.51,
-      "newsScore": 41.48,
-      "technicalScore": 40.34,
-      "score": 100.0,
-      "setup": "Catalyst + momentum",
-      "entry": 73.92,
-      "stop": 59.6,
-      "tp1": 102.56,
-      "tp2": 119.74,
-      "rr": 3.2,
-      "confidence": 70.0,
-      "whyNow": "M&A: Rocket Lab Stock Forecast | Iridium Acquisition Equity Funding - Capital.com | price above EMA20 | RSI 69 confirms momentum",
-      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (M&A) with technical confirmation. This is a scenario, not a certainty.",
-      "catalysts": [
-        "Rocket Lab Stock Forecast | Iridium Acquisition Equity Funding - Capital.com",
-        "Rocket Report: SpaceX completes launch triple-header; Rocket Lab nets big contract - Ars Technica",
-        "Rocket Lab Stock Soars 7% on Record 20-Launch Deal - Yahoo Finance",
-        "Rocket Lab Corporation $RKLB Shares Acquired by Versant Capital Management Inc - MarketBeat"
-      ],
-      "risks": [
-        "High volatility may create gaps through the modeled stop.",
-        "A strong headline can already be priced in before the market opens.",
-        "Sector or market reversal can overwhelm the company-specific catalyst."
-      ],
-      "invalidate": "Close below $59.60 or a material deterioration in the catalyst/news thesis.",
-      "news": [
-        {
-          "title": "Rocket Lab Stock Forecast | Iridium Acquisition Equity Funding - Capital.com",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9qN291UkFkTlZRQXdDdnJydXVKdFkyNkh5QWtBZlp5dDRTSEFBdFhiTTk2OEhIUEhpd2pwajBVdUlxeHBiWlVldzMyR1hsMGcxWktHXzhmVXFFOFZiWGVQVk1vTWljLTZQZ291ZWhn?oc=5",
-          "published": "Fri, 02 Oct 2026 13:55:35 GMT",
-          "source": "Capital.com",
-          "globalDiscovery": true,
-          "eventType": "M&A",
-          "impactScore": 9.82
+          "impactScore": 12.76
         },
         {
-          "title": "Rocket Report: SpaceX completes launch triple-header; Rocket Lab nets big contract - Ars Technica",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYXlwUy0wcmlCZEd3UWlrakQwX3JvWlB1eEcybVdrWHdkc2xtZVdBSlNGTlNGZENaU2hudmo5TGV0MUdKYlNSZ3pFbk5uRlZTY1dOQmtVcmxNWklKakgzV0FlR2pTNllKSE1paGJ5OTdPamVYako5NVZ2U1ZUT2xrczFPUnl0bW1nNHFYMXZiMnhUNGNtRU44SW1QRF82bUhPVnNDMEpYSVFhVk44d0pUcGtTa05FVTgtNEZJ?oc=5",
-          "published": "Fri, 02 Oct 2026 13:54:34 GMT",
-          "source": "Ars Technica",
-          "eventType": "CONTRACT / ORDERS",
-          "impactScore": 8.93
-        },
-        {
-          "title": "Rocket Lab Stock Soars 7% on Record 20-Launch Deal - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQY1phbEdCVlVKdnNFOHFKVGVJRU1ISmJ3ck82aVRYeUJUaV9nRmtYYlpBZjRqbGZMbGFRdmpvZGZ5bUNldjhYcUFGWTRCbGx6WGtBUjZWcllPeEo0WHpHclFkZ0doUDFMckRySXRhN0QyUDZ0YkxnYVJyOXdnYzFKZExvVnU5WUFGRzd1N3lXUmtoMGs?oc=5",
-          "published": "Fri, 02 Oct 2026 17:05:36 GMT",
-          "source": "Yahoo Finance",
-          "eventType": "PRODUCT / TECHNOLOGY",
-          "impactScore": 8.16
-        },
-        {
-          "title": "Rocket Lab Corporation $RKLB Shares Acquired by Versant Capital Management Inc - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQWWFFcUVnalUyRW5yVk53UDdydG1JQm1pSUZDZ0t3VVRqRXFwSDgta212U0EyZHljbFRReEdTRjd4NHZhV3lSRWdOSWR5TmR4UVR3aG1teE9IcEktcmtkN2pwWUNkeHhubGhwQ3A1NUlEUTVXYXJ6NFY5WmZhdnlGM3VFR2lHcnZsRU9fdWNsdjNlSnByNWktVG5QcDdQV0NFaVJudVY5SEJFSlNfOFRYQUNLeWttbE9vWWxIajhlVlcxWFRqN1hHVC1XY3M5QjJlM2J3aA?oc=5",
-          "published": "Sat, 03 Oct 2026 07:30:26 GMT",
+          "title": "NIO (NYSE:NIO) Hits New 12-Month Low - Time to Sell? - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNVF2N3FlMGpFU0loOC1RY1ZJRlByS0k5M04xb0NSR2tzZU5xVUJjbHhJUHdaMVNqcFJvTE5oLTU4MzhBNXl5OEFhcnZtZzZEbkpDUXZHampHM2xKSUxlbXp1a1FTdEtOOUxNNlpZOE5tR3J3eGpFSlBrVU5jWVB4LWo4UUVaVUV5azEyaVh2cUhaN2lvSVBtdmxLTFFzd1dsYlp0cnBIdnlnVzg?oc=5",
+          "published": "Mon, 05 Oct 2026 14:03:30 GMT",
           "source": "MarketBeat",
           "eventType": "OTHER",
           "impactScore": 8.1
         },
         {
-          "title": "Largest Electron Launch Deal At Rocket Lab (RKLB) Has Changed Its Investment Story - Simply Wall Street",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZEdQcWU2cVlyYXE3bG1FVGt3Um0zZERpSVVLUUNyUkdJWnBOaWJQQmkxblhpMEotd0ZWb0kxT1hWT0hBS05aZFNjUExLaXRlYkZyM3p4VXhuYy1ZR1hQUVdFZU5OZVNrbFBFZ2dEZ1BwRVpqVm91ZVV4YlVGaktidUEwOWk1b1NZYWVVa2cyV3Rad0J4bDF2QTFneDh3dE5OMk55UmxyWndCaXlRbEh2aGhJRTVuMmxUZ29majNOV2ZUR08wMm9NM0dESTFrQzVrekFj0gHTAUFVX3lxTE1kR1BxZTZxWXJhcTdsbUVUa3dSbTNkRGlJVUtRQ3JSR0lacE5pYlBCaTFuWGkwSi13RlZvSTFPWFZPSEFLTlpkU2NQTEtpdGViRnIzenhVeG5jLVlHWFBRV0VlTk5lU2tsUEVnZ0RnUHBFWmpWb3VlVXhiVUZqS2J1QTA5aTVvU1lhZVVrZzJXdFp3QnhsMXZBMWd4OHd0Tk4yTnlSbHJad0JpeVFsSHZoaElFNW4ybFRnb2ZqM05XZlRHTzAyb00zR0RJMWtDNWt6QWM?oc=5",
-          "published": "Fri, 02 Oct 2026 21:36:02 GMT",
-          "source": "Simply Wall Street",
-          "eventType": "PRODUCT / TECHNOLOGY",
+          "title": "NIO Stock Rises Overnight After 6-Week Losing Streak: Retail Bulls See ‘Real Money’ In Battery Swaps After Holiday Record Usage",
+          "url": "https://stocktwits.com/news-articles/markets/equity/nio-stock-6-week-losing-streak-retail-real-money-battery-swaps-holiday-record-usage/cZDpZvmRBSJ?.tsrc=rss",
+          "published": "Mon, 05 Oct 2026 05:09:05 +0000",
+          "source": "Yahoo Finance",
+          "eventType": "OTHER",
           "impactScore": 6.48
         },
         {
-          "title": "Rocket Lab Stock Rises on Record Electron Launch Deal and Citi Buy Rating",
-          "url": "https://finance.yahoo.com/m/c745d85c-1753-356b-9c07-a78753b0a2ab/rocket-lab-stock-rises-on.html?.tsrc=rss",
-          "published": "Thu, 01 Oct 2026 16:45:00 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "PRODUCT / TECHNOLOGY",
-          "impactScore": 5.44
-        },
-        {
-          "title": "Rocket Lab wins Synspective contract - Advanced Television",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdVFNUjBnLXE0QWlKZGp3c2oyTEhZOTBORlducjRwYnZnV3NybWx4ODBGVnZDZFFscnFtWmRwbXpWZW5VVV8wOVl4Z1BjeXNnQ2pqTXJMOWR1dmxCYlVVYUUyak95LWFDTGstQmpwUTNRRmxIU1c2T1k0Xy1pVFZUSnJTTVd5MXFaMm1FXw?oc=5",
-          "published": "Fri, 02 Oct 2026 09:10:19 GMT",
-          "source": "Advanced Television",
-          "eventType": "CONTRACT / ORDERS",
-          "impactScore": 5.35
-        },
-        {
-          "title": "Syracuse Crunch beat Laval Rocket 2-0 in season opener - Syracuse.com",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQV2FrSXd4c3AtVGtyTE11ZGllbldndW1NMHIyOXdNZFJVMnNwZndoYjdrM1NFX1h5X2VQeHM0MHRVaHB2cHNnLTlZSTA1YUM1SldBd2RMdi1ULWFOaEVFb3h0VmJHZ2pkZWpoTEVmZFE4NmlqLXJaM08tR1NoREZvaUJKQjJVUVQ0Tzh3UFVPMUJZVTlkajhSOUs2NkpfbGt6?oc=5",
-          "published": "Sat, 03 Oct 2026 02:38:00 GMT",
-          "source": "Syracuse.com",
+          "title": "NIO Stock Rises Overnight After 6-Week Losing Streak: Retail Bulls See ‘Real Money’ In Battery Swaps After Holiday Record Usage - TradingView",
+          "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPdjBMZ0szdlN0dkYtYjNsMDU1MUducHVGOVRfaEpWalpqeFdJWDZwQVdGYjVlR3NmTTFqREk3M3VwUmNiTjhjeFNQOVQ5QWNFeGRHYVBjeWxxTThDOWt3SmZ3SFV5RnoxV0kwbjdBTFY4WFJLV0NCck12WG9tV2UtYXVMNWVUY1M5RHdwUFZRcklqV2dtWHMzYTY2OWpxM3daak5RWjE0R3NMLS1FcEpaMnJ3UXRyMmFFa3BrcFAzbU1ETDRBdzhwaE40ZzZoVWFuOWlaTjBUM0JlOFNUMGlQc3R1RnJGTVpsZXgyWU5uTEE1dWF3cmM5eVZhVGdDZ0g5NDh3WkFQYWR5cU9acm9GR3VrYw?oc=5",
+          "published": "Mon, 05 Oct 2026 05:09:00 GMT",
+          "source": "TradingView",
           "eventType": "OTHER",
-          "impactScore": 4.59
-        }
-      ],
-      "source": "Yahoo Finance public chart/RSS + Google News public RSS",
-      "newsNote": "8 relevant headlines; 9 material events; lead event: M&A",
-      "rank": 4
-    },
-    {
-      "ticker": "JOBY",
-      "name": "Joby Aviation, Inc.",
-      "price": 5.95,
-      "change5d": -5.85,
-      "change20d": -13.39,
-      "rsi": 38.1,
-      "ema20": 6.33,
-      "ema50": 6.95,
-      "atr": 0.25,
-      "relVolume": 0.68,
-      "volatilityPct": 4.27,
-      "high20": 6.99,
-      "low20": 5.84,
-      "newsScore": 38.54,
-      "technicalScore": 4.27,
-      "score": 92.6,
-      "setup": "Catalyst setup",
-      "entry": 5.95,
-      "stop": 5.61,
-      "tp1": 6.64,
-      "tp2": 7.05,
-      "rr": 3.2,
-      "confidence": 62.0,
-      "whyNow": "OTHER: Blade’s BLADEone Enhanced Jet Service Returns with Flights between the New York City area and South Florida, in Partnership with Aero - Joby Aviation",
-      "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
-      "catalysts": [
-        "Blade’s BLADEone Enhanced Jet Service Returns with Flights between the New York City area and South Florida, in Partnership with Aero - Joby Aviation",
-        "$200M in defense contracts landed recently by UD, Joby, GE, Collins Aerospace",
-        "Thomas Gnau: $200M in defense contracts landed recently by UD, Joby, GE, Collins Aerospace",
-        "Joby Aviation Is Flying in Dubai and Texas. Here's When Real Revenue Actually Shows Up."
-      ],
-      "risks": [
-        "High volatility may create gaps through the modeled stop.",
-        "A strong headline can already be priced in before the market opens.",
-        "Sector or market reversal can overwhelm the company-specific catalyst."
-      ],
-      "invalidate": "Close below $5.61 or a material deterioration in the catalyst/news thesis.",
-      "news": [
+          "impactScore": 6.48
+        },
         {
-          "title": "Blade’s BLADEone Enhanced Jet Service Returns with Flights between the New York City area and South Florida, in Partnership with Aero - Joby Aviation",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUWhrdkdxR3c5Yk5nM1ZPZE5McFFyWl9FOU94ZlM2YnRrbTROY3pZZzlqSXliUkVlVUp5MVVGckdMdWJYOE1sSmhUQnlVTldyZGFKYkVya3BfdU40ZnJ5bmhlNnFieEozdl9pWk1Nc2pkWENnWkhneFpNcHdzNTY5OVYzTXRySVA5Mk9YRUF5Q3V1dGliNVBNVXk4ZEQ1ZlFXWm9lZ1NJb0VWMmxXdmJTcGlPUTFCZw?oc=5",
-          "published": "Fri, 02 Oct 2026 12:03:11 GMT",
-          "source": "Joby Aviation",
+          "title": "NIO Stock Slides Overnight: BlackRock Slashes Stake Even As ES9 Deliveries Smash Premium EV Record - Stocktwits",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcHg2QktTOFR6RkhhN3BxVGFBd2xrZ1lfRURVTHJKQ3prVDRnTW45d2FCR0VIOUM4YmoyTDluZDVLZWU2M2tQMnhOWVpuc2NYdW96Ti1udmdpN2NwOXlaS01XYzRzR2s1UmdKNmx2d1dkY0syV3R4OWxEWGNZVjM2ZXlzMDh2c0Q2NzdtMmpwVWdMeW1MX0dlU05JandMUHdsZ05ESENkNHZIdE1iSlVFaS1pXy1idmlJVWY1YlpoOTR3dw?oc=5",
+          "published": "Mon, 05 Oct 2026 07:39:58 GMT",
+          "source": "Stocktwits",
           "eventType": "OTHER",
-          "impactScore": 15.59
+          "impactScore": 6.48
         },
         {
-          "title": "$200M in defense contracts landed recently by UD, Joby, GE, Collins Aerospace",
-          "url": "https://www.journal-news.com/local/200m-in-defense-contracts-landed-recently-by-ud-joby-ge-collins-aerospace/article_0187ddf7-48ae-56ba-8f5b-4d638d03e95a.html?.tsrc=rss",
-          "published": "Thu, 01 Oct 2026 03:59:00 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "CONTRACT / ORDERS",
-          "impactScore": 11.48
-        },
-        {
-          "title": "Thomas Gnau: $200M in defense contracts landed recently by UD, Joby, GE, Collins Aerospace",
-          "url": "https://www.springfieldnewssun.com/local/200m-in-defense-contracts-landed-recently-by-ud-joby-ge-collins-aerospace/article_332334cd-c778-5df5-95db-6033b273800b.html?.tsrc=rss",
-          "published": "Thu, 01 Oct 2026 03:59:00 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "CONTRACT / ORDERS",
-          "impactScore": 11.48
-        },
-        {
-          "title": "Joby Aviation Is Flying in Dubai and Texas. Here's When Real Revenue Actually Shows Up.",
-          "url": "https://www.fool.com/investing/2026/10/02/joby-aviation-is-flying-in-dubai-and-texas-heres/?.tsrc=rss",
-          "published": "Fri, 02 Oct 2026 15:35:00 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "EARNINGS / GUIDANCE",
-          "impactScore": 0.0
-        },
-        {
-          "title": "Prediction: The Next Big Aviation Revolution Could Start With Joby",
-          "url": "https://247wallst.com/investing/2026/10/01/prediction-the-next-big-aviation-revolution-could-start-with-joby/?.tsrc=rss",
-          "published": "Thu, 01 Oct 2026 12:00:35 +0000",
+          "title": "Why Did NKE, NIO, APP Stocks Tumble To 52-Week Lows Last Week?",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-did-nke-nio-app-stocks-tumble-to-52-week-lows-last-week/cZDpjvFRBS3?.tsrc=rss",
+          "published": "Mon, 05 Oct 2026 03:55:34 +0000",
           "source": "Yahoo Finance",
           "eventType": "OTHER",
           "impactScore": 0.0
         },
         {
-          "title": "Joby Aviation: Bull vs. Bear",
-          "url": "https://www.fool.com/investing/2026/09/30/hot-stock-bull-vs-bear/?.tsrc=rss",
-          "published": "Wed, 30 Sep 2026 16:05:00 +0000",
+          "title": "NIO (NIO) Is Down 5.9% After Q3 Delivery Growth Slows Has The Bull Case Changed?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nio-nio-down-5-9-220550752.html?.tsrc=rss",
+          "published": "Sun, 04 Oct 2026 22:05:50 +0000",
           "source": "Yahoo Finance",
           "eventType": "OTHER",
           "impactScore": 0.0
         },
         {
-          "title": "Joby and Archer Each Burn Roughly $200 Million a Quarter. Here's Which One Runs Out of Cash First",
-          "url": "https://www.fool.com/investing/2026/09/29/joby-and-archer-each-burn-roughly-200-million-a-qu/?.tsrc=rss",
-          "published": "Wed, 30 Sep 2026 02:35:00 +0000",
-          "source": "Yahoo Finance",
-          "eventType": "OTHER",
-          "impactScore": 0.0
-        },
-        {
-          "title": "Are You Sure You Understand Joby Stock's Risk?",
-          "url": "https://www.trefis.com/articles/616965/are-you-sure-you-understand-joby-stocks-risk/2026-09-29?.tsrc=rss",
-          "published": "Tue, 29 Sep 2026 18:03:31 +0000",
+          "title": "NIO Stock Is Down 57% in a Year. Is the 87% Upside to the Street Target Achievable?",
+          "url": "https://www.tikr.com/blog/nio-stock-is-down-57-in-a-year-is-the-87-upside-to-the-street-target-achievable?ref=yahoofinance&.tsrc=rss",
+          "published": "Sat, 03 Oct 2026 13:04:21 +0000",
           "source": "Yahoo Finance",
           "eventType": "OTHER",
           "impactScore": 0.0
         }
       ],
       "source": "Yahoo Finance public chart/RSS + Google News public RSS",
-      "newsNote": "8 relevant headlines; 9 material events; lead event: OTHER",
+      "newsNote": "8 relevant headlines; 0 material events; lead event: OTHER",
       "rank": 5
     }
   ],

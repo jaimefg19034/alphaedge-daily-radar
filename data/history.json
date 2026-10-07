@@ -1,5 +1,568 @@
 [
   {
+    "asOf": "2026-10-07",
+    "generatedAt": "2026-10-07T18:58:39.880333+00:00",
+    "mode": "FREE DAILY NEWS-FIRST SCAN",
+    "universeSize": 70,
+    "candidatesScanned": 69,
+    "globalHeadlinesDiscovered": 175,
+    "newsDrivenCandidates": 56,
+    "picks": [
+      {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "price": 643.91,
+        "change5d": 5.26,
+        "change20d": 23.57,
+        "rsi": 77.7,
+        "ema20": 593.39,
+        "ema50": 545.21,
+        "atr": 23.7,
+        "relVolume": 0.63,
+        "volatilityPct": 3.68,
+        "high20": 658.52,
+        "low20": 480.33,
+        "newsScore": 50.0,
+        "technicalScore": 34.31,
+        "score": 100.0,
+        "setup": "Catalyst + momentum",
+        "entry": 643.91,
+        "stop": 502.25,
+        "tp1": 927.24,
+        "tp2": 1097.23,
+        "rr": 3.2,
+        "confidence": 71.0,
+        "whyNow": "REGULATORY / CLINICAL: FDA Approves Maintenance Tucatinib for Advanced HER2+ Breast Cancer - Oncology Nursing News | 5D momentum +5.3% | price above EMA20",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (REGULATORY / CLINICAL) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "FDA Approves Maintenance Tucatinib for Advanced HER2+ Breast Cancer - Oncology Nursing News",
+          "AMD CEO says continues to explore foundry partnership with Samsung Electronics - Reuters",
+          "HPE Stock Hits Record High After Company Adds 4 AMD-Powered Servers For Enterprise AI",
+          "Citi Raises AMD Price Target to $800 on Meta AI Demand"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $502.25 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "FDA Approves Maintenance Tucatinib for Advanced HER2+ Breast Cancer - Oncology Nursing News",
+            "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeEJXTFJyaWVhMkpkVXNIdTZpbXczdFpLcGVEWUhXWEw1QXBwN2pIZzdrUUY5eWg3WXZJcURiRzdxT1U4VHlsNXZGUklISjI4Nnc0TFZSajlGM2dkX3FLQTJEdWxNdmdWWVpsbUNkVzRyTUliN2ZGdm9ybV9hSUNrOTE1WHB1UFJ1T1pDOGdpQ0l3TFZta0RrWG96aEM3NXJIVDgxMQ?oc=5",
+            "published": "Wed, 07 Oct 2026 17:38:23 GMT",
+            "source": "Oncology Nursing News",
+            "globalDiscovery": true,
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 21.67
+          },
+          {
+            "title": "AMD CEO says continues to explore foundry partnership with Samsung Electronics - Reuters",
+            "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVnpmbEtsYzhNazY0T25QU3BtdW9qVUdFQVk0UFVaUkhPN3VZdXJjUk1fU2U3Y3pleVR2TUxxd05ObHVpNEVLLVZiZmZsUkJtU05GbUJGZmtHeVM0MXc3dE9WTEZIajh6OEdVZWk5OXlDVkJkam1VUTdSWHI5ZmZEakthTTVZN29JSm1XbHNxMXVmUzk1YjhpakE0R3BRS3NMUG5LX3ZzSkhCQWJQbmdQcmpnRF9sWnFHbFVwNV9rclhWWUFXd3l4UWpB?oc=5",
+            "published": "Wed, 07 Oct 2026 07:49:25 GMT",
+            "source": "Reuters",
+            "eventType": "OTHER",
+            "impactScore": 17.82
+          },
+          {
+            "title": "HPE Stock Hits Record High After Company Adds 4 AMD-Powered Servers For Enterprise AI",
+            "url": "https://stocktwits.com/news-articles/markets/equity/hpe-stock-hits-record-high-after-company-adds-4-amd-powered-servers-for-enterprise-ai/cZDvgSqRBmM?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 14:45:31 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 7.29
+          },
+          {
+            "title": "Citi Raises AMD Price Target to $800 on Meta AI Demand",
+            "url": "https://www.tikr.com/blog/amd-stock-citi-raises-price-target-800-meta-ai-demand?ref=yahoofinance&.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 13:27:27 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 3.65
+          },
+          {
+            "title": "AMD to ramp up CPU, GPU supply in 2027 as AI demand surges - Network World",
+            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOHlhQUxpVXAxdEg4djVGYm9pUHNzbnI1UFM3bjhTcjRTRF9sb011SWx2M3lyR2lSN2xlMTNpUk5tQUNmWmJHODM4dVpXc1IwbGdYUDE3aVhtazFOU24xOHBhR0NIV1R2eUxKcU5jM21NMDlJejd1eE5WRlNWcWkydkNqalFFTE5zME5iNHdNT29zY3NJZTRDUU93QldZN2ZMVmNkakg1RQ?oc=5",
+            "published": "Wed, 07 Oct 2026 12:10:35 GMT",
+            "source": "Network World",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 3.65
+          },
+          {
+            "title": "Advanced Micro Devices (AMD) Stock Sees Modest Fair Value Lift As AI Analysts Rework Targets",
+            "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-stock-151220023.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 15:12:20 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Nvidia Takes Aim at Intel’s $32 Billion PC Business With Microsoft’s Surface Laptop Ultra",
+            "url": "https://www.tikr.com/blog/nvidia-takes-aim-at-intels-32-billion-pc-business-with-microsofts-surface-laptop-ultra?ref=yahoofinance&.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 14:40:58 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "AMD Is Up More Than 100X in 10 Years. Can It Repeat That Run?",
+            "url": "https://247wallst.com/investing/2026/10/07/amd-is-up-more-than-100x-in-10-years-can-it-repeat-that-run/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 14:00:23 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 3 material events; lead event: REGULATORY / CLINICAL",
+        "rank": 1
+      },
+      {
+        "ticker": "ON",
+        "name": "ON Semiconductor Corporation",
+        "price": 82.4,
+        "change5d": 7.19,
+        "change20d": 16.09,
+        "rsi": 76.2,
+        "ema20": 78.03,
+        "ema50": 79.32,
+        "atr": 3.18,
+        "relVolume": 0.44,
+        "volatilityPct": 3.86,
+        "high20": 86.92,
+        "low20": 65.8,
+        "newsScore": 50.0,
+        "technicalScore": 29.05,
+        "score": 100.0,
+        "setup": "Catalyst + momentum",
+        "entry": 82.4,
+        "stop": 64.81,
+        "tp1": 117.57,
+        "tp2": 138.68,
+        "rr": 3.2,
+        "confidence": 70.0,
+        "whyNow": "EARNINGS / GUIDANCE: Neogen (NEOG) Q1 Revenue Beats Estimates as Company Focuses on O - GuruFocus | 5D momentum +7.2% | price above EMA20",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (EARNINGS / GUIDANCE) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Neogen (NEOG) Q1 Revenue Beats Estimates as Company Focuses on O - GuruFocus",
+          "AMO Pharma in Collaboration with Population Health Research Institute (PHRI) and Venca Research Inc. Announces FDA Advice on Potential Phase 3 Development Path for AMO-02 in Treatment of Arrhythmogenic Cardiomyopathy (ACM) - PR Newswire",
+          "Strengthening partnerships on the water > United States Coast Guard > My Coast Guard News - United States Coast Guard (.mil)",
+          "Mingteng International Corporation (MTEN) Stock Rocketed Nearly 83% After Hours on $15 Million Acquisition Deal - Benzinga"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $64.81 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Neogen (NEOG) Q1 Revenue Beats Estimates as Company Focuses on O - GuruFocus",
+            "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQeFZMRVp0WjNkdmYtZmI0VlgxM0ctR3BFSlM1SU4xTXNaci0tYUF3ZmNjclhPV01Fam1yZXNmS1MxQ3pscThzWGpWYlhpRklXRE9uSjVQWUIyZXVEVDdQVU54REJQMW9lUmpNSWtiV3Q3cE00dDB1Qm1FZWZGUHZqODJOQ2FhMmpqN1VpWm16TnZtOF9WR2pjSDFoMGtwVzZQM2VCV0VCLTNoTFN6cDlpTUNCNGFKUk13SmU1WlhfYw?oc=5",
+            "published": "Tue, 06 Oct 2026 21:04:01 GMT",
+            "source": "GuruFocus",
+            "globalDiscovery": true,
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 35.44
+          },
+          {
+            "title": "AMO Pharma in Collaboration with Population Health Research Institute (PHRI) and Venca Research Inc. Announces FDA Advice on Potential Phase 3 Development Path for AMO-02 in Treatment of Arrhythmogenic Cardiomyopathy (ACM) - PR Newswire",
+            "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxONnZEbGpPM2JmN2JDM3dNY19ZNXQyUF9udmpkb0pnQWp4cmQ2NFkyR1FYNl9GcW9hTGw2eVR5SUtGMWw0RGo3RkxORGFNaThncmlTYkJ4c1ZuQVZrWC1Ra2QyS1ZjSlV6Q0VOQUNHdy0yQUJNUVlJV0p0YWp0bFY1dUJrS1RFdjRZSFh3U3hsVGI1WXFWaFNKODZiZTJtYkJsblJtdUVjWkNVb3BGZC1nYlR6VzJoYV9ZSXJxbExwLXFSVVpJVGNHQnRybGQzcUQ0c3Z6THlleng2dS12UHZ3Vm1yMGRtdzh0dktEampCWmhxdFBlZUpwOTdJdWpyYTNlSWdESnJWT2dqaVI5ZEVZWjdBMnF5QW9ub2NaMVZZbmJtT21oVnZlZ2VqbG9aR1hTZzJ3S1FKSl9pREpyLTRVX3Mtd1JTTldPcTVaUmVpTG5sYmxuSFVnc3RTeEVFeGVSOUpzQk45N3pqaXhacUlHWDBMRUJQb2RhdEd5UzVsM0lneFdnX3Q1dw?oc=5",
+            "published": "Wed, 07 Oct 2026 12:00:00 GMT",
+            "source": "PR Newswire",
+            "globalDiscovery": true,
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 34.63
+          },
+          {
+            "title": "Strengthening partnerships on the water > United States Coast Guard > My Coast Guard News - United States Coast Guard (.mil)",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQWptQjBXa01KcWxCQkU0X3VxN0Vma1lsQy15MFRadFl4VldkWkNoQU9XaFhrWmlmMExLXzR2NHJHVmJGbFJLTEtQeUVPX1VyUFV0cUhRVWdIQVdYUGhQSTRPVDVkRVd6dUh3ZFNKZGZISW9MS2xHZFVvelhrbnN1Wlk2bEJzaWJyZWZDZFNQT0c?oc=5",
+            "published": "Wed, 07 Oct 2026 18:21:42 GMT",
+            "source": "United States Coast Guard (.mil)",
+            "eventType": "OTHER",
+            "impactScore": 22.28
+          },
+          {
+            "title": "Mingteng International Corporation (MTEN) Stock Rocketed Nearly 83% After Hours on $15 Million Acquisition Deal - Benzinga",
+            "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTk1iV1dMTHF1aGlwOUNrQTdWQmdzdlR0ZTBwTENGM0xJMkNfcDBlNkdieWlJdUJ2WkZXRFNvbzF1N25yZWpUQk9tbXhsN1BFd1NtMG9pTXctUmRKZ2Vra0Rtamh4VkZQbnJVLVBvM2Y0dEVBMTJKaTZVSzRNaGI3YmdiUXlfanNrR0lCNkRNRFhsdTRWdU8ydUpxR051bGFlMlJ6WHFfbElkX0diUURIYmZQQ19TQjJOd0hBX0ItOWZFLUFrN0E?oc=5",
+            "published": "Wed, 07 Oct 2026 05:18:50 GMT",
+            "source": "Benzinga",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 17.82
+          },
+          {
+            "title": "Southern Cross Acquisition II Corp. Announces the Separate Trading of its Ordinary Shares, Warrants and Rights, Commencing on October 8, 2026 - Yahoo Finance",
+            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNejVuaEVXZnE5amJ5UFVRckNuZkVJN20yMjBtYjZ3STNnUlM1MXNBdk1UYXhMS2hvR0FiN08tZkZITnhzaHlMbHY3UXMtTnF6REZhOGtKV3NDdzJQVXpKaFh4M1JnYlY0RUo4TFE3ZVpoQUowVzRwZmNnVGJ3TmNrYURfUmt6VHFscnNPdU5jVHdhbjRQVll6Q01mVjJNbmlx?oc=5",
+            "published": "Tue, 06 Oct 2026 20:05:00 GMT",
+            "source": "Yahoo Finance",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 15.59
+          },
+          {
+            "title": "Securitize Soars 10% on LG CNS Partnership, Eyeing Korea for “Next Phase of Institutional Tokenization” - TIKR.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNTN3VVNXc1FoZTZCX21PY3ZRcDNyajB4LTNmVWhHTjJsYlBQc0VSYVlES1d2bDZ1ZWNWUnJseW1PT0JicTZtczlLTEw5dDNuc3o5SUd1YXJ4dDJXakVBaHdSenM5YXJLWTlqX2lUcWI2bE5DRGdLSGhmay1EbFpIQm4yeWVMSFNiR0YteUk3c2xXSHByeVA0STRrTVVvdHhVWF85a2d4SlRzcEhqcklNM1I2azdid2JKc05LMERIdWJJOXM?oc=5",
+            "published": "Tue, 06 Oct 2026 19:00:08 GMT",
+            "source": "TIKR.com",
+            "globalDiscovery": true,
+            "eventType": "OTHER",
+            "impactScore": 15.59
+          },
+          {
+            "title": "Wall Street Skittish on Skydance as Stock Drops Further Post-Merger - Variety",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWDJyQVhYa2R6QVV0dWhIX05vZEVlRE9HVC1DYUlUQ3FUTE1qMXdOOC1hVURnOFVMTXRmSVhGQ3hKeDdlNFhHRkdVdGxMSEp6WlZZeWpsLTlUMURuRDAya1FkWnBhb2Fpd1dJVmNKOFFSNllYM1pHYU8zSi1RSjU3MUZ4VlFrNDhTU1FxTi1ISW4?oc=5",
+            "published": "Wed, 07 Oct 2026 14:46:00 GMT",
+            "source": "Variety",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 12.76
+          },
+          {
+            "title": "Skydance Stock Drops 2.7% on First Day of Trading After Paramount-WBD Merger Close - Variety",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNS0tCU0xYX3ZrNzd1alZQWjdtU1M4WVlKaFBkdXBEaFZrbHgtSEpNb3hJR0ZtVUFOOFNwZXp3Q0kzcE50eWhyaFY3ZlhkcGFYekozMmV0eFNaS2RyWnpXbUIwdzVlc05jYjVabWZWV1E5NUtoT0JMR1VuR29HbGtPQVZNZHFKVm9WWE5IOVpoaWhONkxjY1dielln?oc=5",
+            "published": "Tue, 06 Oct 2026 20:06:00 GMT",
+            "source": "Variety",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 9.92
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 9 material events; lead event: EARNINGS / GUIDANCE",
+        "rank": 2
+      },
+      {
+        "ticker": "FSLR",
+        "name": "First Solar, Inc.",
+        "price": 179.05,
+        "change5d": 2.22,
+        "change20d": -11.84,
+        "rsi": 33.3,
+        "ema20": 186.26,
+        "ema50": 200.19,
+        "atr": 7.38,
+        "relVolume": 0.43,
+        "volatilityPct": 4.12,
+        "high20": 214.18,
+        "low20": 168.6,
+        "newsScore": 50.0,
+        "technicalScore": 5.9,
+        "score": 100.0,
+        "setup": "Catalyst setup",
+        "entry": 179.05,
+        "stop": 166.07,
+        "tp1": 205.01,
+        "tp2": 220.58,
+        "rr": 3.2,
+        "confidence": 66.0,
+        "whyNow": "REGULATORY / CLINICAL: FDA Approves Tukysa Plus Trastuzumab and Pertuzumab as First-Line Maintenance Treatment for HER2-Positive Metastatic Breast Cancer - Pharmaceutical Executive | 5D momentum +2.2%",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (REGULATORY / CLINICAL) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "FDA Approves Tukysa Plus Trastuzumab and Pertuzumab as First-Line Maintenance Treatment for HER2-Positive Metastatic Breast Cancer - Pharmaceutical Executive",
+          "Can Record Module Volume Lift First Solar (NASDAQ:FSLR) Into Earnings? - Kalkine Media",
+          "Skydance Stock Drops 2.7% on First Day of Trading After Paramount-WBD Merger Close - Variety",
+          "First Solar, Inc. $FSLR Stake Trimmed by Two Seas Capital LP - MarketBeat"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $166.07 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "FDA Approves Tukysa Plus Trastuzumab and Pertuzumab as First-Line Maintenance Treatment for HER2-Positive Metastatic Breast Cancer - Pharmaceutical Executive",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQXhheEFyaG9Zb2xQb2V1ZTZpZ1cyLUY0T0UxN014S2FMQUt3Y1doWGJaR0pTaWRmZGhpX0xzY3ZySjRhT04zeUtKV0JHcktSdFUzc2xHamRJbmRqMVRvTl90clVXRjlieF9aX05aT3R1NTBpWU55ZG5HTlJiRUZSTjlYcGgweG1ZRy01QUdaYVp2VkJ0TVhCOXNYa0k2WFpkX201elpTLWc1MENOcTltMHh3?oc=5",
+            "published": "Wed, 07 Oct 2026 18:10:13 GMT",
+            "source": "Pharmaceutical Executive",
+            "globalDiscovery": true,
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 26.77
+          },
+          {
+            "title": "Can Record Module Volume Lift First Solar (NASDAQ:FSLR) Into Earnings? - Kalkine Media",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVHk5Z3prX0Q2RFlnd0k5a2R4c1lNcENGLUVDTnROMWJ3ZmxDS1U3SzlOY3lidVNueGswTERKb3hQNXBhTkNOY3paUXhuZVhqMGZYMTY1LXI1ZHpqVy14clRTTGZoSHhDd1VVRl9zRXRCRTAxeG05dHo5eVN4VmFQNzA4TGpkczFpOFViM0pNdlZOS2Nwa0FtbjZBTU5QRkM1WGlzbVBlM1FyNUlX?oc=5",
+            "published": "Wed, 07 Oct 2026 07:24:00 GMT",
+            "source": "Kalkine Media",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 9.72
+          },
+          {
+            "title": "Skydance Stock Drops 2.7% on First Day of Trading After Paramount-WBD Merger Close - Variety",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNS0tCU0xYX3ZrNzd1alZQWjdtU1M4WVlKaFBkdXBEaFZrbHgtSEpNb3hJR0ZtVUFOOFNwZXp3Q0kzcE50eWhyaFY3ZlhkcGFYekozMmV0eFNaS2RyWnpXbUIwdzVlc05jYjVabWZWV1E5NUtoT0JMR1VuR29HbGtPQVZNZHFKVm9WWE5IOVpoaWhONkxjY1dielln?oc=5",
+            "published": "Tue, 06 Oct 2026 20:06:00 GMT",
+            "source": "Variety",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 6.25
+          },
+          {
+            "title": "First Solar, Inc. $FSLR Stake Trimmed by Two Seas Capital LP - MarketBeat",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWlgycnI0RWhMZEZKa1lVaFM3ektZb2dCempfYmJYNkxBMlJRSEJsZXVESWJYcnhLel80aFhQMk9uSjVjN3lZREpIUHJmRVpicWtnNmJUMXNYSjdpdkVqV3VUNGlFVVJjMlM1UzRZSmdJTHc5b0tycGlWQl9wQXd5NmprbmZ1NjJlMXlCMlUzNlFZcGh5a0dhUjgtbmdCYVJ5WnY3NDc4UWlSWGdvb0pDRWpxRWVYM29LNmc?oc=5",
+            "published": "Tue, 06 Oct 2026 23:13:13 GMT",
+            "source": "MarketBeat",
+            "eventType": "OTHER",
+            "impactScore": 5.67
+          },
+          {
+            "title": "Will First Solar (FSLR) Beat Estimates Again in Its Next Earnings Report?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-beat-estimates-151004150.html?.tsrc=rss",
+            "published": "Thu, 01 Oct 2026 15:10:04 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 4.05
+          },
+          {
+            "title": "First Solar (NASDAQ:FSLR) Stays in Focus as Grid Power Demand Climbs - Kalkine Media",
+            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcm9LYmVRSEE2RU5OX3pkbFduUjN6dWk1Q0JaSUUtNndMUElVdDNVdHVGVFNiSXlaUmVESWM4QWdrVE9PdktXVGpyV3hkX21NcU41NEpKVVNOd2p3NFJ1WmVCZHdDd2MxcXRTdGpwNGQ2RVBCWUFqTnNEb1VNM0t6Vzl6MXZDek9ZbkhJNUtDa1ZINlBFcmZnNG9PT3h6TEswREFXTVRCZXEzM28?oc=5",
+            "published": "Wed, 07 Oct 2026 13:44:00 GMT",
+            "source": "Kalkine Media",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 3.65
+          },
+          {
+            "title": "First Solar (FSLR) Could Be 34% Below Fair Value As Earnings Near",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-could-34-011046243.html?.tsrc=rss",
+            "published": "Sat, 03 Oct 2026 01:10:46 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 1.35
+          },
+          {
+            "title": "How to Play FSLR Stock as First Solar Wages an International Solar Panel Legal Battle",
+            "url": "https://www.barchart.com/story/news/4982482/how-to-play-fslr-stock-as-first-solar-wages-an-international-solar-panel-legal-battle?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 12:45:56 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 9 material events; lead event: REGULATORY / CLINICAL",
+        "rank": 3
+      },
+      {
+        "ticker": "RBLX",
+        "name": "Roblox Corporation",
+        "price": 46.42,
+        "change5d": 9.56,
+        "change20d": 4.27,
+        "rsi": 47.2,
+        "ema20": 45.02,
+        "ema50": 44.82,
+        "atr": 2.47,
+        "relVolume": 0.66,
+        "volatilityPct": 5.32,
+        "high20": 51.96,
+        "low20": 40.75,
+        "newsScore": 39.02,
+        "technicalScore": 30.35,
+        "score": 100.0,
+        "setup": "Catalyst + momentum",
+        "entry": 46.42,
+        "stop": 40.14,
+        "tp1": 58.98,
+        "tp2": 66.52,
+        "rr": 3.2,
+        "confidence": 67.0,
+        "whyNow": "OTHER: Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 4%, Take-Two Holds Steady | 5D momentum +9.6% | price above EMA20",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 4%, Take-Two Holds Steady",
+          "Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 3%, Take-Two Holds Steady - 24/7 Wall St.",
+          "Roblox shares fall as Google and Unity launch AI-powered game creation platform",
+          "Roblox Stock Slips as Google, Unity Launch AI Platform for Building Games - Benzinga"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $40.14 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 4%, Take-Two Holds Steady",
+            "url": "https://247wallst.com/investing/2026/10/07/unity-climbs-4-as-google-partnership-opens-game-creation-to-non-coders-roblox-drops-3-take-two-holds-steady/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 13:11:57 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 12.62
+          },
+          {
+            "title": "Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 3%, Take-Two Holds Steady - 24/7 Wall St.",
+            "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNWVFaOHphbGI1Y0F6RVFVLW1POXVIQnJ4SFBQS0RRWlp6R3JrcWJuUHNpZmZNTDROV0dOT29NM21CbjIyTFVLd1VQeHh0cy1ocm9jUGdPNW55ckQweFZPSjh6d216TzdOWUNLMGNBWV8ycXZxOVdDakp0OVVNZUtCRUctNHdpNWhhTUNMeTRyamJvcC13ajFyOVc0cXQ2eXNfLWNwODhvSHZIT241NmZCMk5fS0p6VEFCZXg3ODd3RUxGdDA3MWRTcFpnYy0wTGlTZEV2Nmd1aU1XOWQwdHR5VGFBc1pOUQ?oc=5",
+            "published": "Wed, 07 Oct 2026 13:11:00 GMT",
+            "source": "24/7 Wall St.",
+            "eventType": "OTHER",
+            "impactScore": 12.62
+          },
+          {
+            "title": "Roblox shares fall as Google and Unity launch AI-powered game creation platform",
+            "url": "https://finance.yahoo.com/technology/ai/articles/roblox-shares-fall-google-unity-124448958.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 12:44:48 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 4.59
+          },
+          {
+            "title": "Roblox Stock Slips as Google, Unity Launch AI Platform for Building Games - Benzinga",
+            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQaWt5bG9MelFoNVI4SV96bzVhTVFnSm1CLWFLd1E4VjRvbHkySUJ5VnFzZ3huVDZGNlk1S19HYm0yUDhkelRGUHhBclpfbEVDV0NCN05jSEVtUk9iendGZWdTMnphbmhrejFtOHZWVTYtTDNqYUtQOEpOZ1pQTlhNX2NSN2QzLWpSNU1EYzhicmxpN0YtMlg2cjBWQjJNQW1oODFsdXdQQ0lrcjF0a1JGUG9fVWxNQkctZFpBM0w2eDNJR3hDT1JGR2FzakpDdw?oc=5",
+            "published": "Wed, 07 Oct 2026 14:28:29 GMT",
+            "source": "Benzinga",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 4.59
+          },
+          {
+            "title": "Roblox shares fall as Google and Unity launch AI-powered game creation platform - Investing.com",
+            "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNXBRLW1pM0JDN2F5TFpkdzNPMUtNTUp2bDZkRUZobjl0d0VIWDRJMUxmOVE0V2VKWGxHU01CQXlQcHF0M056dTZaZVROS3BoaFMybUh5MDRrNm56RTI5OG81QTAwMkhTVlZEZ3N4d29PTGRjRmt6NGJma3VhR0drbDNTRFFSaFh2UVlFQWk3U3d1b01oNy02cEtZMjZueVJSMFoxbG1xQTY3ZG1DUjU1UE5KSThoa2pGbVJ3MDhOb2FDb281dkh0SS1ndWczWlpt?oc=5",
+            "published": "Wed, 07 Oct 2026 12:16:05 GMT",
+            "source": "Investing.com",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 4.59
+          },
+          {
+            "title": "Google and Unity’s New Gaming Platform Is a Threat to Roblox. Why It Could Lure Creators Away.",
+            "url": "https://finance.yahoo.com/m/362091da-4b9c-3a36-8811-2a8185faaae9/google-and-unity%E2%80%99s-new-gaming.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 14:13:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Roblox Shares Fall as Google and Unity Announce AI Game Creation Platform",
+            "url": "https://investorshub.advfn.com/market-news/article/37631/roblox-shares-fall-as-google-and-unity-announce-ai-game-creation-platform?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 12:38:53 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Roblox (RBLX) Has Lost Two Thirds of Its Value. Is the User Growth Still Real?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-rblx-lost-two-thirds-023309223.html?.tsrc=rss",
+            "published": "Sun, 04 Oct 2026 02:33:09 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 6 material events; lead event: OTHER",
+        "rank": 4
+      },
+      {
+        "ticker": "RIVN",
+        "name": "Rivian Automotive, Inc.",
+        "price": 14.24,
+        "change5d": -4.72,
+        "change20d": -11.06,
+        "rsi": 34.5,
+        "ema20": 15.03,
+        "ema50": 15.52,
+        "atr": 0.61,
+        "relVolume": 0.61,
+        "volatilityPct": 4.3,
+        "high20": 16.81,
+        "low20": 13.96,
+        "newsScore": 37.1,
+        "technicalScore": 4.3,
+        "score": 91.2,
+        "setup": "Catalyst setup",
+        "entry": 14.24,
+        "stop": 13.41,
+        "tp1": 15.89,
+        "tp2": 16.88,
+        "rr": 3.2,
+        "confidence": 62.0,
+        "whyNow": "EARNINGS / GUIDANCE: Rivian Automotive earnings beat by $0.03, revenue fell short of estimates - Investing.com",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (EARNINGS / GUIDANCE) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Rivian Automotive earnings beat by $0.03, revenue fell short of estimates - Investing.com",
+          "Tesla, Rivian, and Uber Are Down Between 16% and 26%. Here's the Best Buy for the Robotaxi Takeover.",
+          "Rivian Escapes the EV Graveyard—But Can It Stay Alive? - MarketBeat",
+          "LCID Stock Stays Flat After-Hours On Q3 Sales Dip While TSLA, RIVN Beat Estimates"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $13.41 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Rivian Automotive earnings beat by $0.03, revenue fell short of estimates - Investing.com",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS1Ezc3ZoRlNvX1czdkFDc1VuM2dZa19BVWhadkQxaE53ZUVSblhrNlI5X0tqdkZSelBEUGctRjBVY25oY1o1c0dBWUJsZUd6cXE3MEkydklybmp1bzVfUi1VbUJudjlGSE5wU0xNV2dsTGVBUFFXYTNsbnZWYzRCMHEyOUxRYWw5ZUVPc3A0WVhGWnQ3VU9fUnJHRWNGTVF0a204X3lFOVotSi1zRXI5N0plQ05wbXJxcFE?oc=5",
+            "published": "Tue, 06 Oct 2026 10:43:40 GMT",
+            "source": "Investing.com",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 15.84
+          },
+          {
+            "title": "Tesla, Rivian, and Uber Are Down Between 16% and 26%. Here's the Best Buy for the Robotaxi Takeover.",
+            "url": "https://www.fool.com/investing/2026/10/07/tesla-rivian-and-uber-are-down-between-16-and-26-h/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 12:10:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "M&A",
+            "impactScore": 8.03
+          },
+          {
+            "title": "Rivian Escapes the EV Graveyard—But Can It Stay Alive? - MarketBeat",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYWluWmVfWTkxSTROVjNYZ1ItdzU4M2RtSlp6emxJZkZwNEJINU5rWC00MGdoRkRod1JRYVp6RUYyWldhMjM3dTJuSmstbWlMWTFoMVdTZ0VUc3JlRHRnMWYyTmlOVEYwWTkwOW93Vy1aNDQzOWR4ZXBPcUZVZUR3LUZIbXB4WE9VYktsUnk5ZHpnbU0?oc=5",
+            "published": "Wed, 07 Oct 2026 12:04:53 GMT",
+            "source": "MarketBeat",
+            "eventType": "OTHER",
+            "impactScore": 4.59
+          },
+          {
+            "title": "LCID Stock Stays Flat After-Hours On Q3 Sales Dip While TSLA, RIVN Beat Estimates",
+            "url": "https://stocktwits.com/news-articles/markets/equity/lcid-stock-stays-flat-after-hours-on-q3-sales-dip-while-tsla-rivn-beat-estimates/cZDqXBjRBjs?.tsrc=rss",
+            "published": "Mon, 05 Oct 2026 23:31:20 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 4.32
+          },
+          {
+            "title": "Rivian Automotive (NASDAQ:RIVN) Stock Price Up 2.1% - Time to Buy? - MarketBeat",
+            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWk5xdjJaLUZqVThUTWJiS2prbU1BZ2VydkJfUTd1X2g2TFBEcFBIdU5XZlRzSTlmbXItZFU4MkxISzIxYmJtdGRfNk9vSWI3eGpSNG9CWUJaSWhQNzg3Rk5SanduV2REM3ZUV29Bd3pMUmMySFhDdjRjZE1xOGlBOTRYREdldEVGQzN4UTNFcXltWlUzSktHREYwMFhLSC1vc2hGSHJYQzlaM2lyX3RFWjhWc2hYMkhxNkZZ?oc=5",
+            "published": "Mon, 05 Oct 2026 21:24:24 GMT",
+            "source": "MarketBeat",
+            "eventType": "OTHER",
+            "impactScore": 4.32
+          },
+          {
+            "title": "Rivian Beats Quarterly Delivery Estimates on Strong Cheaper R2 SUV Demand",
+            "url": "https://www.tikr.com/blog/rivian-record-q3-deliveries-r2-suv-beats-estimates?ref=yahoofinance&.tsrc=rss",
+            "published": "Mon, 05 Oct 2026 12:51:15 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 4.25
+          },
+          {
+            "title": "Tesla, Rivian Deliveries Beat Estimates: Analysts Explain Why TSLA Rallied While RIVN Fell",
+            "url": "https://stocktwits.com/news-articles/markets/equity/tesla-rivian-deliveries-beat-estimates-analysts-explain-why-tsla-rallied-while-rivn-fell/cZDm6zHRBKr?.tsrc=rss",
+            "published": "Sat, 03 Oct 2026 00:24:42 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 2.7
+          },
+          {
+            "title": "Should Reaffirmed Delivery Guidance Require Action From Rivian (RIVN) Investors? - Simply Wall Street",
+            "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOR1M4QjM3MnN6UVhDbW9lajZFZXBzTmJFQU5RdFZEbVMwSjJobWVVS1hUNm1waVpmMGcxV0tEQVlFR2lyVEpxeW01TjhscjIxd3lvTHZvYXY4bGZHWVhHS1hMOWpwdFJ5c1NEMEpzWTExOGdIdU9Hb1RQcFFwV3o4dE5EdTJ6ZG1TNUJtbnIxRWN5bmVNOWdlWVpaRUg0UEpVLW53QWxzYTR1UXZhdWo2M0duOC1Vald2UTAzNDBqQzlCMmt6Wlg5UEN1QVl6MFloOGs4bzRn0gHbAUFVX3lxTE1BWUVWY0d4THEtNk1oQXdDTU5aTGlZdTBtbU5oalliTERkS2RBdFZRTi00VXB4QTMzQVJPYVh6OXRHcTZvaE5yVXBiOHpta3JEMnUwTmYyZ0FqSTlMUHAzUG9rbkFOcFBsN2wwcUFCZTJzb2liU2NWMHRnRm51ZUs1dm9rNEI1anVmNTRGMVlTT3ZhUE5LMnZBVVNLczluT3ZnWC00emIwanp5ZGVKWG1WOGtMWUp5MWxpZGdtb0JwVGVUbVdPM2hKeWhmN2x1VXctQWRaYW0zelFzbw?oc=5",
+            "published": "Tue, 06 Oct 2026 09:27:47 GMT",
+            "source": "Simply Wall Street",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 2.16
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 4 material events; lead event: EARNINGS / GUIDANCE",
+        "rank": 5
+      }
+    ],
+    "method": "Daily market data + Yahoo ticker news + Google News RSS global event discovery + company-specific multi-edition news + technical confirmation.",
+    "disclaimer": "Automated research/ranking using free public data sources. This is not financial advice. Stop-loss and profit targets are model scenarios and may not execute at those prices, especially in volatile or gapping markets."
+  },
+  {
     "asOf": "2026-10-06",
     "generatedAt": "2026-10-06T18:27:59.310805+00:00",
     "mode": "FREE DAILY NEWS-FIRST SCAN",

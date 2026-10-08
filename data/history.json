@@ -1,5 +1,534 @@
 [
   {
+    "asOf": "2026-10-08",
+    "generatedAt": "2026-10-08T18:53:47.988932+00:00",
+    "mode": "FREE DAILY NEWS-FIRST SCAN",
+    "universeSize": 70,
+    "candidatesScanned": 69,
+    "globalHeadlinesDiscovered": 0,
+    "newsDrivenCandidates": 32,
+    "picks": [
+      {
+        "ticker": "UBER",
+        "name": "Uber Technologies, Inc.",
+        "price": 69.44,
+        "change5d": 2.3,
+        "change20d": -4.3,
+        "rsi": 44.8,
+        "ema20": 70.07,
+        "ema50": 71.79,
+        "atr": 1.48,
+        "relVolume": 0.45,
+        "volatilityPct": 2.13,
+        "high20": 73.06,
+        "low20": 67.22,
+        "newsScore": 35.23,
+        "technicalScore": 7.97,
+        "score": 92.8,
+        "setup": "Catalyst setup",
+        "entry": 69.44,
+        "stop": 66.21,
+        "tp1": 75.9,
+        "tp2": 79.77,
+        "rr": 3.2,
+        "confidence": 62.0,
+        "whyNow": "M&A: Uber’s M&A Playbook Faces Scrutiny: CFO Says Acquisitions Can Beat Building From Scratch | 5D momentum +2.3%",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (M&A) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Uber’s M&A Playbook Faces Scrutiny: CFO Says Acquisitions Can Beat Building From Scratch",
+          "Uber and China’s Pony.ai plan to launch robotaxis in London",
+          "Uber Technologies (UBER): Strong Operational Growth Offset by Soft Guidance",
+          "Uber’s $2.3B ezCater Deal Continues Push Into Catering by Delivery Platforms"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $66.21 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Uber’s M&A Playbook Faces Scrutiny: CFO Says Acquisitions Can Beat Building From Scratch",
+            "url": "https://stocktwits.com/news-articles/markets/equity/uber-s-m-and-a-playbook-faces-scrutiny-cfo-says-acquisitions-can-beat-building-from-scratch/cZDUQvKRBN2?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 09:15:03 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "M&A",
+            "impactScore": 24.3
+          },
+          {
+            "title": "Uber and China’s Pony.ai plan to launch robotaxis in London",
+            "url": "https://finance.yahoo.com/technology/ai/articles/uber-china-pony-ai-plan-125339256.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 12:53:39 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 7.29
+          },
+          {
+            "title": "Uber Technologies (UBER): Strong Operational Growth Offset by Soft Guidance",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-uber-strong-operational-141051947.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 14:10:51 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 3.65
+          },
+          {
+            "title": "Uber’s $2.3B ezCater Deal Continues Push Into Catering by Delivery Platforms",
+            "url": "https://www.franchisetimes.com/franchise_news/uber-s-2-3b-ezcater-deal-continues-push-into-catering-by-delivery-platforms/article_41279df9-5c20-4fb4-9109-b01f2c8a49b7.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 14:25:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Uber vs. Pony AI: Which Company Has the Edge in the Robotaxi Race?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/uber-vs-pony-ai-company-134100521.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 13:41:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Chewy vs. Uber Technologies: Which Consumer Stock Is a Better Buy in 2026?",
+            "url": "https://www.fool.com/coverage/better-buy/2026/10/07/chewy-vs-uber-technologies-which-consumer-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 03:14:54 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Uber agrees to purchase ezCater for $2.3bn",
+            "url": "https://www.verdictfoodservice.com/news/uber-agrees-to-purchase-ezcater/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 14:27:30 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Uber Technologies (UBER) Settles Third Bellwether Sexual Assault Lawsuit",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-uber-settles-third-151007241.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 15:10:07 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "RISK EVENT",
+            "impactScore": -11.34
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 4 material events; lead event: M&A",
+        "rank": 1
+      },
+      {
+        "ticker": "UPST",
+        "name": "Upstart Holdings, Inc.",
+        "price": 23.86,
+        "change5d": 3.99,
+        "change20d": -4.92,
+        "rsi": 42.0,
+        "ema20": 24.58,
+        "ema50": 26.53,
+        "atr": 1.01,
+        "relVolume": 0.52,
+        "volatilityPct": 4.22,
+        "high20": 26.61,
+        "low20": 22.56,
+        "newsScore": 14.87,
+        "technicalScore": 7.41,
+        "score": 71.9,
+        "setup": "Catalyst setup",
+        "entry": 23.86,
+        "stop": 22.22,
+        "tp1": 27.16,
+        "tp2": 29.14,
+        "rr": 3.2,
+        "confidence": 56.0,
+        "whyNow": "OTHER: Upstart Expands Credit Union Network With Denver Partnership | 5D momentum +4.0%",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Upstart Expands Credit Union Network With Denver Partnership",
+          "Upstart Jumps 6% as Its Own Macro Index Ticks Down; Synchrony Financial Holds Flat, OneMain Holdings Barely Budges",
+          "Credit Union of Denver Partners with Upstart to Expand Access to Personal Lending",
+          "Upstart Holdings, Inc. (UPST) Stock Sinks As Market Gains: Here's Why"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $22.22 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Upstart Expands Credit Union Network With Denver Partnership",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/upstart-expands-credit-union-network-161900520.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 16:19:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 14.02
+          },
+          {
+            "title": "Upstart Jumps 6% as Its Own Macro Index Ticks Down; Synchrony Financial Holds Flat, OneMain Holdings Barely Budges",
+            "url": "https://247wallst.com/investing/2026/10/05/upstart-jumps-6-as-its-own-macro-index-ticks-down-synchrony-financial-holds-flat-onemain-holdings-barely-budges/?.tsrc=rss",
+            "published": "Mon, 05 Oct 2026 17:06:52 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 0.85
+          },
+          {
+            "title": "Credit Union of Denver Partners with Upstart to Expand Access to Personal Lending",
+            "url": "https://finance.yahoo.com/small-business/articles/credit-union-denver-partners-upstart-130000739.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 13:00:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Upstart Holdings, Inc. (UPST) Stock Sinks As Market Gains: Here's Why",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/upstart-holdings-inc-upst-stock-210004741.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 21:00:04 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Upstart to Announce Third Quarter 2026 Results on November 3, 2026",
+            "url": "https://finance.yahoo.com/technology/ai/articles/upstart-announce-third-quarter-2026-200500644.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 20:05:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Stocks making big moves yesterday: Harley-Davidson, Illumina, TechnipFMC, Upstart, and DraftKings",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-192834933.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 19:28:34 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Does Upstart (UPST) Expanding Credit Union HELOCs Reveal a Durable Edge in AI Lending Platforms?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/does-upstart-upst-expanding-credit-020747293.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 02:07:47 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Why Is Upstart (UPST) Stock Soaring Today",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-upstart-upst-stock-soaring-001900183.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 00:19:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 1 material events; lead event: OTHER",
+        "rank": 2
+      },
+      {
+        "ticker": "SPCE",
+        "name": "Virgin Galactic Holdings, Inc.",
+        "price": 2.91,
+        "change5d": -2.62,
+        "change20d": 0.06,
+        "rsi": 41.9,
+        "ema20": 3.05,
+        "ema50": 3.03,
+        "atr": 0.17,
+        "relVolume": 0.67,
+        "volatilityPct": 5.68,
+        "high20": 3.38,
+        "low20": 2.86,
+        "newsScore": 13.6,
+        "technicalScore": 5.02,
+        "score": 68.4,
+        "setup": "Catalyst + momentum",
+        "entry": 2.91,
+        "stop": 2.69,
+        "tp1": 3.36,
+        "tp2": 3.63,
+        "rr": 3.2,
+        "confidence": 55.0,
+        "whyNow": "OTHER: Virgin Galactic Receives Final Approval by the Court to Settle Derivative Claims With No Findings of Wrongdoing",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Virgin Galactic Receives Final Approval by the Court to Settle Derivative Claims With No Findings of Wrongdoing",
+          "Virgin Galactic (SPCE) Stock Looks Undervalued Even With Launch Delays",
+          "Virgin Galactic Holdings (SPCE) Pushes First Commercial Spaceflight Launch To February 2027",
+          "SPCE Q2 Earnings Call Flags Delay but Strong Ticket Demand"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $2.69 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Virgin Galactic Receives Final Approval by the Court to Settle Derivative Claims With No Findings of Wrongdoing",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-receives-final-approval-130000938.html?.tsrc=rss",
+            "published": "Tue, 18 Aug 2026 13:00:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 3.3
+          },
+          {
+            "title": "Virgin Galactic (SPCE) Stock Looks Undervalued Even With Launch Delays",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-spce-stock-looks-081151369.html?.tsrc=rss",
+            "published": "Sat, 15 Aug 2026 08:11:51 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 2.7
+          },
+          {
+            "title": "Virgin Galactic Holdings (SPCE) Pushes First Commercial Spaceflight Launch To February 2027",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-holdings-spce-pushes-200851047.html?.tsrc=rss",
+            "published": "Fri, 14 Aug 2026 20:08:51 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 2.7
+          },
+          {
+            "title": "SPCE Q2 Earnings Call Flags Delay but Strong Ticket Demand",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/spce-q2-earnings-call-flags-140000604.html?.tsrc=rss",
+            "published": "Fri, 14 Aug 2026 14:00:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 2.7
+          },
+          {
+            "title": "Virgin Galactic Shares Sink After Spaceflight Launch Delay",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-shares-sink-spaceflight-184949186.html?.tsrc=rss",
+            "published": "Thu, 13 Aug 2026 18:49:49 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 2.2
+          },
+          {
+            "title": "Intuitive Machines vs. Virgin Galactic: Which Has More Potential?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/intuitive-machines-vs-virgin-galactic-060300331.html?.tsrc=rss",
+            "published": "Thu, 01 Oct 2026 06:03:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Intuitive Machines and Virgin Galactic Jump 10% While Rocket Lab, AST SpaceMobile Sit Out the Space Stock Rally",
+            "url": "https://247wallst.com/investing/2026/08/14/intuitive-machines-and-virgin-galactic-jump-10-while-rocket-lab-ast-spacemobile-sit-out-the-space-stock-rally/?.tsrc=rss",
+            "published": "Fri, 14 Aug 2026 14:12:15 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "7 relevant headlines; 4 material events; lead event: OTHER",
+        "rank": 3
+      },
+      {
+        "ticker": "RBLX",
+        "name": "Roblox Corporation",
+        "price": 45.72,
+        "change5d": 6.31,
+        "change20d": 1.86,
+        "rsi": 44.6,
+        "ema20": 45.09,
+        "ema50": 44.85,
+        "atr": 2.51,
+        "relVolume": 0.48,
+        "volatilityPct": 5.49,
+        "high20": 51.96,
+        "low20": 40.75,
+        "newsScore": 10.2,
+        "technicalScore": 23.8,
+        "score": 82.8,
+        "setup": "Catalyst + momentum",
+        "entry": 45.72,
+        "stop": 40.14,
+        "tp1": 56.87,
+        "tp2": 63.56,
+        "rr": 3.2,
+        "confidence": 57.0,
+        "whyNow": "OTHER: Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 4%, Take-Two Holds Steady | 5D momentum +6.3% | price above EMA20",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 4%, Take-Two Holds Steady",
+          "Roblox shares fall as Google and Unity launch AI-powered game creation platform",
+          "1 Stat That Makes Roblox Hard to Ignore Right Now",
+          "GameStop Rises 4% but Stays Far Below Its Warrant Strike; Take-Two Interactive Gains 3%, Roblox Falls 3%"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $40.14 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Unity Climbs 4% as Google Partnership Opens Game Creation to Non-Coders; Roblox Drops 4%, Take-Two Holds Steady",
+            "url": "https://247wallst.com/investing/2026/10/07/unity-climbs-4-as-google-partnership-opens-game-creation-to-non-coders-roblox-drops-3-take-two-holds-steady/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 13:11:57 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 7.48
+          },
+          {
+            "title": "Roblox shares fall as Google and Unity launch AI-powered game creation platform",
+            "url": "https://finance.yahoo.com/technology/ai/articles/roblox-shares-fall-google-unity-124448958.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 12:44:48 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 2.72
+          },
+          {
+            "title": "1 Stat That Makes Roblox Hard to Ignore Right Now",
+            "url": "https://www.fool.com/investing/2026/10/08/1-stat-that-makes-roblox-hard-to-ignore-right-now/?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 17:45:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "GameStop Rises 4% but Stays Far Below Its Warrant Strike; Take-Two Interactive Gains 3%, Roblox Falls 3%",
+            "url": "https://247wallst.com/investing/2026/10/08/gamestop-rises-4-but-stays-far-below-its-warrant-strike-take-two-interactive-gains-3-roblox-falls-3/?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 17:00:11 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Roblox to Report Third Quarter 2026 Financial Results on October 29, 2026",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-report-third-quarter-2026-130000142.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 13:00:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Roblox CEO, Singapore Fund Join $100 Million Round in Universal Quantum",
+            "url": "https://finance.yahoo.com/technology/ai/articles/roblox-ceo-singapore-fund-join-050002563.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 05:00:02 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Google and Unity’s New Gaming Platform Is a Threat to Roblox. Why It Could Lure Creators Away.",
+            "url": "https://finance.yahoo.com/m/362091da-4b9c-3a36-8811-2a8185faaae9/google-and-unity%E2%80%99s-new-gaming.html?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 14:13:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Roblox Shares Fall as Google and Unity Announce AI Game Creation Platform",
+            "url": "https://investorshub.advfn.com/market-news/article/37631/roblox-shares-fall-as-google-and-unity-announce-ai-game-creation-platform?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 12:38:53 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 1 material events; lead event: OTHER",
+        "rank": 4
+      },
+      {
+        "ticker": "OKLO",
+        "name": "Oklo Inc.",
+        "price": 34.13,
+        "change5d": -5.55,
+        "change20d": -14.41,
+        "rsi": 36.3,
+        "ema20": 37.63,
+        "ema50": 40.75,
+        "atr": 1.93,
+        "relVolume": 1.05,
+        "volatilityPct": 5.66,
+        "high20": 41.29,
+        "low20": 33.7,
+        "newsScore": 9.72,
+        "technicalScore": 5.0,
+        "score": 64.5,
+        "setup": "Technical confirmation",
+        "entry": 34.13,
+        "stop": 31.52,
+        "tp1": 39.36,
+        "tp2": 42.49,
+        "rr": 3.2,
+        "confidence": 54.0,
+        "whyNow": "PRODUCT / TECHNOLOGY: How Deep Borehole Disposal Breakthrough At Oklo (OKLO) Has Changed Its Investment Story",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (PRODUCT / TECHNOLOGY) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "How Deep Borehole Disposal Breakthrough At Oklo (OKLO) Has Changed Its Investment Story",
+          "Energy Fuels Falls 9% as Uranium and Reactor Names Sell Off Together; Oklo and Centrus Energy Drop 5%",
+          "OKLO Nearly Halved in 2026: 240% Returns to Materialize in 12 Months Says One Wall Street Pro",
+          "Nuclear Stocks Rally as Google’s Reactor Deal Lifts the Sector: NANO Nuclear Energy and Oklo Jump 8%, NuScale Power Gains 7%"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $31.52 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "How Deep Borehole Disposal Breakthrough At Oklo (OKLO) Has Changed Its Investment Story",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/deep-borehole-disposal-breakthrough-oklo-220859953.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 22:08:59 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 9.72
+          },
+          {
+            "title": "Energy Fuels Falls 9% as Uranium and Reactor Names Sell Off Together; Oklo and Centrus Energy Drop 5%",
+            "url": "https://247wallst.com/investing/2026/10/07/energy-fuels-falls-9-as-uranium-and-reactor-names-sell-off-together-oklo-and-centrus-energy-drop-5/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 18:02:20 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "OKLO Nearly Halved in 2026: 240% Returns to Materialize in 12 Months Says One Wall Street Pro",
+            "url": "https://247wallst.com/investing/2026/10/07/oklo-nearly-halved-in-2026-240-returns-to-materialize-in-12-months-says-one-wall-street-pro/?.tsrc=rss",
+            "published": "Wed, 07 Oct 2026 16:45:11 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Nuclear Stocks Rally as Google’s Reactor Deal Lifts the Sector: NANO Nuclear Energy and Oklo Jump 8%, NuScale Power Gains 7%",
+            "url": "https://247wallst.com/investing/2026/10/06/nuclear-stocks-rally-as-googles-reactor-deal-lifts-the-sector-nano-nuclear-energy-jumps-8-oklo-climbs-8-nuscale-power-gains-7/?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 16:00:10 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Oklo vs. NuScale Power: Which Utilities Stock Is a Better Buy in 2026?",
+            "url": "https://www.fool.com/coverage/better-buy/2026/10/05/oklo-vs-nuscale-power-which-utilities-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 01:15:08 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Everyone's Watching Oklo and NuScale for Nuclear Exposure. This Company Actually Fuels Them.",
+            "url": "https://www.fool.com/investing/2026/10/04/everyone-s-watching-oklo-and-nuscale-for-nuclear-exposure-this-company-actually-fuels-them/?.tsrc=rss",
+            "published": "Sun, 04 Oct 2026 14:57:01 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "6 relevant headlines; 1 material events; lead event: PRODUCT / TECHNOLOGY",
+        "rank": 5
+      }
+    ],
+    "method": "Daily market data + Yahoo ticker news + Google News RSS global event discovery + company-specific multi-edition news + technical confirmation.",
+    "disclaimer": "Automated research/ranking using free public data sources. This is not financial advice. Stop-loss and profit targets are model scenarios and may not execute at those prices, especially in volatile or gapping markets."
+  },
+  {
     "asOf": "2026-10-07",
     "generatedAt": "2026-10-07T18:58:39.880333+00:00",
     "mode": "FREE DAILY NEWS-FIRST SCAN",

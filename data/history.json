@@ -1,5 +1,572 @@
 [
   {
+    "asOf": "2026-10-09",
+    "generatedAt": "2026-10-09T18:24:39.778592+00:00",
+    "mode": "FREE DAILY NEWS-FIRST SCAN",
+    "universeSize": 70,
+    "candidatesScanned": 69,
+    "globalHeadlinesDiscovered": 145,
+    "newsDrivenCandidates": 60,
+    "picks": [
+      {
+        "ticker": "AI",
+        "name": "C3.ai, Inc.",
+        "price": 11.69,
+        "change5d": 6.13,
+        "change20d": 10.86,
+        "rsi": 70.1,
+        "ema20": 10.94,
+        "ema50": 10.5,
+        "atr": 0.45,
+        "relVolume": 0.6,
+        "volatilityPct": 3.81,
+        "high20": 11.75,
+        "low20": 10.2,
+        "newsScore": 50.0,
+        "technicalScore": 37.06,
+        "score": 100.0,
+        "setup": "Catalyst + momentum",
+        "entry": 11.69,
+        "stop": 10.05,
+        "tp1": 14.96,
+        "tp2": 16.93,
+        "rr": 3.2,
+        "confidence": 72.0,
+        "whyNow": "EARNINGS / GUIDANCE: TCS Shares Rise 4% As Q2 Profit Beats Estimates, AI Revenue Crosses $3.1 Bn - BW Businessworld | 5D momentum +6.1% | price above EMA20 | RSI 70 confirms momentum",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (EARNINGS / GUIDANCE) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "TCS Shares Rise 4% As Q2 Profit Beats Estimates, AI Revenue Crosses $3.1 Bn - BW Businessworld",
+          "Overview of Company's Cash Acquisition Deal - Intellectia AI",
+          "Apple Cuts October Component Orders for iPhone 18 Pro Models by 15-20% - Intellectia AI",
+          "Velotic Appoints Enterprise AI Leader Houman Behzadi to Board of Directors"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $10.05 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "TCS Shares Rise 4% As Q2 Profit Beats Estimates, AI Revenue Crosses $3.1 Bn - BW Businessworld",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUGJDTW9PSEdPVXRWbnBZSUtBR2EwUi1WcjktV2NqR3ZEZnhIWGpoNTdrZmxKUi1pbGZiRG5JSTJuM29pWXFndk5TUU83ci1EWEJNLXpMMmVLWkdBcmxkMzVRZ3VfNzRiTHZZdGwxMUFKampyYWEtckRncTNHVHVMWG5oR185U21SMklnTW5Cb0k1T2I0eXlPVlRlR04tZFhKRmlEODJadW0ycUd4dDFFVDBUUGxtYzQ?oc=5",
+            "published": "Fri, 09 Oct 2026 00:30:05 GMT",
+            "source": "BW Businessworld",
+            "globalDiscovery": true,
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 35.44
+          },
+          {
+            "title": "Overview of Company's Cash Acquisition Deal - Intellectia AI",
+            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOY1lNWVRiNmtVTHZqMnFYcTlVNmYyVDRCbGxjX2tLNC05TE4tOHIxVVBYVV82WlZ4ZzNSS2wwaGhtNHhWeWNHWFR3bUVZTlRBRlJvSGo3a2Zkakg3V2tCaE9PTDBTQjZNdzBjZFJmSnBZdFpjdnhocWotejE3MGJ4bGlR?oc=5",
+            "published": "Fri, 09 Oct 2026 05:23:57 GMT",
+            "source": "Intellectia AI",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 17.82
+          },
+          {
+            "title": "Apple Cuts October Component Orders for iPhone 18 Pro Models by 15-20% - Intellectia AI",
+            "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQ2poMEdpVHpGSHNKUndSanRvVXFvLWdUWk9FWFpyaVIwbk5CQVV0M0dKZ1c0amRLWXFCU1AxRFZlYnV6aUMydkVLZFRqeHc4eUJOejA1a01mcnlTQVlzTktOZXVkOWtHZ3FlczZ6cWw1VXkyMGhGcENNUW1leG1udHFZUzZrQl8wdW1LVWx2MldPVldsZFdDSzBsY2RzQktabGN6bw?oc=5",
+            "published": "Fri, 09 Oct 2026 08:38:15 GMT",
+            "source": "Intellectia AI",
+            "globalDiscovery": true,
+            "eventType": "CONTRACT / ORDERS",
+            "impactScore": 6.48
+          },
+          {
+            "title": "Velotic Appoints Enterprise AI Leader Houman Behzadi to Board of Directors",
+            "url": "https://finance.yahoo.com/technology/ai/articles/velotic-appoints-enterprise-ai-leader-130000749.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 13:00:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "monday.com, CrowdStrike, Asana, C3.ai, and Palo Alto Networks Shares Skyrocket, What You Need To Know",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/monday-com-crowdstrike-asana-c3-213634140.html?.tsrc=rss",
+            "published": "Tue, 06 Oct 2026 21:36:34 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "3 Reasons AI is Risky and 1 Stock to Buy Instead",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-ai-risky-1-214700205.html?.tsrc=rss",
+            "published": "Mon, 05 Oct 2026 21:47:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "C3.ai (AI) Catches A Macro Lift On An Overvalued Narrative",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/c3-ai-ai-catches-macro-201208530.html?.tsrc=rss",
+            "published": "Fri, 02 Oct 2026 20:12:08 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "C3.ai, Inc. (AI) Is a Trending Stock: Facts to Know Before Betting on It",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/c3-ai-inc-ai-trending-120004588.html?.tsrc=rss",
+            "published": "Fri, 02 Oct 2026 12:00:04 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 6 material events; lead event: EARNINGS / GUIDANCE",
+        "rank": 1
+      },
+      {
+        "ticker": "TSM",
+        "name": "Taiwan Semiconductor Manufacturing Company Limited",
+        "price": 451.48,
+        "change5d": -4.51,
+        "change20d": 4.21,
+        "rsi": 53.6,
+        "ema20": 453.64,
+        "ema50": 438.64,
+        "atr": 11.25,
+        "relVolume": 0.65,
+        "volatilityPct": 2.49,
+        "high20": 487.47,
+        "low20": 412.55,
+        "newsScore": 50.0,
+        "technicalScore": 16.17,
+        "score": 100.0,
+        "setup": "Catalyst + momentum",
+        "entry": 451.48,
+        "stop": 406.36,
+        "tp1": 541.72,
+        "tp2": 595.86,
+        "rr": 3.2,
+        "confidence": 68.0,
+        "whyNow": "REGULATORY / CLINICAL: Taiwan Semiconductor (TSM) Posts Strong Q3 Revenue Beat Amid AI Demand Surge - GuruFocus | RSI 54 confirms momentum",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (REGULATORY / CLINICAL) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Taiwan Semiconductor (TSM) Posts Strong Q3 Revenue Beat Amid AI Demand Surge - GuruFocus",
+          "TSM's Record Sales Couldn't Stop a 3% Slide - Moomoo",
+          "ASIC Material Disclosure: Asia Insurance discloses acquisition of 25.42% stake by Private Limited - Investify",
+          "Taiwan Semiconductor Manufacturing (TSM) Posts Record Q3 Revenue And Unveils $2 Billion Supply Deal - Simply Wall Street"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $406.36 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Taiwan Semiconductor (TSM) Posts Strong Q3 Revenue Beat Amid AI Demand Surge - GuruFocus",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnJKQmRqeGZvMnprck5EM0hMVDVNbjRmLUVTdERXV1dsem9jR2V6WTBwdHRlaFRWRUdfci1tWjNOSUVITDhEV0xtYWxhUzVCd21nTFRFTkFYZjI0eU9RNEpDRWtpdndaTGRtWjZkYmJZNnRnaEZ2ejl6dmsySkJRemV5V0NlRklHdWtyNldoWUVoWXZaZGlCOGJRVFdVTWtfRmp3cXFETzBPN2I2UW1VNGVmNA?oc=5",
+            "published": "Fri, 09 Oct 2026 14:20:10 GMT",
+            "source": "GuruFocus",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 20.05
+          },
+          {
+            "title": "TSM's Record Sales Couldn't Stop a 3% Slide - Moomoo",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbEhudzg3M2FqR0FfcWpYeWdabmdoQVZqNFlPeE5Ud0VCMmxJcFRoclo1MU5EczhQWk1JRU1KVUNYY1JDeTNSUmtYSEtCU3VNWVM4U1VmZmtES1lQQ1JNUlBSWFhwX0dINmstLWxDQzI2MGROVHVFSXhZSVlhNXNvd3NNTTNuYnNENEQxX3FVcEJoeFVicFl1QWdMb0s?oc=5",
+            "published": "Fri, 09 Oct 2026 03:56:15 GMT",
+            "source": "Moomoo",
+            "eventType": "OTHER",
+            "impactScore": 14.58
+          },
+          {
+            "title": "ASIC Material Disclosure: Asia Insurance discloses acquisition of 25.42% stake by Private Limited - Investify",
+            "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1tb2xmVHF6cW10YWwxZEdfaHRkM1FUSno0M056aUJYWkVwYzN1TUs3VUUzdy1EWnVWbUpIX09Nc2ozc1Q3VzhjeGc3UnhBMGFVZDEydFBKbHFVMHRXWFRSX1RnZ0tEX0Z1RUF2dTRRYw?oc=5",
+            "published": "Fri, 09 Oct 2026 07:41:55 GMT",
+            "source": "Investify",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 11.22
+          },
+          {
+            "title": "Taiwan Semiconductor Manufacturing (TSM) Posts Record Q3 Revenue And Unveils $2 Billion Supply Deal - Simply Wall Street",
+            "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxONDF0QV9ZU1JSdGwxYUEycS1OZ3FJMEtCeHNPRW5XcHI3LVdNUXV5UE9aQ0V1cW5sZU00UFRYd1lQS0JGallBLWNsY1VTdG5DYUxYVks5NU9FS2F0V1k3bmFCTkRmRVZsdXJTdzFnY0hjd2RmdGNTV1NXUWV6cWlxM1h6UVJmTml0WkVDVDMyenh2dndraVZ3aTAwRHotYmdPZFVtdzZSbG9YaU5oajdDdlgtcEZsVk12TDJwSUpqSHdrYncyaFJqWXRFQ0tGVmIzYlM4ZGtha3VnSV9iWm9LVXFyRU9TWXQ1SUFuZNIB8gFBVV95cUxQTHhvRkNSMWw3dnAwSWJsYzBaWTFtWnNfRDhBYnA1eHFVek5XSm1jV1hTWjk0QkRyNEszSTFDNm5TTjhtZkpaUThaUThuTnQ4MW90MnA2eDBadmFjUnJwV0JaZnJkOVc2SXJYUzV3dk5DVEtmUW9tczFkdkFfbjBxend4WktWRFFOQnluNFAtVnd4bThrZjh0TmFYTXo0T0NIVjFoZG5PZG00b3Nza2VycVVjZTc0THprNEpfU1ZVajBnY2VNS0ZOcUwxR3Z2MDdxV0FEY1NKc1ZhOEw0Q2FhRVVXNGR3SEdybl9NTnRNQUZoQQ?oc=5",
+            "published": "Fri, 09 Oct 2026 17:25:36 GMT",
+            "source": "Simply Wall Street",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 8.1
+          },
+          {
+            "title": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Stock Purchased by Wedmont Private Capital - MarketBeat",
+            "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNNW9YMFZBSERnR2NyU3lDY1g1UVJaVWxMZ04yZm9aU21UVFdtd1RBc3NUclYxaXhLZFQ3MVBpS1RNS3ZMaGV5Rm1WN0Z1dWIzYUxfYjhkSWlLdEgyNkJMUXM1c2JPN21GTTMzTWlSVUNUbXpzVk9SX2VlT2ZpNkJyRFZCdFNMeE1YdDRyX1doQUVtSGREUWlWa2J3bmhMa1lRX0g4VkdRdTZYd3ROTUZ6U0dyNnRGR1RYcEkzMG05QWQzY21COXRwZ2FkZjEzaFZpQklkSl9CeXF6N0hsV0N5QVZ5eEZDWmZWcXc?oc=5",
+            "published": "Fri, 09 Oct 2026 17:45:25 GMT",
+            "source": "MarketBeat",
+            "eventType": "OTHER",
+            "impactScore": 8.1
+          },
+          {
+            "title": "Taiwan Semiconductor Manufacturing's Earnings Call Eve: Foreign Brokerages Set NT$4,000 Target Price, Focus on AI Demand and Musk Collaboration - BigGo Finance",
+            "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAzN2JVY1VnZmo3WVBUU2VhMjN0elFuLU1NRUV5U1RHOVgydUNFbU1tN2xRdG1OUTJEWFdFQ09lYlFrN0FLYVZUbVlMUmxPYjU4ZGFYZWVHS1ZqVDctd0JfM0p3d1pCSjhwLWdDZlpKblI1TE9ZTFE?oc=5",
+            "published": "Fri, 09 Oct 2026 11:55:00 GMT",
+            "source": "BigGo Finance",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 6.75
+          },
+          {
+            "title": "Why Is TSM Stock Rising Premarket? - Stocktwits",
+            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPX0IzT1pGZ1JESnZlRkdkampTalg2ODFiSExpME4wZUtNVHJWSzR1U1pDNWFkcXAyeVlyVjl3NVFQamg5dmdVVE1uYWhxVE9ta2RwRXVrcy13RW1UTjhQTU56RWV5allqYm5mNENqTkpXSExmTjdhSU5sT1dRZHJXNUxyRDhxdEo4dEdFeTBscUlVenhSTmVfa18tUFNSQQ?oc=5",
+            "published": "Fri, 09 Oct 2026 02:07:34 GMT",
+            "source": "Stocktwits",
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 2.84
+          },
+          {
+            "title": "Taiwan Semiconductor Vs. ASML: If I Had to Choose One For the Next 5 Years, It’s This One",
+            "url": "https://247wallst.com/investing/2026/10/09/taiwan-semiconductor-vs-asml-if-i-had-to-choose-one-for-the-next-5-years-its-this-one/?.tsrc=rss",
+            "published": "Fri, 09 Oct 2026 16:45:59 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 7 material events; lead event: REGULATORY / CLINICAL",
+        "rank": 2
+      },
+      {
+        "ticker": "FSLR",
+        "name": "First Solar, Inc.",
+        "price": 178.46,
+        "change5d": 2.21,
+        "change20d": -14.62,
+        "rsi": 31.7,
+        "ema20": 184.96,
+        "ema50": 198.6,
+        "atr": 6.92,
+        "relVolume": 0.35,
+        "volatilityPct": 3.88,
+        "high20": 211.67,
+        "low20": 168.6,
+        "newsScore": 50.0,
+        "technicalScore": 5.64,
+        "score": 100.0,
+        "setup": "Catalyst setup",
+        "entry": 178.46,
+        "stop": 166.07,
+        "tp1": 203.25,
+        "tp2": 218.13,
+        "rr": 3.2,
+        "confidence": 66.0,
+        "whyNow": "REGULATORY / CLINICAL: Milestone Pharmaceuticals Announces First European Study Participant Enrolled in ReVeRA-301 Phase 3 Clinical Trial - The Manila Times | 5D momentum +2.2%",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (REGULATORY / CLINICAL) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "Milestone Pharmaceuticals Announces First European Study Participant Enrolled in ReVeRA-301 Phase 3 Clinical Trial - The Manila Times",
+          "FDA Approves First Colon Cancer Indication for Roche’s Tecentriq - Genome Web",
+          "A trial of a nasal spray for fast, irregular heartbeats enrolls its first European patient. - Stock Titan",
+          "Teva Announces U.S. Food and Drug Administration (FDA) Approval of WELTRUZA™ (Olanzapine) For Extended-Release Injectable Suspension, as the First and Only Once-Monthly Subcutaneous Injectable Olanzapine for Adults with Schizophrenia - Teva Pharmaceuticals"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $166.07 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "Milestone Pharmaceuticals Announces First European Study Participant Enrolled in ReVeRA-301 Phase 3 Clinical Trial - The Manila Times",
+            "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQLXZjMUpta2JGb0w5TDJRT25pYWRsUy1KQTRNWUY2R0FiZC04aVA3clpDeGtHWTFqQm4ta1VXenFnNkcxQXUzOVF4djl2ejFrYnlQRjNyUnI4b1ZLdTBnSVRjZUlLN2VVOWF3ODNsamJIMjlaUlp6QnIyWXNQbktuYkZDZko3QTUyOGR6cTE2dk9ZalUtSW5WbEhCdUt5WVVRMVFPOWJQMjIxVElSZEJhYldSYTR6bTN1RHE0U09FNjI2c1gzbkI4TXRRZnFJY083dGpDMDh6bVhwUTQ5eFZYYjFCTVlEaDJwQXROOG1sX25iSFNZaDVJNW1UaUtOUHJQbjlENXBQZDFBc0JnQml6bVFhS0JkQ0xvaDhwWdIBnAJBVV95cUxQLXZjMUpta2JGb0w5TDJRT25pYWRsUy1KQTRNWUY2R0FiZC04aVA3clpDeGtHWTFqQm4ta1VXenFnNkcxQXUzOVF4djl2ejFrYnlQRjNyUnI4b1ZLdTBnSVRjZUlLN2VVOWF3ODNsamJIMjlaUlp6QnIyWXNQbktuYkZDZko3QTUyOGR6cTE2dk9ZalUtSW5WbEhCdUt5WVVRMVFPOWJQMjIxVElSZEJhYldSYTR6bTN1RHE0U09FNjI2c1gzbkI4TXRRZnFJY083dGpDMDh6bVhwUTQ5eFZYYjFCTVlEaDJwQXROOG1sX25iSFNZaDVJNW1UaUtOUHJQbjlENXBQZDFBc0JnQml6bVFhS0JkQ0xvaDhwWQ?oc=5",
+            "published": "Fri, 09 Oct 2026 12:08:17 GMT",
+            "source": "The Manila Times",
+            "globalDiscovery": true,
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 21.8
+          },
+          {
+            "title": "FDA Approves First Colon Cancer Indication for Roche’s Tecentriq - Genome Web",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOempoZ3BFV3p2OWpnUUQ2ZDZaVW5LdmFBaHFCUkZJT1psYVF4VUR1bHRScWtuQjVOU243RGI5MXZzdTRFZWZhWFpmVVFWZE1HNGlsSVBhRUhVSjh0dHpvTU1oZjJ6NGRMT0lJZlc2My1mcU1naUNsUEEzSEMxcDEtbWJDQTR3cXJqYUF6V09oeVZXUC1OeDNZVlJCWnI1LW1URkdNQWhfdmhucWZWNHpF?oc=5",
+            "published": "Fri, 09 Oct 2026 12:43:00 GMT",
+            "source": "Genome Web",
+            "globalDiscovery": true,
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 19.51
+          },
+          {
+            "title": "A trial of a nasal spray for fast, irregular heartbeats enrolls its first European patient. - Stock Titan",
+            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcmNwWGZMRmNCLTFFYlJDXzlPSU83ejZCRFc5ZjMydFJWVzJIQm9FQ2FXd2VoNkN3MlluNGdHcDVUcWhMY1FIQTM4ZFpmTEF3d0NoTEkweU1yVjVudVZTSHA4Tnp1blRId0Rhc2RIMHVpMGttdmJVZ2dvdnE4b0lNRk8zdHZTUFBGZklYNFZ4MUZtNHNuU0RUcVU2UTJYRlNsTGpjNGJGcVhyTG9xLVl5S2RHM0NsWVc1dFk2TlJqc2U?oc=5",
+            "published": "Fri, 09 Oct 2026 12:00:00 GMT",
+            "source": "Stock Titan",
+            "globalDiscovery": true,
+            "eventType": "OTHER",
+            "impactScore": 9.18
+          },
+          {
+            "title": "Teva Announces U.S. Food and Drug Administration (FDA) Approval of WELTRUZA™ (Olanzapine) For Extended-Release Injectable Suspension, as the First and Only Once-Monthly Subcutaneous Injectable Olanzapine for Adults with Schizophrenia - Teva Pharmaceuticals",
+            "url": "https://news.google.com/rss/articles/CBMiywNBVV95cUxQV1NMcTdkbFZwcVpKRWphcWw0WW5yZVlqRU51emd1RmFNdGZURkZ2dW5hZldTanJRVW1lVzVlM2xncEFJRFlPd2RVQVBTWVlWVGhyUDVScXlmT3lUTVc0a2ptN0tFcS1iZFViSUt4VV91R0J4RWp0bkNFMzhWUDVsaWdYUzZ6M3h6ajlGYkhRRjBIQm5DVkJzcGZQODJ3eTEyOTI1ajhNXzVnSzh0WWhJRmZnNkZ4eTNEamhRZndGMHlFOTdTQkt6Y3FKLU9VSExfX25LN0h5VTZpYjlIRDJnaFkxX3VNc1JISXVOWWFER3Z0b2szXzV5ekpCcm5vb2R2THBUMjdLNDFmVFBtYWVNVDVzRUtNenI2bFU5MThMRWhVSl9SWTJqdkQ3SFhuMGpnQkQxODlWRGdRdmdQVkhJU2dGaFI0Q1hEQ2lQRkViQVd2el9JaGluTWp0ZE4xajFuTUxYTHNOYllfQjJHR0h0UXJ3ZE1vby1YWTYxSk9HU1dScC1reGZvYUYzZnRZaDJXRjZUNmxEMURER0tZbjloekFEdUo0U3NTQ3VodXJzOE01T3JyblNqWjNRdHM2WjM4LV9NcDVkZXdxQm8?oc=5",
+            "published": "Fri, 09 Oct 2026 11:14:14 GMT",
+            "source": "Teva Pharmaceuticals",
+            "globalDiscovery": true,
+            "eventType": "REGULATORY / CLINICAL",
+            "impactScore": 9.18
+          },
+          {
+            "title": "Skydance CEO David Ellison Outlines 4 Goals For Merger Success, Company Targets $2B In First-Year Synergies - Stocktwits",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPS0FKT29SaTJucEhZYmZ1cG5XMS00dmx2aWlkbXg1Y0ROTEVTMXM2WVdXa25MVWtvYVBpcHVfN2RhS3k5SC13cVdfV3JqM0xEb19QQTNrM0ZHQzQwTHMyX1hESW9QTHNoZTdfaTFsZ2gwTGZGdXVNQVVJTTduVWxCOWFaUXM1d3BPcmZGeGNDc0xaR0pHdUROUVFEaTUxWmlZeFFPSV91UEhGNjdydFdkX2dWcGFUSjNfN1ZMUVNWQXhrdw?oc=5",
+            "published": "Fri, 09 Oct 2026 08:23:53 GMT",
+            "source": "Stocktwits",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 7.14
+          },
+          {
+            "title": "Teva, Already Up 26% This Year, Surges Again On First-Of-Its-Kind Approval - Investor's Business Daily",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUm5wRE9pbXhRYjl2cXFWNDdzUU0zcHpiRE8xeHdIN01WUWpuVU5mYTJxMmVybnlZMG1Gb1NHYzU1NmdNbDMtYmdIVmo0czVieGdDSnJkVTE1d2ZfbTNxcGJYc1NQMkpBZXZKT2s5dWdaTThRaE9qZ2tiVDJVbzZ3aDRzV3RXWjBGbmtkYTE2eExBZ0hXT0lSNmdoemdNN2NWY3Rz?oc=5",
+            "published": "Fri, 09 Oct 2026 13:48:00 GMT",
+            "source": "Investor's Business Daily",
+            "globalDiscovery": true,
+            "eventType": "OTHER",
+            "impactScore": 6.88
+          },
+          {
+            "title": "First Solar (NASDAQ:FSLR) Stock Price Target Lowered at The Goldman Sachs Group - MarketBeat",
+            "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPYklmZDg0X2ZwOGlBdkJKQi11SDV6SXl6YzRBNUlGVkp5U2FPS1Rnelh1STdQQnFWNEdpSVRyU3FxNnFCNXBWT0NqbnR1eU5PUUUyN2VpVk45azUzMDI4YzFzdi1LNkhOcGpGMUstUDNpY1FybnlfOG5rN3ZiX09XREZqZWlpS0NWRldKaVVWa05VcHZNX1llb0tPcTVKOTFCMER2aVRuWlRjWkEyVWZJdHNfV2w5bGF2b24tX3JYSGFNbTBYMmJBTXBhVTc0V1Z2dXNIaHpR?oc=5",
+            "published": "Thu, 08 Oct 2026 12:53:22 GMT",
+            "source": "MarketBeat",
+            "eventType": "OTHER",
+            "impactScore": 4.32
+          },
+          {
+            "title": "Will First Solar (FSLR) Beat Estimates Again in Its Next Earnings Report?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-beat-estimates-151004150.html?.tsrc=rss",
+            "published": "Thu, 01 Oct 2026 15:10:04 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "EARNINGS / GUIDANCE",
+            "impactScore": 4.05
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 8 material events; lead event: REGULATORY / CLINICAL",
+        "rank": 3
+      },
+      {
+        "ticker": "RKLB",
+        "name": "Rocket Lab Corporation",
+        "price": 68.88,
+        "change5d": -6.82,
+        "change20d": 9.42,
+        "rsi": 48.1,
+        "ema20": 70.21,
+        "ema50": 71.93,
+        "atr": 3.91,
+        "relVolume": 0.52,
+        "volatilityPct": 5.68,
+        "high20": 78.28,
+        "low20": 60.51,
+        "newsScore": 32.23,
+        "technicalScore": 11.77,
+        "score": 93.4,
+        "setup": "Catalyst + momentum",
+        "entry": 68.88,
+        "stop": 59.6,
+        "tp1": 87.44,
+        "tp2": 98.57,
+        "rr": 3.2,
+        "confidence": 62.0,
+        "whyNow": "M&A: VEEA Stock Rockets On NovaGen Merger And Trollee Deal - StocksToTrade",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (M&A) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "VEEA Stock Rockets On NovaGen Merger And Trollee Deal - StocksToTrade",
+          "VEEA Stock Rockets On NovaGen Merger Deal And Trollee Rollout - StocksToTrade",
+          "RKLB Rises Overnight: Cathie Wood’s ARK Puts Neutron ‘Close To The Falcon 9’ — Firms ‘In Dire Need’ Of Launches",
+          "SpaceX eyes near back-to-back rocket launches in California. Watch live - The Desert Sun"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $59.60 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "VEEA Stock Rockets On NovaGen Merger And Trollee Deal - StocksToTrade",
+            "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE55ZkdwamxoNVg2TVJiWkVyLTB6WFRzWDhYUktCc1FNY3pETnJBSm5xc0h4WEVhSktTTkpXbTIxM0x5aWdWMGtGcHVPN1Z2R1NWNzlBVmwtdTNYRFlLdmFhdmYzcVl3aHNSOWNiNXdnSjg?oc=5",
+            "published": "Fri, 09 Oct 2026 13:18:00 GMT",
+            "source": "StocksToTrade",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 8.03
+          },
+          {
+            "title": "VEEA Stock Rockets On NovaGen Merger Deal And Trollee Rollout - StocksToTrade",
+            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9qQ1F1a1VHc0phV3Y2c0pnLXhyTF9GSVZYbTA2c1YtR1lPTnQ2ejhQMDc4V2V6cWpBWVFSWkFaZjRmSDRJd2RjbjVxTDI0cTRFa0NoTzh0dVIwbEhRTTVTVWZ3QjFJcG9fWXRORTZ3?oc=5",
+            "published": "Fri, 09 Oct 2026 11:47:00 GMT",
+            "source": "StocksToTrade",
+            "globalDiscovery": true,
+            "eventType": "M&A",
+            "impactScore": 8.03
+          },
+          {
+            "title": "RKLB Rises Overnight: Cathie Wood’s ARK Puts Neutron ‘Close To The Falcon 9’ — Firms ‘In Dire Need’ Of Launches",
+            "url": "https://stocktwits.com/news-articles/markets/equity/rklb-cathie-wood-ark-neutron-close-falcon-9-firms-dire-need-launches/cZD6gN8RBV1?.tsrc=rss",
+            "published": "Fri, 09 Oct 2026 05:15:23 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 6.48
+          },
+          {
+            "title": "SpaceX eyes near back-to-back rocket launches in California. Watch live - The Desert Sun",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdHNCUS1vbHlUVnVnQjZ2VWt3elRDc2JLTldNWFR5UDhmd1Y3aWNCN3l0a0FfUGoxTzNKNW5tNHdsUFdxbnJ5LXgxSWhqV1NNYXk4bnVPeGFIaW5qeXlwbS1oMXhzSlByNmU0aEQxV2dfRjlNNjRnMnpDamRMU0tnQThkVGRyUGxBY2JsZWNnS29GdzlVWldib2VhaUNlNWlBcTNGd2I0TE9NM3NT?oc=5",
+            "published": "Fri, 09 Oct 2026 16:01:00 GMT",
+            "source": "The Desert Sun",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 5.1
+          },
+          {
+            "title": "Hiring US-to-China Oil Tanker Costs More Than Launching a Space Rocket - Bloomberg.com",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcV96TC1RNU80WGVyQmVaS3I3bS00TkJXNDZuMlQxSGl0TWROZC1BNVJtQXVrU2thU1dnZm9FMERxY0FUQllSRm5IRElzck9kMVhlblNxS2E4dWdKQ0YzeXdVMjN2ejh0U0NtVk5tS19NSFdpY0JaMFdRNGJwRy12bzE4NDhEaVd6R3RNUzZJMUVHZUVYSzlLYmRLME1Kd1ZYOGtZRHdhWHczOHZPaWc?oc=5",
+            "published": "Fri, 09 Oct 2026 11:59:14 GMT",
+            "source": "Bloomberg.com",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 4.59
+          },
+          {
+            "title": "Rocket Names Nicole Beattie Chief Servicing Officer - National Mortgage Professional",
+            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUFI0al93ZmdtSmlCbklVQzJEUWlOdTN4UkhjekY4amtrSE9iTXNWdEp3a1JjRTdPZmVHdklGNVNINE1FOGRZMVdnRW1CeF9oa21YM3Rpd1lNbFZXWUtaSklSNXlpM21Xd0pYLVhyS0U0cVB1TzhsaUtya05EVlQwOVk4TDl5NENfdkJVTGlTamVQRDloNXc0RlBPdTV0QQ?oc=5",
+            "published": "Fri, 09 Oct 2026 12:35:10 GMT",
+            "source": "National Mortgage Professional",
+            "eventType": "OTHER",
+            "impactScore": 4.59
+          },
+          {
+            "title": "Saudi-led coalition says it destroyed three Houthi rocket-launch platforms - Middle East Eye",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWXZVamx0M3YyeW56Yk4zOEhVcDd6VVFmVnRWQk5MMWExT2ExTzJMNWxNcUgxX1NjSWN0OUxEbWJqbzFKeXluaTlJZ3dJS3lhXzU0RUJwQk0tZlBad09HR2VnaHVTak9ZcFNFb01PMVdnWUZhQi1XZFl4X2NQLTdvUDY3WUpRZG5PUFQzb0hRbjd5X05wNFFRQ3d3STZFeHRDbzlBTXo5NDlXRE9idnFyVEtMUlF4YW4xU1o5emhR?oc=5",
+            "published": "Fri, 09 Oct 2026 09:15:00 GMT",
+            "source": "Middle East Eye",
+            "eventType": "PRODUCT / TECHNOLOGY",
+            "impactScore": 4.08
+          },
+          {
+            "title": "AST SpaceMobile Sinks 7% as Satellite Rival Clears Regulatory Hurdle; Rocket Lab Drops 4%, Planet Labs Falls 5%",
+            "url": "https://247wallst.com/investing/2026/10/08/ast-spacemobile-sinks-7-as-satellite-rival-clears-regulatory-hurdle-rocket-lab-drops-4-planet-labs-falls-5/?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 16:43:31 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 1.36
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 9 material events; lead event: M&A",
+        "rank": 4
+      },
+      {
+        "ticker": "HOOD",
+        "name": "Robinhood Markets, Inc.",
+        "price": 108.89,
+        "change5d": -3.41,
+        "change20d": -3.27,
+        "rsi": 22.3,
+        "ema20": 112.58,
+        "ema50": 108.92,
+        "atr": 4.84,
+        "relVolume": 0.43,
+        "volatilityPct": 4.44,
+        "high20": 126.74,
+        "low20": 101.71,
+        "newsScore": 31.98,
+        "technicalScore": 4.44,
+        "score": 86.2,
+        "setup": "Catalyst setup",
+        "entry": 108.89,
+        "stop": 100.18,
+        "tp1": 126.31,
+        "tp2": 136.76,
+        "rr": 3.2,
+        "confidence": 60.0,
+        "whyNow": "OTHER: WasabiCard Advances Global Partnership Discussions at TOKEN2049 and Shares Insights on APAC Payment Infrastructure - markets.businessinsider.com",
+        "thesis": "The setup is primarily driven by the latest company-specific/news catalyst (OTHER) with technical confirmation. This is a scenario, not a certainty.",
+        "catalysts": [
+          "WasabiCard Advances Global Partnership Discussions at TOKEN2049 and Shares Insights on APAC Payment Infrastructure - markets.businessinsider.com",
+          "TD Bank Gets Regulatory Approval for Share Buyback Program - marketscreener.com",
+          "U.S. government will livestream Fort Hood shooter's firing squad execution - Mashable",
+          "US military will livestream the firing squad execution of Fort Hood shooter, 'torture' for UN - Euronews.com"
+        ],
+        "risks": [
+          "High volatility may create gaps through the modeled stop.",
+          "A strong headline can already be priced in before the market opens.",
+          "Sector or market reversal can overwhelm the company-specific catalyst."
+        ],
+        "invalidate": "Close below $100.18 or a material deterioration in the catalyst/news thesis.",
+        "news": [
+          {
+            "title": "WasabiCard Advances Global Partnership Discussions at TOKEN2049 and Shares Insights on APAC Payment Infrastructure - markets.businessinsider.com",
+            "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPbE1rbVlSWEgzYWJCUm9oeXF4SFBERS1wYkNvVWtEM21SeTVRU1V1ZlllSzUzeEFxZy1QdU5tQ04wTnBWRXd2M2tJT3plSk1OVWctWTVWRVhNWkdxcHc5ekpDSWtxcnNyTUd1RUZla0VlN3RFdnFmWmtodzNoQkZBLXZkVHRycmxXaElYaEV4Sm1JQ3ZhREV1QWUtamdGWEVXT2gxUTZGYUFWR25YNkZNRGZhb01IeWszaDVPYlFnWFQ1MEQwZkZzb01XMjBEeDZSRGpGWEs3c1BoQTRYX05JZm5rTWNOOWVpMTEtRjVDQnFxMmRHeGxvdVFOOEQ5aEVkT3Rr?oc=5",
+            "published": "Fri, 09 Oct 2026 11:14:35 GMT",
+            "source": "markets.businessinsider.com",
+            "globalDiscovery": true,
+            "eventType": "OTHER",
+            "impactScore": 12.62
+          },
+          {
+            "title": "TD Bank Gets Regulatory Approval for Share Buyback Program - marketscreener.com",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZ2NENGxoZHo0T0Q0RW9UazgtR1JSYXB1ejc4b1VJRjF5cnJpX2VvUVNzWWxqSjExOGpDeV8xVzRJaFZaR1ZrRVZ2RTJQaDFROGgzZnU0b2tuTWVuV0prZENoOGNMVG5qVHh6bHJNRTZoSTdXVHlDY1hFT2ttWER3UDdQZ1F3cmtFc3U4bjh4Uk1NWHFhTFhaYkpNU3NVWTVieU5aUG5laTlEU0xmc1lBSQ?oc=5",
+            "published": "Fri, 09 Oct 2026 10:14:53 GMT",
+            "source": "marketscreener.com",
+            "globalDiscovery": true,
+            "eventType": "RISK EVENT",
+            "impactScore": 10.71
+          },
+          {
+            "title": "U.S. government will livestream Fort Hood shooter's firing squad execution - Mashable",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYWJMWkNVc2FibEdFZ2VUbWFkRnJpOVNUdVdneGlXdTFCNkhnazAwZ1R3M1oxeTViRWlrdDYyNG5WOFlndUhUV3NOQnR3YmNHLWI0aDVRMzI0VnhhcDRrSzYyemxXTE42TGhlUzlGYVZwV3JuN2xUMU91bjVIV0dKWDJrNEg?oc=5",
+            "published": "Fri, 09 Oct 2026 16:53:39 GMT",
+            "source": "Mashable",
+            "eventType": "OTHER",
+            "impactScore": 4.05
+          },
+          {
+            "title": "US military will livestream the firing squad execution of Fort Hood shooter, 'torture' for UN - Euronews.com",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTHR1MnBFMHh3NXg0S0ZWWHp5WGdlMFp0UGVtYVJfd3BFdkU5OF8xdlB4RnJhZWhRSVVmeS1HRkc3dUxaVlpmaTI5OXF3U3JKM21LLTRpaTZyOWIxYWRtUWZTelZwaEJKUmRvY0pidTJ2TVVESEdTb19jZ05NRkg5THBPZkRneDhnWkxsUGx6Qy1WVDRRQUJJTllkb3RNR08wdUlrbEpyUElINF9OX3ZoWg?oc=5",
+            "published": "Fri, 09 Oct 2026 06:14:41 GMT",
+            "source": "Euronews.com",
+            "eventType": "OTHER",
+            "impactScore": 3.24
+          },
+          {
+            "title": "Can Webull's Regulatory Troubles Give Robinhood a Competitive Edge?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/webulls-regulatory-troubles-robinhood-competitive-125900308.html?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 12:59:00 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 1.36
+          },
+          {
+            "title": "Why Do Interactive Brokers' Customers Hold So Much More Money Than Robinhood's?",
+            "url": "https://www.fool.com/investing/2026/10/09/why-do-interactive-brokers-customers-hold-so-much-more-money-than-robinhood-s/?.tsrc=rss",
+            "published": "Fri, 09 Oct 2026 08:01:01 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "Robinhood Bought Bitcoin for Its Own Balance Sheet, Then Fell Back Below $100 Billion",
+            "url": "https://247wallst.com/investing/2026/10/08/robinhood-bought-bitcoin-for-its-own-balance-sheet-then-fell-back-below-100-billion/?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 13:10:46 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          },
+          {
+            "title": "HOOD Stock On Track To Post Third Week Of Declines: This Analyst Sees ‘Opportunity’ In Private Funds",
+            "url": "https://stocktwits.com/news-articles/markets/equity/hood-stock-on-track-to-post-third-week-of-declines-this-analyst-sees-opportunity-in-private-funds/cZDUb4VRBZQ?.tsrc=rss",
+            "published": "Thu, 08 Oct 2026 01:20:28 +0000",
+            "source": "Yahoo Finance",
+            "eventType": "OTHER",
+            "impactScore": 0.0
+          }
+        ],
+        "source": "Yahoo Finance public chart/RSS + Google News public RSS",
+        "newsNote": "8 relevant headlines; 1 material events; lead event: OTHER",
+        "rank": 5
+      }
+    ],
+    "method": "Daily market data + Yahoo ticker news + Google News RSS global event discovery + company-specific multi-edition news + technical confirmation.",
+    "disclaimer": "Automated research/ranking using free public data sources. This is not financial advice. Stop-loss and profit targets are model scenarios and may not execute at those prices, especially in volatile or gapping markets."
+  },
+  {
     "asOf": "2026-10-08",
     "generatedAt": "2026-10-08T18:53:47.988932+00:00",
     "mode": "FREE DAILY NEWS-FIRST SCAN",

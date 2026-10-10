@@ -28,7 +28,7 @@ PICKS_FILE = DATA / "picks.json"
 HISTORY_FILE = DATA / "history.json"
 UTC = dt.timezone.utc
 NY = ZoneInfo("America/New_York")
-APP_VERSION = "5.0"
+APP_VERSION = "5.1"
 CONTACT_EMAIL = os.getenv("ALPHAEDGE_CONTACT_EMAIL", "").strip()
 UA = f"AlphaEdge/{APP_VERSION} (public-market-research; contact: {CONTACT_EMAIL or 'not-configured'})"
 
@@ -37,11 +37,15 @@ PLTR CRWD PANW DDOG NET SNOW MDB SHOP UBER DASH HOOD COIN MSTR MARA RIOT CLSK AP
 RKLB ASTS LUNR SPCE SOUN BBAI AI PATH IONQ RGTI QBTS TEM HIMS CELH DKNG TSLA RIVN LCID
 NIO XPEV CVNA AFRM UPST SOFI NU TMDX ENPH FSLR OKLO VST GEV CAVA DUOL AUR ACHR JOBY
 MRNA BNTX PFE LLY NVO ABBV REGN AMGN GILD VRTX BIIB ALNY SRPT CRSP NTLA BEAM EDIT VKTX
-ALT SANA IOVA IMVT RXRX RARE ARWR INSM EXAS CORT AXSM NBIX LQDA APLS CYTK PRTA SAVA
+ALT SANA IOVA IMVT RXRX RARE ARWR INSM CORT AXSM NBIX LQDA CYTK PRTA FLNA
 JNJ MRK BMY AZN NVS SNY GSK BABA BIDU PDD JD TME SE GRAB MELI WING ELF ULTA LULU NKE
 COST WMT TGT DG DLTR BBY CAT DE CMI ETN HON GE RTX LMT NOC BA FDX UPS DAL UAL AAL
 XOM CVX OXY SLB XLE GLD SLV FCX AA NEM UUUU CCJ URA WDC STX DELL HPE IBM ORCL CRM NOW
-ADBE INTU SQ XYZ PYPL GS JPM BAC C WFC RBLX HOOD DKNG PENN MGM WYNN MAR ABNB EXPE BKNG""".split()))
+ADBE INTU XYZ PYPL GS JPM BAC C WFC RBLX HOOD DKNG PENN MGM WYNN MAR ABNB EXPE BKNG""".split()))
+
+# These old symbols must not re-enter through stale headlines or ticker maps.
+# EXAS was acquired by Abbott, APLS by Biogen, SAVA became FLNA, and SQ became XYZ.
+INACTIVE_OR_RENAMED_TICKERS = {"EXAS", "APLS", "SAVA", "SQ"}
 
 GLOBAL_QUERIES = [
     "FDA approves drug biotech shares", "FDA rejects drug clinical hold biotech stock",
@@ -452,7 +456,7 @@ def discover_tickers(headlines, ticker_names, alias_index):
         for ticker, relevance in found.items():
             counts[ticker] = counts.get(ticker, 0) + relevance
             max_signal[ticker] = max(max_signal.get(ticker, 0), strength * relevance)
-    extra = [ticker for ticker in counts if ticker not in UNIVERSE]
+    extra = [ticker for ticker in counts if ticker not in UNIVERSE and ticker not in INACTIVE_OR_RENAMED_TICKERS]
     extra.sort(key=lambda ticker: (max_signal.get(ticker, 0), counts[ticker]), reverse=True)
     return extra[:35], max_signal
 
@@ -688,9 +692,9 @@ def sector_cluster(ticker):
     groups = {
         "semiconductors": set("NVDA AMD AVGO TSM ASML ARM SMCI MU MRVL QCOM TXN INTC AMAT LRCX KLAC ON MCHP WDC STX".split()),
         "software/AI": set("PLTR CRWD PANW DDOG NET SNOW MDB APP PATH AI SOUN BBAI IONQ RGTI QBTS TEM ORCL CRM NOW ADBE".split()),
-        "biotech/pharma": set("MRNA BNTX PFE LLY NVO ABBV REGN AMGN GILD VRTX BIIB ALNY SRPT CRSP NTLA BEAM EDIT VKTX ALT SANA IOVA IMVT RXRX RARE ARWR INSM EXAS CORT AXSM NBIX LQDA APLS CYTK PRTA SAVA JNJ MRK BMY AZN NVS SNY GSK".split()),
+        "biotech/pharma": set("MRNA BNTX PFE LLY NVO ABBV REGN AMGN GILD VRTX BIIB ALNY SRPT CRSP NTLA BEAM EDIT VKTX ALT SANA IOVA IMVT RXRX RARE ARWR INSM CORT AXSM NBIX LQDA CYTK PRTA FLNA JNJ MRK BMY AZN NVS SNY GSK".split()),
         "space/defense": set("RKLB ASTS LUNR SPCE ACHR JOBY AUR RTX LMT NOC BA".split()),
-        "crypto/fintech": set("HOOD COIN MSTR MARA RIOT CLSK AFRM UPST SOFI NU SQ XYZ PYPL".split()),
+        "crypto/fintech": set("HOOD COIN MSTR MARA RIOT CLSK AFRM UPST SOFI NU XYZ PYPL".split()),
         "EV/mobility": set("TSLA RIVN LCID NIO XPEV CVNA UBER DASH LYFT".split()),
         "energy/materials": set("XOM CVX OXY SLB OKLO VST GEV ENPH FSLR FCX AA NEM UUUU CCJ".split()),
     }

@@ -1,26 +1,57 @@
+```yaml
 name: AlphaEdge daily stock scan
 
 on:
   schedule:
+    # Primer análisis: 8:20 a. m. de Nueva York
     - cron: '20 8 * * 1-5'
       timezone: 'America/New_York'
+
+    # Actualización final: 9:20 a. m. de Nueva York
+    - cron: '20 9 * * 1-5'
+      timezone: 'America/New_York'
+
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: alphaedge-daily-scan
+  cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Run free scanner
-        run: python scripts/update.py
+
+      - name: Run stock scanner
+        run: python -u scripts/update.py
+
+      - name: Validate generated files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for filename in ("data/picks.json", "data/history.json"):
+              path = Path(filename)
+              if not path.exists():
+                  raise SystemExit(f"ERROR: missing {filename}")
+              with path.open(encoding="utf-8") as f:
+                  json.load(f)
+              print(f"OK: {filename} contains valid JSON")
+          PY
+
       - name: Commit daily picks
         run: |
           git config user.name "alphaedge-bot"
@@ -29,3 +60,4 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "daily scan: update picks"
           git push
+```

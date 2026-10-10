@@ -1,16 +1,14 @@
-```yaml
+
 name: AlphaEdge daily stock scan
 
 on:
   schedule:
-    # Primer análisis: 8:20 a. m. de Nueva York
+    # Initial catalyst scan, 8:20 a. m. New York time
     - cron: '20 8 * * 1-5'
       timezone: 'America/New_York'
-
-    # Actualización final: 9:20 a. m. de Nueva York
+    # Final refresh, 9:20 a. m. New York time
     - cron: '20 9 * * 1-5'
       timezone: 'America/New_York'
-
   workflow_dispatch:
 
 permissions:
@@ -23,26 +21,26 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
+    timeout-minutes: 30
+    env:
+      # Add this repository variable in Settings > Secrets and variables > Actions > Variables.
+      ALPHAEDGE_CONTACT_EMAIL: ${{ vars.ALPHAEDGE_CONTACT_EMAIL }}
+      # Manual runs outside premarket test feeds without overwriting published picks.
+      ALPHAEDGE_DIAGNOSTIC_ONLY: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-
-      - name: Run stock scanner
+      - name: Run scanner
         run: python -u scripts/update.py
-
-      - name: Validate generated files
+      - name: Validate generated data
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-
           for filename in ("data/picks.json", "data/history.json"):
               path = Path(filename)
               if not path.exists():
@@ -51,7 +49,6 @@ jobs:
                   json.load(f)
               print(f"OK: {filename} contains valid JSON")
           PY
-
       - name: Commit daily picks
         run: |
           git config user.name "alphaedge-bot"
@@ -60,4 +57,3 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "daily scan: update picks"
           git push
-```

@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """AlphaEdge — free pre-market catalyst / intraday scanner.
 
@@ -33,7 +34,7 @@ import statistics
 import time
 import urllib.parse
 import urllib.request
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as XML
 from difflib import SequenceMatcher
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -43,7 +44,7 @@ DATA = ROOT / "data"
 TODAY_FILE = DATA / "picks.json"
 HISTORY_FILE = DATA / "history.json"
 UTC = dt.timezone.utc
-ET = ZoneInfo("America/New_York")
+NY_TZ = ZoneInfo("America/New_York")
 UA = os.getenv(
     "ALPHAEDGE_USER_AGENT",
     "Mozilla/5.0 (compatible; AlphaEdgeDaily/4.0; GitHubActions; +https://github.com/)"
@@ -196,7 +197,7 @@ def request_json(url: str, timeout: int = 12):
 
 
 def local_dt(epoch: int) -> dt.datetime:
-    return dt.datetime.fromtimestamp(epoch, tz=UTC).astimezone(ET)
+    return dt.datetime.fromtimestamp(epoch, tz=UTC).astimezone(NY_TZ)
 
 
 def parse_pubdate(value: str | None):
@@ -231,7 +232,7 @@ def allowed_age_hours(now_utc: dt.datetime, published: str | None) -> float | No
     age = (now_utc - parsed).total_seconds() / 3600.0
     if age < -1.0:  # future-dated or timezone-corrupt items must not rank
         return None
-    now_et = now_utc.astimezone(ET)
+    now_et = now_utc.astimezone(NY_TZ)
     max_hours = 84 if now_et.weekday() == 0 else 42
     if now_et.weekday() == 1 and now_et.hour < 10:
         max_hours = 66
@@ -258,7 +259,7 @@ def recency_weight(age_hours: float | None) -> float:
 
 def parse_feed(url: str, source: str, limit: int = 35):
     try:
-        root = ET.fromstring(http_get(url, timeout=12))
+        root = XML.fromstring(http_get(url, timeout=12))
     except Exception as exc:
         print(f"Feed unavailable ({source}): {type(exc).__name__}")
         return []
@@ -320,7 +321,7 @@ def yahoo_chart(symbol: str):
     quote = result.get("indicators", {}).get("quote", [{}])[0]
     bars = []
     opens, highs, lows, closes, volumes = [quote.get(k, []) for k in ("open", "high", "low", "close", "volume")]
-    scan_date = dt.datetime.now(ET).date()
+    scan_date = dt.datetime.now(NY_TZ).date()
     for i, stamp in enumerate(timestamps):
         try:
             # Keep only fully completed prior sessions; don't use a partial current-day bar.
@@ -1070,7 +1071,7 @@ def load_history():
 def main():
     DATA.mkdir(parents=True, exist_ok=True)
     now_utc = dt.datetime.now(UTC)
-    now_et = now_utc.astimezone(ET)
+    now_et = now_utc.astimezone(NY_TZ)
     scan_date = now_et.date().isoformat()
     lookback_days = scan_lookback_days(now_et)
     print(f"AlphaEdge premarket day-trade scan: {now_et.isoformat()}")

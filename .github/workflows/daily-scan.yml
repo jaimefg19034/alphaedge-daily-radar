@@ -3,10 +3,10 @@ name: AlphaEdge daily stock scan
 
 on:
   schedule:
-    # Initial catalyst scan, 8:20 a. m. New York time
+    # Early catalyst scan, in New York local time
     - cron: '20 8 * * 1-5'
       timezone: 'America/New_York'
-    # Final refresh, 9:20 a. m. New York time
+    # Final premarket refresh, 10 minutes before the regular open
     - cron: '20 9 * * 1-5'
       timezone: 'America/New_York'
   workflow_dispatch:
@@ -23,37 +23,117 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # Add this repository variable in Settings > Secrets and variables > Actions > Variables.
       ALPHAEDGE_CONTACT_EMAIL: ${{ vars.ALPHAEDGE_CONTACT_EMAIL }}
-      # Manual runs outside premarket test feeds without overwriting published picks.
+      # Manual runs outside the premarket are diagnostics only.
       ALPHAEDGE_DIAGNOSTIC_ONLY: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+
+      - name: Show trigger and branch
+        run: |
+          echo "EVENT=$GITHUB_EVENT_NAME"
+          echo "REF=$GITHUB_REF"
+          echo "SHA=$GITHUB_SHA"
+          echo "RUN_ID=$GITHUB_RUN_ID"
+          echo "CONTACT_CONFIGURED=$([ -n \"$ALPHAEDGE_CONTACT_EMAIL\" ] && echo yes || echo no)"
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          print("New York runner time:", datetime.now(ZoneInfo("America/New_York")).isoformat())
+          PY
+
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+
       - name: Run scanner
         run: python -u scripts/update.py
-      - name: Validate generated data
+
+      - name: Validate output and verify scheduled refresh
         run: |
           python - <<'PY'
-          import json
+          import json, os, datetime as dt
           from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          ny = ZoneInfo("America/New_York")
+          now = dt.datetime.now(ny)
+          today = now.date()
           for filename in ("data/picks.json", "data/history.json"):
               path = Path(filename)
               if not path.exists():
                   raise SystemExit(f"ERROR: missing {filename}")
               with path.open(encoding="utf-8") as f:
                   json.load(f)
-              print(f"OK: {filename} contains valid JSON")
+              print(f"OK: {filename} is valid JSON")
+
+          path = Path("data/picks.json")
+          payload = json.loads(path.read_text(encoding="utf-8"))
+          print("PICKS_AS_OF:", payload.get("asOf"))
+          print("PICKS_GENERATED_AT:", payload.get("generatedAt"))
+          print("PICKS_TICKERS:", ", ".join(str(x.get("ticker", "?")) for x in payload.get("picks", [])))
+          print("QUALIFIED_SETUPS:", payload.get("qualifiedTradeSetups"))
+          print("GLOBAL_HEADLINES:", payload.get("globalHeadlinesDiscovered"))
+
+          def easter_sunday(year):
+              a=year%19; b=year//100; c=year%100; d=b//4; e=b%4; f=(b+8)//25; g=(b-f+1)//3
+              h=(19*a+b-d-g+15)%30; i=c//4; k=c%4; l=(32+2*e+2*i-h-k)%7; m=(a+11*h+22*l)//451
+              month=(h+l-7*m+114)//31; day=(h+l-7*m+114)%31+1
+              return dt.date(year, month, day)
+          def observed(day):
+              if day.weekday()==5: return day-dt.timedelta(days=1)
+              if day.weekday()==6: return day+dt.timedelta(days=1)
+              return day
+          def nth_weekday(year, month, weekday, n):
+              first=dt.date(year,month,1)
+              return first+dt.timedelta(days=(weekday-first.weekday())%7+7*(n-1))
+          def last_weekday(year, month, weekday):
+              first_next=dt.date(year+1,1,1) if month==12 else dt.date(year,month+1,1)
+              last=first_next-dt.timedelta(days=1)
+              return last-dt.timedelta(days=(last.weekday()-weekday)%7)
+          def holidays(year):
+              out=set()
+              for y in (year-1,year,year+1): out.add(observed(dt.date(y,1,1)))
+              out.update({nth_weekday(year,1,0,3), nth_weekday(year,2,0,3), easter_sunday(year)-dt.timedelta(days=2),
+                          last_weekday(year,5,0), observed(dt.date(year,6,19)), observed(dt.date(year,7,4)),
+                          nth_weekday(year,9,0,1), nth_weekday(year,11,3,4), observed(dt.date(year,12,25))})
+              return out
+
+          is_schedule = os.getenv("GITHUB_EVENT_NAME") == "schedule"
+          is_market_day = today.weekday() < 5 and today not in holidays(today.year)
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as env_file:
+              env_file.write(f"ALPHAEDGE_IS_MARKET_DAY={'true' if is_market_day else 'false'}\n")
+          if is_schedule and is_market_day:
+              if payload.get("asOf") != today.isoformat():
+                  raise SystemExit("ERROR: this was a scheduled market-day run, but picks.json was NOT refreshed for today. The scanner probably skipped the premarket window or did not write new output.")
+              generated = dt.datetime.fromisoformat(str(payload.get("generatedAt", "")).replace("Z", "+00:00"))
+              if generated.tzinfo is None:
+                  generated = generated.replace(tzinfo=dt.timezone.utc)
+              age_minutes = (dt.datetime.now(dt.timezone.utc)-generated.astimezone(dt.timezone.utc)).total_seconds()/60
+              if age_minutes > 50 or age_minutes < -5:
+                  raise SystemExit(f"ERROR: generatedAt is stale or invalid ({age_minutes:.1f} minutes old).")
+              print(f"OK: scheduled output is fresh for {today}; generated {age_minutes:.1f} minutes ago.")
+          elif is_schedule:
+              print("Market holiday/weekend: no fresh picks required; previous published data is preserved.")
+          else:
+              print("Manual run: freshness guard skipped because diagnostics outside premarket intentionally do not publish picks.")
           PY
+
       - name: Commit daily picks
         run: |
           git config user.name "alphaedge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/picks.json data/history.json
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            if [ "$GITHUB_EVENT_NAME" = "schedule" ] && [ "$ALPHAEDGE_IS_MARKET_DAY" = "true" ]; then
+              echo "::error::Scheduled market-day run produced no committed data changes. Check whether the scanner wrote fresh output and whether data files are tracked."
+              exit 1
+            fi
+            echo "No output changes to commit (expected for manual diagnostics or a market holiday)."
+            exit 0
+          fi
           git commit -m "daily scan: update picks"
           git push

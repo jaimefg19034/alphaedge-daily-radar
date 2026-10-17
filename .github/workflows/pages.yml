@@ -1,8 +1,17 @@
 name: Deploy AlphaEdge to GitHub Pages
 
 on:
+  # Normal deploys when a person pushes changes to main
   push:
     branches: [main]
+
+  # The stock-scan workflow commits JSON with GITHUB_TOKEN.
+  # GitHub does not start a second workflow from that push, so deploy after the scan finishes.
+  workflow_run:
+    workflows: ["AlphaEdge daily stock scan"]
+    types: [completed]
+    branches: [main]
+
   workflow_dispatch:
 
 permissions:
@@ -16,14 +25,23 @@ concurrency:
 
 jobs:
   build:
+    # Do not publish anything if the stock scan failed.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Checkout latest main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

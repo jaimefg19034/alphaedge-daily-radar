@@ -28,7 +28,7 @@ PICKS_FILE = DATA / "picks.json"
 HISTORY_FILE = DATA / "history.json"
 UTC = dt.timezone.utc
 NY = ZoneInfo("America/New_York")
-APP_VERSION = "5.1"
+APP_VERSION = "5.4"
 CONTACT_EMAIL = os.getenv("ALPHAEDGE_CONTACT_EMAIL", "").strip()
 UA = f"AlphaEdge/{APP_VERSION} (public-market-research; contact: {CONTACT_EMAIL or 'not-configured'})"
 
@@ -42,6 +42,9 @@ JNJ MRK BMY AZN NVS SNY GSK BABA BIDU PDD JD TME SE GRAB MELI WING ELF ULTA LULU
 COST WMT TGT DG DLTR BBY CAT DE CMI ETN HON GE RTX LMT NOC BA FDX UPS DAL UAL AAL
 XOM CVX OXY SLB XLE GLD SLV FCX AA NEM UUUU CCJ URA WDC STX DELL HPE IBM ORCL CRM NOW
 ADBE INTU XYZ PYPL GS JPM BAC C WFC RBLX HOOD DKNG PENN MGM WYNN MAR ABNB EXPE BKNG""".split()))
+# This is a single-company news scanner; broad commodity/sector ETFs are not company catalysts.
+NON_SINGLE_STOCK_UNIVERSE = {"XLE", "GLD", "SLV", "URA"}
+UNIVERSE = [ticker for ticker in UNIVERSE if ticker not in NON_SINGLE_STOCK_UNIVERSE]
 
 # These old symbols must not re-enter through stale headlines or ticker maps.
 # EXAS was acquired by Abbott, APLS by Biogen, SAVA became FLNA, and SQ became XYZ.
@@ -121,6 +124,56 @@ NEGATIVE_PATTERNS = [
 AMBIGUOUS_SHORT_TICKERS = {"AI", "ON", "ARM", "NET", "PATH", "SO", "C", "A", "T", "X", "F", "GAP", "ALL", "LOVE", "REAL", "GOOD", "LIFE", "FAST", "RUN", "PLAY", "OPEN", "KEY", "PLUG", "BEAT", "ALLY", "PAY", "DAY", "YOU", "MOON", "WAVE", "WORK", "NOTE", "SNAP", "BOX", "APP", "BOWL", "BIRD", "CAVA", "LEAP"}
 LEGAL_SUFFIXES = {"inc", "incorporated", "corp", "corporation", "co", "company", "ltd", "limited", "plc", "holdings", "holding", "group", "class", "common", "shares", "ordinary", "lp", "llc", "sa", "ag", "nv", "se", "the"}
 GENERIC_WORDS = {"technology", "technologies", "systems", "international", "global", "health", "healthcare", "financial", "finance", "energy", "services", "solutions", "industries", "industrial", "pharmaceutical", "pharmaceuticals", "biotechnology", "bio", "capital", "partners", "resources", "software", "media", "communications", "electronics", "holdings", "company", "group", "incorporated", "corporation"}
+
+# Do not let listed warrants, units, rights or debt instruments enter the stock shortlist.
+# Keep ordinary class shares (e.g. BRK.B) and ADRs unless the listing description says otherwise.
+NON_COMMON_NAME = re.compile(
+    r"\b(?:warrants?|subscription rights?|rights? to purchase|preferred (?:stock|shares?|securities)|"
+    r"depositary preferred shares?|senior notes?|convertible notes?|debentures?|subscription receipts?|"
+    r"contingent value rights|when[- ]issued)\b|"
+    r"\bunits?\s*(?:,|consisting|each|of\s+\$|\()|"
+    r"(?:[-–—:]\s*units?)\s*$|\bunits?\b.{0,80}\bwarrants?\b|\btest issue\b",
+    re.IGNORECASE,
+)
+NON_COMMON_SUFFIX = re.compile(r"\.(?:U|W|WS|R|RT|WT|P|PR|UN|RW|RI)$", re.IGNORECASE)
+
+
+def is_common_stock_security(ticker: str, name: str) -> bool:
+    """Best-effort filter for common-equity candidates; not a substitute for exchange metadata."""
+    ticker = (ticker or "").strip().upper()
+    name = (name or "").strip()
+    if not ticker or not name or NON_COMMON_SUFFIX.search(ticker):
+        return False
+    if NON_COMMON_NAME.search(name):
+        return False
+    if name.lower() in {"test issue", "test instrument", ""}:
+        return False
+    return True
+
+
+def composite_score(news_score: float, premarket_score: float, technical_score: float):
+    """Combine scores on consistent scales; weights sum to 100%.
+
+    News is 58%, premarket reaction 27%, and technical context 15%.
+    Premarket and technical scores are each 0–50, so normalize them to 0–100 first.
+    Negative news receives no positive-news contribution and an explicit penalty.
+    This is a ranking score, not a probability of profit.
+    """
+    n = max(0.0, min(100.0, float(news_score or 0.0)))
+    p = max(0.0, min(50.0, float(premarket_score or 0.0))) * 2.0
+    t = max(0.0, min(50.0, float(technical_score or 0.0))) * 2.0
+    news_contribution = n * 0.58
+    premarket_contribution = p * 0.27
+    technical_contribution = t * 0.15
+    adverse_news_penalty = min(20.0, abs(min(0.0, float(news_score or 0.0))) * 0.20)
+    total = max(0.0, min(100.0, news_contribution + premarket_contribution + technical_contribution - adverse_news_penalty))
+    return round(total, 1), {
+        "news": round(news_contribution, 1),
+        "premarket": round(premarket_contribution, 1),
+        "technical": round(technical_contribution, 1),
+        "negativeNewsPenalty": round(adverse_news_penalty, 1),
+        "weightsPercent": {"news": 58, "premarket": 27, "technical": 15},
+    }
 
 
 def http_get(url: str, timeout: int = 12, sec: bool = False) -> bytes:
@@ -333,7 +386,7 @@ def fetch_nasdaq_symbol_map():
                     continue
                 ticker = fields[si].strip().upper().replace("$", "")
                 name = fields[ni].strip()
-                if re.fullmatch(r"[A-Z]{1,5}(?:\.[A-Z])?", ticker) and name and name.lower() not in {"test issue", "test instrument"}:
+                if re.fullmatch(r"[A-Z]{1,5}(?:\.[A-Z]{1,3})?", ticker) and is_common_stock_security(ticker, name):
                     mapping.setdefault(ticker, name)
             print(f"Ticker fallback ({label}): map now has {len(mapping)} symbols")
         except Exception as exc:
@@ -363,7 +416,7 @@ def fetch_sec_ticker_map():
                 # Keep exchange-listed US equities; OTC names create excessive false candidates.
                 if exchange not in {"nasdaq", "nyse", "nyse american", "nyse arca", "nyse texas", "cboe bzx"}:
                     continue
-                if re.fullmatch(r"[A-Z]{1,6}(?:\.[A-Z])?", ticker) and name:
+                if re.fullmatch(r"[A-Z]{1,6}(?:\.[A-Z]{1,3})?", ticker) and is_common_stock_security(ticker, name):
                     result[ticker] = name
         elif isinstance(raw, dict):  # Compatibility with the older keyed SEC map.
             for row in raw.values():
@@ -371,7 +424,7 @@ def fetch_sec_ticker_map():
                     continue
                 ticker = str(row.get("ticker", "")).upper().strip()
                 name = str(row.get("title", row.get("name", ""))).strip()
-                if re.fullmatch(r"[A-Z]{1,6}(?:\.[A-Z])?", ticker) and name:
+                if re.fullmatch(r"[A-Z]{1,6}(?:\.[A-Z]{1,3})?", ticker) and is_common_stock_security(ticker, name):
                     result[ticker] = name
         if result:
             print(f"SEC ticker/name map: {len(result)} exchange-listed companies")
@@ -436,8 +489,11 @@ def symbol_mentions(text, ticker_names, alias_index):
         if ticker in ticker_names: found[ticker] = max(found.get(ticker, 0), 1.4)
     for ticker in set(re.findall(r"\b[A-Z]{1,5}\b", text)):
         if ticker not in ticker_names: continue
-        if ticker in AMBIGUOUS_SHORT_TICKERS and len(ticker) <= 3: continue
-        if len(ticker) >= 2: found[ticker] = max(found.get(ticker, 0), 1.05 if len(ticker) >= 4 else .75)
+        # Short uppercase tokens are common English/acronym noise. Require an explicit
+        # $TICKER / EXCHANGE:TICKER marker or a company-name alias for 1–3 letter symbols.
+        if len(ticker) <= 3:
+            continue
+        found[ticker] = max(found.get(ticker, 0), 1.05)
     padded = f" {normalize(text)} "
     for alias, tickers in alias_index:
         if f" {alias} " in padded:
@@ -456,9 +512,13 @@ def discover_tickers(headlines, ticker_names, alias_index):
         for ticker, relevance in found.items():
             counts[ticker] = counts.get(ticker, 0) + relevance
             max_signal[ticker] = max(max_signal.get(ticker, 0), strength * relevance)
-    extra = [ticker for ticker in counts if ticker not in UNIVERSE and ticker not in INACTIVE_OR_RENAMED_TICKERS]
+    extra = [ticker for ticker in counts
+             if ticker not in UNIVERSE
+             and ticker not in INACTIVE_OR_RENAMED_TICKERS
+             and ticker not in NON_SINGLE_STOCK_UNIVERSE
+             and is_common_stock_security(ticker, ticker_names.get(ticker, ""))]
     extra.sort(key=lambda ticker: (max_signal.get(ticker, 0), counts[ticker]), reverse=True)
-    return extra[:35], max_signal
+    return extra[:60], max_signal
 
 
 def relevant_news(ticker, company, headlines):
@@ -466,12 +526,17 @@ def relevant_news(ticker, company, headlines):
     out = []
     # Match a ticker token in its original uppercase form. Matching normalized lowercase
     # text against short symbols such as CAT, ALL, ON or A can create many false catalysts.
-    ticker_pattern = re.compile(rf"(?<![A-Za-z0-9])(?:\$|(?:NASDAQ|NYSE|AMEX|NASDAQGS|NASDAQGM|NYSEAMERICAN)\s*[:/-]\s*)?{re.escape(ticker)}(?![A-Za-z0-9])")
+    ticker_pattern = re.compile(rf"(?<![A-Za-z0-9]){re.escape(ticker)}(?![A-Za-z0-9])")
+    explicit_pattern = re.compile(
+        rf"\$\s*{re.escape(ticker)}\b|\b(?:NASDAQ|NYSE|AMEX|NASDAQGS|NASDAQGM|NYSEAMERICAN)\s*[:/-]\s*{re.escape(ticker)}\b",
+        re.IGNORECASE,
+    )
     for item in headlines:
         raw_text = item.get("title", "") + " " + item.get("description", "")
         text = normalize(raw_text)
-        ticker_hit = bool(ticker_pattern.search(raw_text))  # case-sensitive by design
-        # For extremely ambiguous short names, require the ticker in uppercase or a company-name match.
+        # For 1–3 character tickers, a bare acronym can match unrelated news (e.g. AA, EYE).
+        # Accept explicit ticker notation, or a sufficiently distinctive company-name alias.
+        ticker_hit = bool(explicit_pattern.search(raw_text)) if len(ticker) <= 3 or ticker in AMBIGUOUS_SHORT_TICKERS else bool(ticker_pattern.search(raw_text))
         hit = ticker_hit or any(f" {alias} " in f" {text} " for alias in aliases)
         if hit:
             copy = dict(item); copy["matchedToTicker"] = True; copy["scope"] = "global headline match"; out.append(copy)
@@ -588,10 +653,16 @@ def premarket_metrics(bars, now_et):
     today = now_et.date(); pm = [b for b in (bars or []) if local_time(b["t"]).date() == today and dt.time(4) <= local_time(b["t"]).time() < dt.time(9, 30)]
     pm.sort(key=lambda b: b["t"])
     if len(pm) < 3: return {"available": False, "bars": pm, "reason": "No reliable current-session premarket bars"}
+    last_dt = dt.datetime.fromtimestamp(pm[-1]["t"], UTC)
+    age_minutes = (now_et.astimezone(UTC) - last_dt).total_seconds() / 60.0
+    # Do not qualify a setup from a quote that has gone stale during premarket.
+    if age_minutes < -2 or age_minutes > 20:
+        return {"available": False, "bars": pm, "reason": f"Latest premarket bar is stale ({age_minutes:.1f} minutes old)",
+                "lastTimestamp": last_dt.isoformat(), "lastBarAgeMinutes": round(age_minutes, 1)}
     latest = pm[-1]["c"]
     return {"available": True, "bars": pm, "open": pm[0]["o"], "last": latest, "high": max(b["h"] for b in pm), "low": min(b["l"] for b in pm),
             "volume": sum(b["v"] for b in pm), "dollarVolume": sum(b["v"]*b["c"] for b in pm), "pmAtr": atr(pm),
-            "lastTimestamp": dt.datetime.fromtimestamp(pm[-1]["t"], UTC).isoformat(), "barsCount": len(pm)}
+            "lastTimestamp": last_dt.isoformat(), "lastBarAgeMinutes": round(age_minutes, 1), "barsCount": len(pm)}
 
 
 def intraday_levels(pm, daily_atr):
@@ -633,8 +704,7 @@ def make_candidate(ticker, name, bars, meta, headlines, scoped_news, intraday, n
     pm_gap = (pm["last"]/previous-1)*100 if pm.get("available") and previous else None
     levels = intraday_levels(pm, metrics["atr"])
     pms = premarket_score(pm, previous, metrics["avgVolume20"])
-    score = max(0.0, min(100.0, max(0.0, news_score)*.58 + pms*.27 + metrics["technicalScore"]*.30))
-    if news_score < 0: score = max(0.0, score + news_score*.35)
+    score, score_breakdown = composite_score(news_score, pms, metrics["technicalScore"])
     before_open = now_et.weekday() < 5 and dt.time(4) <= now_et.time() < dt.time(9, 30)
     avgvol = metrics["avgVolume20"] or 0
     status, reason = "NO TRADE", ""
@@ -669,7 +739,7 @@ def make_candidate(ticker, name, bars, meta, headlines, scoped_news, intraday, n
         "rsi": round(metrics["rsi"], 1) if metrics["rsi"] is not None else None, "ema20": round(metrics["ema20"], 4) if metrics["ema20"] is not None else None,
         "ema50": round(metrics["ema50"], 4) if metrics["ema50"] is not None else None, "atr": round(metrics["atr"] or 0, 4), "relVolume": round(metrics["relVolume"], 2),
         "volatilityPct": round(metrics["volatilityPct"], 2), "high20": round(metrics["high20"], 4), "low20": round(metrics["low20"], 4),
-        "newsScore": news_score, "technicalScore": round(metrics["technicalScore"], 1), "premarketScore": round(pms, 1), "score": round(score, 1),
+        "newsScore": news_score, "technicalScore": round(metrics["technicalScore"], 1), "premarketScore": round(pms, 1), "score": round(score, 1), "scoreBreakdown": score_breakdown,
         "setup": "INTRADAY LONG — PM HIGH BREAKOUT" if status.startswith("QUALIFIED") else "WATCH ONLY — WAIT FOR OPEN" if positive_lead else "NO TRADE — NO STRONG CATALYST",
         "tradeStatus": status, "tradeStatusReason": reason, "entry": out_levels["entry"], "stop": out_levels["stop"], "tp1": out_levels["tp1"], "tp2": out_levels["tp2"], "rr": out_levels["rr"],
         "entryLogic": out_levels["entryLogic"], "stopLogic": out_levels["stopLogic"], "tp1Logic": out_levels["tp1Logic"], "tp2Logic": out_levels["tp2Logic"],
@@ -701,8 +771,322 @@ def sector_cluster(ticker):
     return next((label for label, members in groups.items() if ticker in members), "other")
 
 
+def recent_pick_counts(history, current_asof, sessions=3):
+    """Count appearances in the most recent distinct published sessions before today."""
+    if not isinstance(history, list):
+        return {}, []
+    dates = []
+    seen_dates = set()
+    counts = {}
+    for payload in history:
+        if not isinstance(payload, dict):
+            continue
+        asof = str(payload.get("asOf", ""))
+        if not asof or asof >= str(current_asof) or asof in seen_dates:
+            continue
+        seen_dates.add(asof)
+        dates.append(asof)
+        picks = payload.get("picks", [])
+        if isinstance(picks, list):
+            for pick in picks:
+                if isinstance(pick, dict) and pick.get("ticker"):
+                    ticker = str(pick["ticker"]).upper().strip()
+                    counts[ticker] = counts.get(ticker, 0) + 1
+        if len(dates) >= sessions:
+            break
+    return counts, dates
+
+
+def has_fresh_material_positive_catalyst(candidate, max_age_hours=12.0):
+    """Do not penalize a returning ticker when a recent, material positive story exists."""
+    for item in candidate.get("news", []) or []:
+        if not isinstance(item, dict):
+            continue
+        try:
+            age = float(item.get("ageHours", 9999))
+            impact = float(item.get("impactScore", 0))
+        except (TypeError, ValueError):
+            continue
+        if item.get("materialEvent") and impact >= 32 and 0 <= age <= max_age_hours:
+            return True
+    return False
+
+
+def apply_rotation_adjustments(candidates, history, current_asof, sessions=3):
+    """Apply a modest repetition penalty, never a hard ban on a stock.
+
+    Qualified setups and tickers with a fresh material positive catalyst are exempt.
+    This helps avoid a recurring list driven by old headlines without forcing a new
+    ticker into the list when it does not have a better setup.
+    """
+    counts, dates = recent_pick_counts(history, current_asof, sessions=sessions)
+    for candidate in candidates:
+        ticker = str(candidate.get("ticker", "")).upper().strip()
+        status = str(candidate.get("tradeStatus", ""))
+        repeats = counts.get(ticker, 0)
+        has_fresh = has_fresh_material_positive_catalyst(candidate)
+        eligible = repeats > 0 and not status.startswith("QUALIFIED") and not has_fresh
+        penalty = min(12.0, repeats * 4.0) if eligible else 0.0
+        base = safe_float(candidate.get("score")) or 0.0
+        candidate["recentPickCount"] = repeats
+        candidate["rotationPenalty"] = round(penalty, 1)
+        candidate["rankingScore"] = round(max(0.0, base - penalty), 1)
+        if penalty:
+            candidate["rotationNote"] = f"Ranking reduced by {penalty:.1f} points: this non-qualified ticker appeared in {repeats} of the last {len(dates)} published sessions without a fresh material positive catalyst."
+        elif repeats and (status.startswith("QUALIFIED") or has_fresh):
+            candidate["rotationNote"] = "No repetition penalty: qualified setup or fresh material positive catalyst."
+        else:
+            candidate["rotationNote"] = "No recent-repeat penalty."
+    return candidates
+
+
+def signal_session_bars(bars, signal_date):
+    """Return regular-session bars for a signal date (ET), excluding pre/after-market."""
+    result = []
+    for bar in bars or []:
+        try:
+            local = local_time(int(bar["t"]))
+        except (KeyError, TypeError, ValueError, OverflowError):
+            continue
+        if local.date().isoformat() != str(signal_date):
+            continue
+        if dt.time(9, 30) <= local.time() < dt.time(15, 55):
+            result.append(bar)
+    return sorted(result, key=lambda item: int(item["t"]))
+
+
+def evaluate_qualified_signal(pick, bars, signal_date):
+    """Observe how a conditional setup behaved using 5-minute OHLC bars.
+
+    This is a path label, not a backtested P&L or proof of profitability. If OHLC
+    cannot reveal whether the stop or target came first within a candle, the result
+    is explicitly marked ambiguous instead of guessing.
+    """
+    status = str(pick.get("tradeStatus", ""))
+    if not status.startswith("QUALIFIED"):
+        return {"result": "NOT_QUALIFIED", "signalDate": str(signal_date), "barsUsed": 0}
+
+    entry = safe_float(pick.get("entry"))
+    stop = safe_float(pick.get("stop"))
+    tp1 = safe_float(pick.get("tp1"))
+    tp2 = safe_float(pick.get("tp2"))
+    if None in (entry, stop, tp1, tp2) or entry <= stop or tp1 <= entry or tp2 <= tp1:
+        return {"result": "INVALID_LEVELS", "signalDate": str(signal_date), "barsUsed": 0}
+    risk = entry - stop
+    rows = signal_session_bars(bars, signal_date)
+    if not rows:
+        return {"result": "NO_DATA", "signalDate": str(signal_date), "barsUsed": 0}
+
+    entered = False
+    tp1_seen = False
+    tracked = []
+    terminal_result = None
+    for bar in rows:
+        high = safe_float(bar.get("h")); low = safe_float(bar.get("l")); close = safe_float(bar.get("c"))
+        if None in (high, low, close):
+            continue
+        if not entered:
+            # Current strategy requires a 5-minute close at/above the trigger, not a wick-only touch.
+            if close < entry:
+                continue
+            entered = True
+            tracked.append(bar)
+            # The entry candle can also touch a stop/target. OHLC does not reveal ordering.
+            if low <= stop or high >= tp1:
+                terminal_result = "AMBIGUOUS_ENTRY_BAR"
+                break
+            continue
+
+        tracked.append(bar)
+        hit_stop = low <= stop
+        hit_tp1 = high >= tp1
+        hit_tp2 = high >= tp2
+        if hit_stop and (hit_tp1 or hit_tp2):
+            terminal_result = "AMBIGUOUS_BAR"
+            break
+        if hit_stop:
+            terminal_result = "TP1_THEN_STOP" if tp1_seen else "STOP_BEFORE_TP1"
+            break
+        if hit_tp2:
+            terminal_result = "TP2_BEFORE_STOP"
+            break
+        if hit_tp1:
+            tp1_seen = True
+
+    if not entered:
+        return {"result": "NO_ENTRY", "signalDate": str(signal_date), "barsUsed": len(rows)}
+
+    max_high = max(safe_float(b.get("h")) for b in tracked if safe_float(b.get("h")) is not None)
+    min_low = min(safe_float(b.get("l")) for b in tracked if safe_float(b.get("l")) is not None)
+    last_close = safe_float(tracked[-1].get("c"))
+    common = {
+        "signalDate": str(signal_date),
+        "barsUsed": len(rows),
+        "entryTriggered": True,
+        "mfeR": round(max(0.0, (max_high - entry) / risk), 2),
+        "maeR": round(max(0.0, (entry - min_low) / risk), 2),
+        "lastObservedCloseR": round((last_close - entry) / risk, 2) if last_close is not None else None,
+    }
+    if terminal_result is None:
+        terminal_result = "TP1_REACHED_NO_STOP" if tp1_seen else "OPEN_AT_CLOSE"
+    common["result"] = terminal_result
+    common["note"] = "Observational label from 5-minute OHLC; same-candle ordering may be unknowable. Not a realised performance guarantee."
+    return common
+
+
+def evaluate_previous_session(history, current_intraday, today_et):
+    """Evaluate the latest prior session once, using existing 5m data or a small fallback fetch."""
+    if not isinstance(history, list):
+        return None
+    today = today_et if isinstance(today_et, dt.date) else dt.date.fromisoformat(str(today_et))
+    previous = None
+    for payload in history:
+        if not isinstance(payload, dict):
+            continue
+        try:
+            signal_day = dt.date.fromisoformat(str(payload.get("asOf", "")))
+        except ValueError:
+            continue
+        if signal_day >= today:
+            continue
+        previous = payload
+        break
+    if previous is None:
+        return None
+
+    signal_date = dt.date.fromisoformat(previous["asOf"])
+    age_days = (today - signal_date).days
+    # Yahoo's public 5-day/5-minute endpoint is insufficient for older signals.
+    if age_days < 1 or age_days > 5:
+        print(f"Outcome tracker: skipped {signal_date}; outside Yahoo 5-day intraday history window.")
+        return None
+    if previous.get("performanceEvaluation"):
+        return summarize_performance(history)
+
+    picks = previous.get("picks", [])
+    if not isinstance(picks, list) or not picks:
+        return None
+    qualified = [p for p in picks if isinstance(p, dict) and str(p.get("tradeStatus", "")).startswith("QUALIFIED")]
+    if not qualified:
+        print(f"Outcome tracker: {signal_date} had no qualified setup; nothing to evaluate.")
+        return summarize_performance(history)
+    bars_by_ticker = {}
+    missing = []
+    for pick in qualified:
+        ticker = str(pick.get("ticker", "")).upper()
+        bars = (current_intraday or {}).get(ticker)
+        if bars and signal_session_bars(bars, signal_date.isoformat()):
+            bars_by_ticker[ticker] = bars
+        else:
+            missing.append(ticker)
+    missing = list(dict.fromkeys(t for t in missing if t))
+    if missing:
+        print(f"Outcome tracker: fetching prior-session 5m data for {len(missing)} qualified tickers.")
+        fetched = fetch_bulk(missing, lambda ticker: yahoo_chart(ticker, "5d", "5m")[0], workers=min(5, max(1, len(missing))))
+        bars_by_ticker.update({ticker: value for ticker, value in fetched.items() if value})
+
+    results = []
+    pending_outcomes = []
+    for pick in picks:
+        if not isinstance(pick, dict):
+            continue
+        ticker = str(pick.get("ticker", "")).upper()
+        outcome = evaluate_qualified_signal(pick, bars_by_ticker.get(ticker, []), signal_date.isoformat())
+        pending_outcomes.append((pick, outcome))
+        results.append({"ticker": ticker, **outcome})
+
+    # If a qualified ticker's 5-minute feed is missing, leave the session retryable on
+    # the next run instead of permanently recording an incomplete evaluation.
+    unresolved = [row for row in results if row.get("result") in {"NO_DATA", "INVALID_LEVELS"}]
+    if unresolved:
+        print("Outcome tracker: incomplete feed for " + ", ".join(row["ticker"] for row in unresolved) + "; will retry while 5-day bars remain available.")
+        return summarize_performance(history)
+
+    for pick, outcome in pending_outcomes:
+        pick["outcomeEvaluation"] = outcome
+    previous["performanceEvaluation"] = {
+        "signalDate": signal_date.isoformat(),
+        "evaluatedAt": dt.datetime.now(UTC).isoformat(),
+        "qualifiedSignals": len(qualified),
+        "evaluatedQualifiedSignals": sum(1 for row in results if row.get("result") not in {"NOT_QUALIFIED", "NO_DATA", "INVALID_LEVELS"}),
+        "results": results,
+        "note": "Descriptive outcomes based on public 5-minute OHLC bars; ambiguous candles are not guessed, and this is not a validated backtest.",
+    }
+    summary = summarize_performance(history)
+    print(f"Outcome tracker: session={signal_date} | qualified={len(qualified)} | results=" + ", ".join(f"{r['ticker']}:{r['result']}" for r in results))
+    return summary
+
+
+def summarize_performance(history):
+    """Aggregate observed path labels; deliberately avoids presenting them as win rate."""
+    counts = {}
+    evaluated_sessions = 0
+    qualified_signals = 0
+    for payload in history if isinstance(history, list) else []:
+        if not isinstance(payload, dict):
+            continue
+        evaluation = payload.get("performanceEvaluation")
+        if not isinstance(evaluation, dict):
+            continue
+        evaluated_sessions += 1
+        qualified_signals += int(evaluation.get("qualifiedSignals", 0) or 0)
+        for row in evaluation.get("results", []) or []:
+            result = row.get("result") if isinstance(row, dict) else None
+            if result:
+                counts[result] = counts.get(result, 0) + 1
+    return {"evaluatedSessions": evaluated_sessions, "qualifiedSignalsObserved": qualified_signals, "outcomes": counts,
+            "note": "Outcome labels are descriptive and not a realised net-return statistic; include spreads, commissions, slippage and sample-size checks before judging the strategy."}
+
+
+def validate_payload(payload):
+    """Refuse to publish malformed output or an incomplete/duplicated five-stock list."""
+    if not isinstance(payload, dict):
+        raise ValueError("Output payload must be a JSON object")
+    if not payload.get("asOf") or not payload.get("generatedAt"):
+        raise ValueError("Output payload is missing asOf/generatedAt")
+    picks = payload.get("picks")
+    if not isinstance(picks, list) or len(picks) != 5:
+        size = len(picks) if isinstance(picks, list) else "non-list"
+        raise ValueError(f"Refusing to publish: expected exactly 5 picks, received {size}")
+    tickers = []
+    for index, pick in enumerate(picks, 1):
+        if not isinstance(pick, dict) or not pick.get("ticker") or not pick.get("tradeStatus"):
+            raise ValueError(f"Pick #{index} is missing ticker/tradeStatus")
+        tickers.append(str(pick["ticker"]).upper().strip())
+    if len(set(tickers)) != len(tickers):
+        raise ValueError("Refusing to publish duplicate ticker rows")
+    return True
+
+
+def atomic_write_json(path, value):
+    """Validate JSON and atomically replace one file, avoiding truncated dashboard files."""
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    serialized = json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False)
+    json.loads(serialized)
+    temp_path = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    try:
+        temp_path.write_text(serialized + "\n", encoding="utf-8")
+        os.replace(temp_path, path)
+    finally:
+        try:
+            temp_path.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+
 def choose_five(candidates):
-    ranked = sorted(candidates, key=lambda x: (x.get("tradeStatus", "").startswith("QUALIFIED"), x.get("newsScore", 0), x.get("score", 0), x.get("premarketScore", 0)), reverse=True)
+    # Qualified ideas first; otherwise rank by the normalized composite score. Ranking every
+    # NO TRADE row on raw news alone caused recurring, headline-heavy names to dominate even
+    # when their price reaction and technical context were weak.
+    ranked = sorted(candidates, key=lambda x: (
+        str(x.get("tradeStatus", "")).startswith("QUALIFIED"),
+        x.get("rankingScore", x.get("score", 0)),
+        x.get("score", 0),
+        max(-100, min(100, x.get("newsScore", 0))),
+        x.get("premarketScore", 0),
+        x.get("technicalScore", 0),
+    ), reverse=True)
     picks, chosen = [], set()
     for item in ranked:
         if item["ticker"] in chosen: continue
@@ -771,6 +1155,7 @@ def main():
     now_utc = dt.datetime.now(UTC); now_et = now_utc.astimezone(NY); date_et = now_et.date()
     print(f"AlphaEdge {APP_VERSION} scan: {now_et.isoformat()}")
     print(f"Session: {now_et.strftime('%A %H:%M %Z')} | contact configured={'yes' if CONTACT_EMAIL else 'NO'}")
+    print(f"GitHub context: event={os.getenv('GITHUB_EVENT_NAME', 'local')} | ref={os.getenv('GITHUB_REF', 'local')}")
     # Scheduled runs never replace the live dashboard outside premarket. Manual runs may
     # perform diagnostics on weekends/after-hours, but those results are never published.
     diagnostic_only = os.getenv("ALPHAEDGE_DIAGNOSTIC_ONLY", "false").strip().lower() in {"1", "true", "yes"}
@@ -787,6 +1172,9 @@ def main():
     lookback = lookback_days(now_et)
     headlines = discover_global_news(now_et)
     print(f"Fresh global/event headlines: {len(headlines)}")
+    # A near-empty merged feed on a normal market morning likely means a source outage.
+    if not diagnostic_only and len(headlines) < 10:
+        raise RuntimeError(f"Only {len(headlines)} fresh global headlines were collected; refusing to publish possibly incomplete picks.")
     sec_map = fetch_sec_ticker_map()
     ticker_names = dict(fetch_nasdaq_symbol_map())
     ticker_names.update(sec_map)
@@ -795,6 +1183,7 @@ def main():
     dynamic, dynamic_signal = discover_tickers(headlines, ticker_names, alias_index)
     symbols = list(dict.fromkeys(UNIVERSE + dynamic))
     print(f"Ticker map: {len(ticker_names)} names | symbols considered: {len(symbols)} | dynamic discoveries: {len(dynamic)}")
+    print(f"Instrument filters: excluded warrants/units/rights/preferred/debt listings and broad ETFs from company-catalyst universe")
 
     market_raw = fetch_bulk(symbols, lambda ticker: yahoo_chart(ticker, "6mo", "1d"), workers=10)
     markets = {}
@@ -804,6 +1193,9 @@ def main():
     print(f"Daily market histories received: {len(markets)}/{len(symbols)}")
     if not markets:
         raise RuntimeError("No daily market data returned; refusing to overwrite existing picks.")
+    minimum_daily_coverage = max(5, int(len(symbols) * 0.60))
+    if not diagnostic_only and len(markets) < minimum_daily_coverage:
+        raise RuntimeError(f"Daily market-data coverage too low ({len(markets)}/{len(symbols)}; need at least {minimum_daily_coverage}); previous picks preserved.")
 
     # Rank names using actual broad-news matches before making per-ticker RSS requests.
     prelim = []
@@ -815,7 +1207,7 @@ def main():
         prelim.append((ticker, name, bars, meta, matches, score, bool(lead), (tm or {}).get("technicalScore", 0)))
     # Keep broad company news coverage while reducing avoidable Yahoo RSS traffic.
     prelim.sort(key=lambda row: (row[5] >= 18 or row[6], row[5], dynamic_signal.get(row[0], 0), row[7]), reverse=True)
-    rss_symbols = [row[0] for row in prelim[:100]]
+    rss_symbols = [row[0] for row in prelim[:120]]
     news_raw = fetch_bulk(rss_symbols, lambda ticker: yahoo_news(ticker, 10), workers=8)
     # If a ticker's global news did not qualify but Yahoo RSS finds a fresh event, it is included below.
     ticker_scoped = {k: v for k, v in news_raw.items() if v}
@@ -829,7 +1221,7 @@ def main():
             ready.append((ticker, name, bars, meta, yahoo_items))
     ready.sort(key=lambda row: (score_news(relevant_news(row[0], row[1], headlines)+(row[4] or []), now_utc)[0], dynamic_signal.get(row[0], 0)), reverse=True)
     # Only request intraday bars for the likely catalyst candidates; 5-minute data is the bottleneck.
-    intraday_symbols = [row[0] for row in ready[:60]]
+    intraday_symbols = [row[0] for row in ready[:80]]
     intraday_raw = fetch_bulk(intraday_symbols, lambda ticker: yahoo_chart(ticker, "5d", "5m")[0], workers=8)
     candidates = []
     for ticker, name, bars, meta, yahoo_items in ready:
@@ -837,7 +1229,11 @@ def main():
         if candidate:
             candidate["sectorCluster"] = sector_cluster(ticker)
             candidates.append(candidate)
-    print(f"Candidates built: {len(candidates)} | current-session intraday feeds received: {sum(bool(x) for x in intraday_raw.values())}/{len(intraday_symbols)}")
+    intraday_with_data = sum(bool(x) for x in intraday_raw.values())
+    print(f"Candidates built: {len(candidates)} | current-session intraday feeds received: {intraday_with_data}/{len(intraday_symbols)}")
+    minimum_intraday_coverage = min(len(intraday_symbols), max(5, int(len(intraday_symbols) * 0.15))) if intraday_symbols else 0
+    if not diagnostic_only and intraday_symbols and intraday_with_data < minimum_intraday_coverage:
+        raise RuntimeError(f"Premarket-data coverage too low ({intraday_with_data}/{len(intraday_symbols)}; need at least {minimum_intraday_coverage}); previous picks preserved.")
 
     # Complete the dashboard with explicit NO TRADE placeholders, never fabricated entries.
     if len(candidates) < 5:
@@ -865,30 +1261,45 @@ def main():
             if len(candidates) >= 5: break
     if not candidates:
         raise RuntimeError("No candidates could be built; existing picks/history preserved.")
+    history_before_scan = load_history()
+    performance_summary = None
+    if not diagnostic_only and in_premarket:
+        performance_summary = evaluate_previous_session(history_before_scan, intraday_raw, date_et)
+    apply_rotation_adjustments(candidates, history_before_scan, date_et.isoformat(), sessions=3)
     picks = choose_five(candidates)
-    if len(picks) < 5 and PICKS_FILE.exists():
-        print("Fewer than five usable candidates; previous picks file preserved.")
-        return
+    if len(picks) != 5:
+        raise RuntimeError(f"Refusing to publish an incomplete shortlist ({len(picks)}/5 picks); existing picks/history preserved.")
     for rank, pick in enumerate(picks, 1):
-        pick["rank"] = rank; pick.pop("sectorCluster", None); pick["generatedAt"] = now_utc.isoformat()
+        pick["rank"] = rank; pick.pop("sectorCluster", None); pick["generatedAt"] = now_utc.isoformat(); pick["modelVersion"] = APP_VERSION
     payload = {
         "asOf": date_et.isoformat(), "generatedAt": now_utc.isoformat(), "marketTimezone": "America/New_York", "marketSession": "PREMARKET",
-        "mode": "FREE PREMARKET CATALYST DAY-TRADE SCAN", "strategy": "Fresh company-specific catalyst + premarket confirmation + conditional 5-minute breakout; one session only.",
+        "mode": "FREE PREMARKET CATALYST DAY-TRADE SCAN", "modelVersion": APP_VERSION,
+        "strategy": "Fresh company-specific catalyst + fresh premarket confirmation + conditional 5-minute breakout; one session only.",
+        "scoreWeights": {"news": 58, "premarket": 27, "technical": 15},
         "universeSize": len(symbols), "candidatesScanned": len(candidates), "globalHeadlinesDiscovered": len(headlines),
         "qualifiedTradeSetups": sum(1 for x in picks if str(x.get("tradeStatus", "")).startswith("QUALIFIED")),
+        "feedHealth": {"tickerMapEntries": len(ticker_names), "symbolsRequested": len(symbols), "dailyHistoriesReceived": len(markets),
+                       "yahooTickerNewsFeedsWithData": len(ticker_scoped), "intradayRequested": len(intraday_symbols),
+                       "intradayFeedsWithData": intraday_with_data, "secContactConfigured": bool(CONTACT_EMAIL)},
+        "historicalPerformance": performance_summary or summarize_performance(history_before_scan),
         "secContactConfigured": bool(CONTACT_EMAIL), "sourceCoverage": ["Google News RSS: US, UK, Canada, Australia, India, Spain, France, Germany, Japan", "Yahoo Finance public ticker RSS/chart endpoint", "FDA public RSS feeds", "SEC EDGAR feeds (requires contact email configured)"],
         "picks": picks,
-        "method": "Rule-based news-first screener. A row is QUALIFIED only when catalyst, premarket reaction, liquidity and modeled risk filters pass. Others remain WATCH/NO TRADE.",
+        "method": "Rule-based news-first screener. Ranking score is normalized to 0–100 with 58% news, 27% premarket reaction and 15% technical context. Short ambiguous tickers and non-common instruments are filtered; stale premarket bars cannot qualify a setup. Modest repetition penalties discourage recurring non-qualified names unless a fresh material positive catalyst exists. Prior-session qualified setups are labelled against subsequent 5-minute OHLC when the free endpoint still has the data; ambiguous candles are not guessed. Publication is blocked when source coverage is too incomplete. A row is QUALIFIED only when catalyst, premarket reaction, liquidity and modeled risk filters pass. Others remain WATCH/NO TRADE.",
         "disclaimer": "Free public sources can be delayed, incomplete, or unavailable. Entry is conditional, not a guaranteed signal. Confirm live prices/spreads, account for slippage, and exit intraday positions before 15:55 ET."}
     print("Today's five:")
-    for pick in picks: print(f"  #{pick['rank']} {pick['ticker']}: {pick.get('tradeStatus')} | news={pick.get('newsScore')} | score={pick.get('score')}")
+    for pick in picks:
+        print(f"  #{pick['rank']} {pick['ticker']}: {pick.get('tradeStatus')} | news={pick.get('newsScore')} | pm={pick.get('premarketScore')} | technical={pick.get('technicalScore')} | score={pick.get('score')} | reason={pick.get('tradeStatusReason')}")
     if diagnostic_only and not in_premarket:
         print("DIAGNOSTIC COMPLETE: source checks finished; data/picks.json and data/history.json were not modified.")
         return
-    PICKS_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    history = [x for x in load_history() if x.get("asOf") != date_et.isoformat()]
+    validate_payload(payload)
+    history = [x for x in history_before_scan if isinstance(x, dict) and x.get("asOf") != date_et.isoformat()]
     history.insert(0, payload)
-    HISTORY_FILE.write_text(json.dumps(history[:90], indent=2, ensure_ascii=False), encoding="utf-8")
+    # Serialize/validate both files before replacing the currently published versions.
+    json.dumps(payload, ensure_ascii=False, allow_nan=False)
+    json.dumps(history[:90], ensure_ascii=False, allow_nan=False)
+    atomic_write_json(HISTORY_FILE, history[:90])
+    atomic_write_json(PICKS_FILE, payload)
     print(f"Saved {PICKS_FILE} and {HISTORY_FILE}")
 
 

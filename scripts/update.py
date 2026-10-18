@@ -28,7 +28,7 @@ PICKS_FILE = DATA / "picks.json"
 HISTORY_FILE = DATA / "history.json"
 UTC = dt.timezone.utc
 NY = ZoneInfo("America/New_York")
-APP_VERSION = "5.4"
+APP_VERSION = "5.4.1"
 CONTACT_EMAIL = os.getenv("ALPHAEDGE_CONTACT_EMAIL", "").strip()
 UA = f"AlphaEdge/{APP_VERSION} (public-market-research; contact: {CONTACT_EMAIL or 'not-configured'})"
 
@@ -136,13 +136,27 @@ NON_COMMON_NAME = re.compile(
     re.IGNORECASE,
 )
 NON_COMMON_SUFFIX = re.compile(r"\.(?:U|W|WS|R|RT|WT|P|PR|UN|RW|RI)$", re.IGNORECASE)
+# Some issuer-level SEC maps provide only the registrant name, not the security class.
+# SPAC units/rights/warrants may therefore look like ordinary stock names even though
+# their tickers conventionally end in U/R/W (for example, FVNNU is a unit ticker).
+SPAC_ISSUER_NAME = re.compile(
+    r"\b(?:special purpose acquisition(?: company| corp(?:oration)?)?|"
+    r"acquisition\s+(?:corp(?:oration)?|company)|"
+    r"blank[- ]check\s+(?:company|corporation)|business combination company)\b",
+    re.IGNORECASE,
+)
+SPAC_NON_COMMON_ENDING = re.compile(r"(?:U|R|W)$", re.IGNORECASE)
 
 
 def is_common_stock_security(ticker: str, name: str) -> bool:
-    """Best-effort filter for common-equity candidates; not a substitute for exchange metadata."""
+    """Best-effort common-share filter; exchange security descriptions take precedence."""
     ticker = (ticker or "").strip().upper()
     name = (name or "").strip()
     if not ticker or not name or NON_COMMON_SUFFIX.search(ticker):
+        return False
+    # Handle SEC issuer-name-only entries for SPACs, where security descriptions such as
+    # '- Units' may be absent. Do not exclude ordinary shares like ticker FVN itself.
+    if SPAC_ISSUER_NAME.search(name) and SPAC_NON_COMMON_ENDING.search(ticker):
         return False
     if NON_COMMON_NAME.search(name):
         return False

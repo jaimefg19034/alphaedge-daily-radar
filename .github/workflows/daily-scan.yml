@@ -1,18 +1,18 @@
 name: AlphaEdge daily stock scan
 
 on:
-  schedule:
-    # Several staggered premarket attempts reduce the chance that one delayed
-    # GitHub scheduled event causes the entire day's scan to be missed.
-    - cron: '7 8 * * 1-5'
-      timezone: 'America/New_York'
-    - cron: '37 8 * * 1-5'
-      timezone: 'America/New_York'
-    - cron: '7 9 * * 1-5'
-      timezone: 'America/New_York'
-    - cron: '17 9 * * 1-5'
-      timezone: 'America/New_York'
   workflow_dispatch:
+    inputs:
+      publish:
+        description: "Set true only for cron-job.org premarket runs. Leave false for manual diagnostics."
+        required: false
+        type: boolean
+        default: false
+      scheduler_slot:
+        description: "External scheduler slot for logging, e.g. 08:07 ET"
+        required: false
+        type: string
+        default: "manual"
 
 permissions:
   contents: write
@@ -27,10 +27,9 @@ jobs:
     timeout-minutes: 30
     env:
       ALPHAEDGE_CONTACT_EMAIL: ${{ vars.ALPHAEDGE_CONTACT_EMAIL }}
-      # Manual runs off-session are diagnostic only. The Python scanner also
-      # enforces its own market-session check.
-      ALPHAEDGE_DIAGNOSTIC_ONLY: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
-      ALPHAEDGE_SCHEDULE_EXPR: ${{ github.event.schedule || 'not-scheduled' }}
+      ALPHAEDGE_DIAGNOSTIC_ONLY: ${{ inputs.publish != true }}
+      ALPHAEDGE_PUBLISH_REQUESTED: ${{ inputs.publish }}
+      ALPHAEDGE_SCHEDULE_EXPR: ${{ inputs.scheduler_slot || 'manual' }}
 
     steps:
       - name: Checkout
@@ -42,7 +41,8 @@ jobs:
           echo "REF=$GITHUB_REF"
           echo "SHA=$GITHUB_SHA"
           echo "RUN_ID=$GITHUB_RUN_ID"
-          echo "SCHEDULE_EXPR=$ALPHAEDGE_SCHEDULE_EXPR"
+          echo "PUBLISH_REQUESTED=$ALPHAEDGE_PUBLISH_REQUESTED"
+          echo "SCHEDULE_SLOT=$ALPHAEDGE_SCHEDULE_EXPR"
           echo "CONTACT_CONFIGURED=$([ -n \"$ALPHAEDGE_CONTACT_EMAIL\" ] && echo yes || echo no)"
           python - <<'PY'
           from datetime import datetime
@@ -60,7 +60,8 @@ jobs:
 
       - name: Validate JSON and verify today's published snapshot
         env:
-          EVENT_NAME: ${{ github.event_name }}
+          PUBLISH_REQUESTED: ${{ inputs.publish }}
+          SCHEDULE_SLOT: ${{ inputs.scheduler_slot }}
         run: |
           python - <<'PY'
           import datetime as dt
@@ -75,30 +76,35 @@ jobs:
 
           def easter_sunday(year):
               a=year%19; b=year//100; c=year%100; d=b//4; e=b%4; f=(b+8)//25; g=(b-f+1)//3
-              h=(19*a+b-d-g+15)%30; i=c//4; k=c%4; l=(32+2*e+2*i-h-k)%7; m=(a+11*h+22*l)//451
-              month=(h+l-7*m+114)//31; day=(h+l-7*m+114)%31+1
+              h=(19*a+b-d-g+15)%30; i=c//4; k=c%4; l=(32+2*e+2*i-h-k)%7; m=(a+11*h+22*i)//451
+              month=(h+l-7*m+114)//31; day=(h+l-7*m+114)%30+1
               return dt.date(year, month, day)
 
           def observed(day):
-              if day.weekday()==5: return day-dt.timedelta(days=1)
-              if day.weekday()==6: return day+dt.timedelta(days=1)
+              if day.weekday() == 5: return day - dt.timedelta(days=1)
+              if day.weekday() == 6: return day + dt.timedelta(days=1)
               return day
 
           def nth_weekday(year, month, weekday, n):
-              first=dt.date(year,month,1)
-              return first+dt.timedelta(days=(weekday-first.weekday())%7+7*(n-1))
+              first = dt.date(year, month, 1)
+              return first + dt.timedelta(days=(weekday-first.weekday())%7 + 7*(n-1))
 
           def last_weekday(year, month, weekday):
-              first_next=dt.date(year+1,1,1) if month==12 else dt.date(year,month+1,1)
-              last=first_next-dt.timedelta(days=1)
-              return last-dt.timedelta(days=(last.weekday()-weekday)%7)
+              first_next = dt.date(year+1, 1, 1) if month == 12 else dt.date(year, month+1, 1)
+              last = first_next - dt.timedelta(days=1)
+              return last - dt.timedelta(days=(last.weekday()-weekday)%7)
 
           def market_holidays(year):
-              out=set()
-              for y in (year-1,year,year+1): out.add(observed(dt.date(y,1,1)))
-              out.update({nth_weekday(year,1,0,3), nth_weekday(year,2,0,3), easter_sunday(year)-dt.timedelta(days=2),
-                          last_weekday(year,5,0), observed(dt.date(year,6,19)), observed(dt.date(year,7,4)),
-                          nth_weekday(year,9,0,1), nth_weekday(year,11,3,4), observed(dt.date(year,12,25))})
+              out = set()
+              for y in (year-1, year, year+1):
+                  out.add(observed(dt.date(y, 1, 1)))
+              out.update({
+                  nth_weekday(year, 1, 0, 3), nth_weekday(year, 2, 0, 3),
+                  easter_sunday(year) - dt.timedelta(days=2), last_weekday(year, 5, 0),
+                  observed(dt.date(year, 6, 19)), observed(dt.date(year, 7, 4)),
+                  nth_weekday(year, 9, 0, 1), nth_weekday(year, 11, 3, 4),
+                  observed(dt.date(year, 12, 25)),
+              })
               return out
 
           paths = [Path("data/picks.json"), Path("data/history.json")]
@@ -116,21 +122,25 @@ jobs:
           print("PICKS_TICKERS:", ", ".join(str(item.get("ticker", "?")) for item in picks))
           print("QUALIFIED_SETUPS:", payload.get("qualifiedTradeSetups"))
           print("GLOBAL_HEADLINES:", payload.get("globalHeadlinesDiscovered"))
-          print("SCHEDULE_EXPR:", os.getenv("ALPHAEDGE_SCHEDULE_EXPR", "not-available"))
+          print("SCHEDULE_SLOT:", os.getenv("SCHEDULE_SLOT", "manual"))
 
-          is_schedule = os.getenv("EVENT_NAME") == "schedule"
+          publish_requested = os.getenv("PUBLISH_REQUESTED", "false").strip().lower() == "true"
           is_market_day = today.weekday() < 5 and today not in market_holidays(today.year)
           is_fresh = False
+          generated_et = None
+
           if payload.get("asOf") == today.isoformat():
               try:
                   generated = dt.datetime.fromisoformat(str(payload.get("generatedAt", "")).replace("Z", "+00:00"))
                   if generated.tzinfo is None:
                       generated = generated.replace(tzinfo=dt.timezone.utc)
                   generated_et = generated.astimezone(ny)
-                  # A valid day's picks must have been generated during that day's
-                  # premarket, even if a later backup schedule is delayed until afternoon.
-                  is_fresh = (generated_et.date() == today and
-                              dt.time(4, 0) <= generated_et.time() < dt.time(9, 30))
+                  is_fresh = (
+                      generated_et.date() == today
+                      and dt.time(4, 0) <= generated_et.time() < dt.time(9, 30)
+                      and len(picks) == 5
+                      and len({str(item.get("ticker", "")).upper() for item in picks}) == 5
+                  )
                   print("PICKS_GENERATED_AT_NY:", generated_et.isoformat())
               except (ValueError, TypeError):
                   is_fresh = False
@@ -138,16 +148,17 @@ jobs:
           with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as env_file:
               env_file.write(f"ALPHAEDGE_IS_MARKET_DAY={'true' if is_market_day else 'false'}\n")
               env_file.write(f"ALPHAEDGE_OUTPUT_FRESH={'true' if is_fresh else 'false'}\n")
+              env_file.write(f"ALPHAEDGE_PUBLISH_REQUESTED={'true' if publish_requested else 'false'}\n")
 
-          if is_schedule and is_market_day:
+          if publish_requested and is_market_day:
               if not is_fresh:
-                  raise SystemExit("ERROR: no valid picks snapshot generated during today's 04:00–09:30 ET premarket. See EVENT, SCHEDULE_EXPR, and scanner time above. Existing picks were preserved.")
-              age_minutes = (dt.datetime.now(dt.timezone.utc)-generated.astimezone(dt.timezone.utc)).total_seconds()/60
-              print(f"OK: today's premarket snapshot exists ({age_minutes:.1f} minutes old at this run). A late backup run will not invalidate an already-published same-day snapshot.")
-          elif is_schedule:
-              print("Weekend/market holiday: no fresh picks required; previous published data is preserved.")
+                  raise SystemExit("ERROR: publication requested, but no valid five-pick snapshot for today's premarket was generated.")
+              age = (dt.datetime.now(dt.timezone.utc) - generated_et.astimezone(dt.timezone.utc)).total_seconds() / 60
+              print(f"OK: today's premarket snapshot is valid ({age:.1f} minutes old).")
+          elif publish_requested:
+              print("Weekend/market holiday: no publication required; previous picks are preserved.")
           else:
-              print("Manual run: current snapshot validation is informational only; off-session diagnostics do not publish picks.")
+              print("Manual diagnostic: publication was not requested; existing picks are intentionally preserved.")
           PY
 
       - name: Commit daily picks
@@ -156,15 +167,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/picks.json data/history.json
           if git diff --cached --quiet; then
-            if [ "$GITHUB_EVENT_NAME" = "schedule" ] && [ "$ALPHAEDGE_IS_MARKET_DAY" = "true" ]; then
-              if [ "$ALPHAEDGE_OUTPUT_FRESH" = "true" ]; then
-                echo "No file changes, but today's valid premarket snapshot is already published. This is normal for a late backup schedule."
-                exit 0
-              fi
-              echo "::error::Scheduled market-day run has no valid same-day premarket snapshot and no output changes to commit."
-              exit 1
+            if [ "$ALPHAEDGE_PUBLISH_REQUESTED" = "true" ] && [ "$ALPHAEDGE_IS_MARKET_DAY" = "true" ] && [ "$ALPHAEDGE_OUTPUT_FRESH" = "true" ]; then
+              echo "Today's valid premarket snapshot already exists; no new file changes to commit."
+              exit 0
             fi
-            echo "No output changes to commit (expected for manual diagnostics or market holidays)."
+            echo "No output changes to commit. This is expected for manual diagnostics or market holidays."
             exit 0
           fi
           git commit -m "daily scan: update picks"
